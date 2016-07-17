@@ -1,0 +1,1365 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "C12Dissertation14ViewController"
+provides-member:
+- ["C12Dissertation14ViewController", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+- "prepareBeaconManager"
+- "prepareTempBeacons"
+- "preferredStatusBarStyle"
+- "didReceiveMemoryWarning"
+- "beaconManager"
+- "beaconManager"
+- "beaconManager"
+- "label"
+- "image"
+- "activityIndicator"
+depends-top-level:
+- !private "UIApplication"
+- "BeaconID"
+- !private "BeaconDetails"
+- "ViewController"
+- "ProximityContentManager"
+- "UIStatusBarStyle"
+- "UIViewController"
+- !private "String"
+- !private "UILocalNotificationDefaultSoundName"
+- !private "DefinitionsConversion"
+- !private "StringLiteralType"
+- "UILabel"
+- "ProximityContentManagerDelegate"
+- "CLBeaconRegion"
+- "ESTBeaconManagerDelegate"
+- "ESTBeaconManager"
+- !private "+"
+- "UIActivityIndicatorView"
+- "UIImageView"
+- !private "BooleanLiteralType"
+- "AnyObject"
+- !private "UILocalNotification"
+depends-member:
+- !private ["Ps9AnyObject", "BeaconDetails"]
+- !private ["Ps9AnyObject", "BeaconID"]
+- !private ["Ps9AnyObject", "DefinitionsConversion"]
+- !private ["Ps9AnyObject", "ESTBeaconManager"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UIApplication"]
+- !private ["Ps9AnyObject", "UILocalNotification"]
+- !private ["Ps9AnyObject", "UILocalNotificationDefaultSoundName"]
+- ["Ps9AnyObject", "activityIndicator"]
+- !private ["Ps9AnyObject", "alertBody"]
+- ["Ps9AnyObject", "allBeacons"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "beaconManager"]
+- ["Ps9AnyObject", "beaconManagerDidStartAdvertising"]
+- !private ["Ps9AnyObject", "beaconName"]
+- !private ["Ps9AnyObject", "delegate"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "getProximityUUID"]
+- !private ["Ps9AnyObject", "hidden"]
+- ["Ps9AnyObject", "image"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isEqualToNumber"]
+- ["Ps9AnyObject", "label"]
+- !private ["Ps9AnyObject", "minor"]
+- !private ["Ps9AnyObject", "neutralColor"]
+- ["Ps9AnyObject", "preferredStatusBarStyle"]
+- ["Ps9AnyObject", "prepareBeaconManager"]
+- ["Ps9AnyObject", "prepareTempBeacons"]
+- !private ["Ps9AnyObject", "presentLocalNotificationNow"]
+- ["Ps9AnyObject", "proximityContentManager"]
+- !private ["Ps9AnyObject", "removeFromSuperview"]
+- !private ["Ps9AnyObject", "requestAlwaysAuthorization"]
+- !private ["Ps9AnyObject", "sharedApplication"]
+- !private ["Ps9AnyObject", "soundName"]
+- !private ["Ps9AnyObject", "startAnimating"]
+- !private ["Ps9AnyObject", "startMonitoringForRegion"]
+- !private ["Ps9AnyObject", "stopAnimating"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "append"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["C12Dissertation13BeaconDetails", "backgroundColor"]
+- !private ["C12Dissertation13BeaconDetails", "beaconName"]
+- !private ["C12Dissertation13BeaconDetails", "neutralColor"]
+- !private ["V12Dissertation8BeaconID", "asBeaconRegion"]
+- ["V12Dissertation8BeaconID", "deinit"]
+- !private ["V12Dissertation8BeaconID", "init"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "isEqualToNumber"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo14CLBeaconRegion", "minor"]
+- !private ["CSo8CLRegion", "minor"]
+- !private ["Ps11CVarArgType", "BeaconDetails"]
+- !private ["Ps11CVarArgType", "BeaconID"]
+- !private ["Ps11CVarArgType", "DefinitionsConversion"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "ESTBeaconManager"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "UIApplication"]
+- !private ["Ps11CVarArgType", "UILocalNotification"]
+- !private ["Ps11CVarArgType", "UILocalNotificationDefaultSoundName"]
+- ["Ps11CVarArgType", "activityIndicator"]
+- !private ["Ps11CVarArgType", "alertBody"]
+- ["Ps11CVarArgType", "allBeacons"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- ["Ps11CVarArgType", "beaconManager"]
+- ["Ps11CVarArgType", "beaconManagerDidStartAdvertising"]
+- !private ["Ps11CVarArgType", "delegate"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["Ps11CVarArgType", "getProximityUUID"]
+- !private ["Ps11CVarArgType", "hidden"]
+- ["Ps11CVarArgType", "image"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "isEqualToNumber"]
+- ["Ps11CVarArgType", "label"]
+- !private ["Ps11CVarArgType", "minor"]
+- ["Ps11CVarArgType", "preferredStatusBarStyle"]
+- ["Ps11CVarArgType", "prepareBeaconManager"]
+- ["Ps11CVarArgType", "prepareTempBeacons"]
+- !private ["Ps11CVarArgType", "presentLocalNotificationNow"]
+- ["Ps11CVarArgType", "proximityContentManager"]
+- !private ["Ps11CVarArgType", "removeFromSuperview"]
+- !private ["Ps11CVarArgType", "requestAlwaysAuthorization"]
+- !private ["Ps11CVarArgType", "sharedApplication"]
+- !private ["Ps11CVarArgType", "soundName"]
+- !private ["Ps11CVarArgType", "startAnimating"]
+- !private ["Ps11CVarArgType", "startMonitoringForRegion"]
+- !private ["Ps11CVarArgType", "stopAnimating"]
+- !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "append"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "BeaconDetails"]
+- !private ["Ps28CustomDebugStringConvertible", "BeaconID"]
+- !private ["Ps28CustomDebugStringConvertible", "DefinitionsConversion"]
+- !private ["Ps28CustomDebugStringConvertible", "ESTBeaconManager"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
+- !private ["Ps28CustomDebugStringConvertible", "UILocalNotification"]
+- !private ["Ps28CustomDebugStringConvertible", "UILocalNotificationDefaultSoundName"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- ["Ps28CustomDebugStringConvertible", "activityIndicator"]
+- !private ["Ps28CustomDebugStringConvertible", "alertBody"]
+- ["Ps28CustomDebugStringConvertible", "allBeacons"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- ["Ps28CustomDebugStringConvertible", "beaconManager"]
+- ["Ps28CustomDebugStringConvertible", "beaconManagerDidStartAdvertising"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "getProximityUUID"]
+- !private ["Ps28CustomDebugStringConvertible", "hidden"]
+- ["Ps28CustomDebugStringConvertible", "image"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isEqualToNumber"]
+- ["Ps28CustomDebugStringConvertible", "label"]
+- !private ["Ps28CustomDebugStringConvertible", "minor"]
+- ["Ps28CustomDebugStringConvertible", "preferredStatusBarStyle"]
+- ["Ps28CustomDebugStringConvertible", "prepareBeaconManager"]
+- ["Ps28CustomDebugStringConvertible", "prepareTempBeacons"]
+- !private ["Ps28CustomDebugStringConvertible", "presentLocalNotificationNow"]
+- ["Ps28CustomDebugStringConvertible", "proximityContentManager"]
+- !private ["Ps28CustomDebugStringConvertible", "removeFromSuperview"]
+- !private ["Ps28CustomDebugStringConvertible", "requestAlwaysAuthorization"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedApplication"]
+- !private ["Ps28CustomDebugStringConvertible", "soundName"]
+- !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
+- !private ["Ps28CustomDebugStringConvertible", "startMonitoringForRegion"]
+- !private ["Ps28CustomDebugStringConvertible", "stopAnimating"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "BeaconDetails"]
+- !private ["Ps23CustomStringConvertible", "BeaconID"]
+- !private ["Ps23CustomStringConvertible", "DefinitionsConversion"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "ESTBeaconManager"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIApplication"]
+- !private ["Ps23CustomStringConvertible", "UILocalNotification"]
+- !private ["Ps23CustomStringConvertible", "UILocalNotificationDefaultSoundName"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "activityIndicator"]
+- !private ["Ps23CustomStringConvertible", "alertBody"]
+- ["Ps23CustomStringConvertible", "allBeacons"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "asBeaconRegion"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- ["Ps23CustomStringConvertible", "beaconManager"]
+- ["Ps23CustomStringConvertible", "beaconManagerDidStartAdvertising"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "getProximityUUID"]
+- !private ["Ps23CustomStringConvertible", "hidden"]
+- ["Ps23CustomStringConvertible", "image"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isEqualToNumber"]
+- ["Ps23CustomStringConvertible", "label"]
+- !private ["Ps23CustomStringConvertible", "minor"]
+- ["Ps23CustomStringConvertible", "preferredStatusBarStyle"]
+- ["Ps23CustomStringConvertible", "prepareBeaconManager"]
+- ["Ps23CustomStringConvertible", "prepareTempBeacons"]
+- !private ["Ps23CustomStringConvertible", "presentLocalNotificationNow"]
+- ["Ps23CustomStringConvertible", "proximityContentManager"]
+- !private ["Ps23CustomStringConvertible", "removeFromSuperview"]
+- !private ["Ps23CustomStringConvertible", "requestAlwaysAuthorization"]
+- !private ["Ps23CustomStringConvertible", "sharedApplication"]
+- !private ["Ps23CustomStringConvertible", "soundName"]
+- !private ["Ps23CustomStringConvertible", "startAnimating"]
+- !private ["Ps23CustomStringConvertible", "startMonitoringForRegion"]
+- !private ["Ps23CustomStringConvertible", "stopAnimating"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["CSo21DefinitionsConversion", "getProximityUUID"]
+- !private ["Sd", "deinit"]
+- !private ["CSo16ESTBeaconManager", "delegate"]
+- !private ["CSo16ESTBeaconManager", "init"]
+- !private ["CSo16ESTBeaconManager", "requestAlwaysAuthorization"]
+- !private ["CSo16ESTBeaconManager", "startMonitoringForRegion"]
+- !private ["PSo24ESTBeaconManagerDelegate", "BeaconDetails"]
+- !private ["PSo24ESTBeaconManagerDelegate", "BeaconID"]
+- !private ["PSo24ESTBeaconManagerDelegate", "DefinitionsConversion"]
+- !private ["PSo24ESTBeaconManagerDelegate", "ESTBeaconManager"]
+- !private ["PSo24ESTBeaconManagerDelegate", "String"]
+- !private ["PSo24ESTBeaconManagerDelegate", "UIApplication"]
+- !private ["PSo24ESTBeaconManagerDelegate", "UILocalNotification"]
+- !private ["PSo24ESTBeaconManagerDelegate", "UILocalNotificationDefaultSoundName"]
+- !private ["PSo24ESTBeaconManagerDelegate", "activityIndicator"]
+- !private ["PSo24ESTBeaconManagerDelegate", "allBeacons"]
+- ["PSo24ESTBeaconManagerDelegate", "beaconManager"]
+- ["PSo24ESTBeaconManagerDelegate", "beaconManagerDidStartAdvertising"]
+- !private ["PSo24ESTBeaconManagerDelegate", "image"]
+- !private ["PSo24ESTBeaconManagerDelegate", "label"]
+- !private ["PSo24ESTBeaconManagerDelegate", "prepareBeaconManager"]
+- !private ["PSo24ESTBeaconManagerDelegate", "prepareTempBeacons"]
+- ["PSo24ESTBeaconManagerDelegate", "proximityContentManager"]
+- !private ["PSo24ESTBeaconManagerDelegate", "view"]
+- ["PSo24ESTBeaconManagerDelegate", ""]
+- !private ["Ps9Equatable", "BeaconDetails"]
+- !private ["Ps9Equatable", "BeaconID"]
+- !private ["Ps9Equatable", "DefinitionsConversion"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "ESTBeaconManager"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "LightContent"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "UIApplication"]
+- !private ["Ps9Equatable", "UILocalNotification"]
+- !private ["Ps9Equatable", "UILocalNotificationDefaultSoundName"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "activityIndicator"]
+- !private ["Ps9Equatable", "alertBody"]
+- ["Ps9Equatable", "allBeacons"]
+- !private ["Ps9Equatable", "asBeaconRegion"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- ["Ps9Equatable", "beaconManager"]
+- ["Ps9Equatable", "beaconManagerDidStartAdvertising"]
+- !private ["Ps9Equatable", "delegate"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "getProximityUUID"]
+- !private ["Ps9Equatable", "hidden"]
+- ["Ps9Equatable", "image"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isEqualToNumber"]
+- ["Ps9Equatable", "label"]
+- !private ["Ps9Equatable", "minor"]
+- ["Ps9Equatable", "preferredStatusBarStyle"]
+- ["Ps9Equatable", "prepareBeaconManager"]
+- ["Ps9Equatable", "prepareTempBeacons"]
+- !private ["Ps9Equatable", "presentLocalNotificationNow"]
+- ["Ps9Equatable", "proximityContentManager"]
+- !private ["Ps9Equatable", "removeFromSuperview"]
+- !private ["Ps9Equatable", "requestAlwaysAuthorization"]
+- !private ["Ps9Equatable", "sharedApplication"]
+- !private ["Ps9Equatable", "soundName"]
+- !private ["Ps9Equatable", "startAnimating"]
+- !private ["Ps9Equatable", "startMonitoringForRegion"]
+- !private ["Ps9Equatable", "stopAnimating"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps23FloatLiteralConvertible", "isEqualToNumber"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "BeaconDetails"]
+- !private ["Ps8Hashable", "BeaconID"]
+- !private ["Ps8Hashable", "DefinitionsConversion"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "ESTBeaconManager"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "LightContent"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "UIApplication"]
+- !private ["Ps8Hashable", "UILocalNotification"]
+- !private ["Ps8Hashable", "UILocalNotificationDefaultSoundName"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "activityIndicator"]
+- !private ["Ps8Hashable", "alertBody"]
+- ["Ps8Hashable", "allBeacons"]
+- !private ["Ps8Hashable", "asBeaconRegion"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- ["Ps8Hashable", "beaconManager"]
+- ["Ps8Hashable", "beaconManagerDidStartAdvertising"]
+- !private ["Ps8Hashable", "delegate"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "getProximityUUID"]
+- !private ["Ps8Hashable", "hidden"]
+- ["Ps8Hashable", "image"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isEqualToNumber"]
+- ["Ps8Hashable", "label"]
+- !private ["Ps8Hashable", "minor"]
+- ["Ps8Hashable", "preferredStatusBarStyle"]
+- ["Ps8Hashable", "prepareBeaconManager"]
+- ["Ps8Hashable", "prepareTempBeacons"]
+- !private ["Ps8Hashable", "presentLocalNotificationNow"]
+- ["Ps8Hashable", "proximityContentManager"]
+- !private ["Ps8Hashable", "removeFromSuperview"]
+- !private ["Ps8Hashable", "requestAlwaysAuthorization"]
+- !private ["Ps8Hashable", "sharedApplication"]
+- !private ["Ps8Hashable", "soundName"]
+- !private ["Ps8Hashable", "startAnimating"]
+- !private ["Ps8Hashable", "startMonitoringForRegion"]
+- !private ["Ps8Hashable", "stopAnimating"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "isEqualToNumber"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "append"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "append"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["PSo8NSCoding", "BeaconDetails"]
+- !private ["PSo8NSCoding", "BeaconID"]
+- !private ["PSo8NSCoding", "DefinitionsConversion"]
+- !private ["PSo8NSCoding", "ESTBeaconManager"]
+- !private ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "UIApplication"]
+- !private ["PSo8NSCoding", "UILocalNotification"]
+- !private ["PSo8NSCoding", "UILocalNotificationDefaultSoundName"]
+- ["PSo8NSCoding", "activityIndicator"]
+- !private ["PSo8NSCoding", "alertBody"]
+- ["PSo8NSCoding", "allBeacons"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- ["PSo8NSCoding", "beaconManager"]
+- ["PSo8NSCoding", "beaconManagerDidStartAdvertising"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "hidden"]
+- ["PSo8NSCoding", "image"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isEqualToNumber"]
+- ["PSo8NSCoding", "label"]
+- !private ["PSo8NSCoding", "minor"]
+- ["PSo8NSCoding", "preferredStatusBarStyle"]
+- ["PSo8NSCoding", "prepareBeaconManager"]
+- ["PSo8NSCoding", "prepareTempBeacons"]
+- ["PSo8NSCoding", "proximityContentManager"]
+- !private ["PSo8NSCoding", "removeFromSuperview"]
+- !private ["PSo8NSCoding", "soundName"]
+- !private ["PSo8NSCoding", "startAnimating"]
+- !private ["PSo8NSCoding", "stopAnimating"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "alertBody"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "isEqualToNumber"]
+- !private ["PSo9NSCopying", "minor"]
+- !private ["PSo9NSCopying", "soundName"]
+- !private ["PSo26NSExtensionRequestHandling", "BeaconDetails"]
+- !private ["PSo26NSExtensionRequestHandling", "BeaconID"]
+- !private ["PSo26NSExtensionRequestHandling", "DefinitionsConversion"]
+- !private ["PSo26NSExtensionRequestHandling", "ESTBeaconManager"]
+- !private ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "UIApplication"]
+- !private ["PSo26NSExtensionRequestHandling", "UILocalNotification"]
+- !private ["PSo26NSExtensionRequestHandling", "UILocalNotificationDefaultSoundName"]
+- ["PSo26NSExtensionRequestHandling", "activityIndicator"]
+- ["PSo26NSExtensionRequestHandling", "allBeacons"]
+- ["PSo26NSExtensionRequestHandling", "beaconManager"]
+- ["PSo26NSExtensionRequestHandling", "beaconManagerDidStartAdvertising"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "image"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "label"]
+- ["PSo26NSExtensionRequestHandling", "preferredStatusBarStyle"]
+- ["PSo26NSExtensionRequestHandling", "prepareBeaconManager"]
+- ["PSo26NSExtensionRequestHandling", "prepareTempBeacons"]
+- ["PSo26NSExtensionRequestHandling", "proximityContentManager"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "isEqualToNumber"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "BeaconDetails"]
+- ["CSo8NSObject", "BeaconID"]
+- ["CSo8NSObject", "CLBeaconRegion"]
+- !private ["CSo8NSObject", "DefinitionsConversion"]
+- ["CSo8NSObject", "ESTBeaconManager"]
+- ["CSo8NSObject", "ProximityContentManager"]
+- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIActivityIndicatorView"]
+- !private ["CSo8NSObject", "UIApplication"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "UILocalNotification"]
+- !private ["CSo8NSObject", "UILocalNotificationDefaultSoundName"]
+- ["CSo8NSObject", "UIStatusBarStyle"]
+- ["CSo8NSObject", "activityIndicator"]
+- !private ["CSo8NSObject", "alertBody"]
+- ["CSo8NSObject", "allBeacons"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- ["CSo8NSObject", "beaconManager"]
+- ["CSo8NSObject", "beaconManagerDidStartAdvertising"]
+- !private ["CSo8NSObject", "delegate"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "getProximityUUID"]
+- !private ["CSo8NSObject", "hidden"]
+- ["CSo8NSObject", "image"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isEqualToNumber"]
+- ["CSo8NSObject", "label"]
+- !private ["CSo8NSObject", "minor"]
+- ["CSo8NSObject", "preferredStatusBarStyle"]
+- ["CSo8NSObject", "prepareBeaconManager"]
+- ["CSo8NSObject", "prepareTempBeacons"]
+- !private ["CSo8NSObject", "presentLocalNotificationNow"]
+- ["CSo8NSObject", "proximityContentManager"]
+- !private ["CSo8NSObject", "removeFromSuperview"]
+- !private ["CSo8NSObject", "requestAlwaysAuthorization"]
+- !private ["CSo8NSObject", "sharedApplication"]
+- !private ["CSo8NSObject", "soundName"]
+- !private ["CSo8NSObject", "startAnimating"]
+- !private ["CSo8NSObject", "startMonitoringForRegion"]
+- !private ["CSo8NSObject", "stopAnimating"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "BeaconDetails"]
+- !private ["PSo16NSObjectProtocol", "BeaconID"]
+- !private ["PSo16NSObjectProtocol", "DefinitionsConversion"]
+- !private ["PSo16NSObjectProtocol", "ESTBeaconManager"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UIApplication"]
+- !private ["PSo16NSObjectProtocol", "UILocalNotification"]
+- !private ["PSo16NSObjectProtocol", "UILocalNotificationDefaultSoundName"]
+- ["PSo16NSObjectProtocol", "activityIndicator"]
+- !private ["PSo16NSObjectProtocol", "alertBody"]
+- ["PSo16NSObjectProtocol", "allBeacons"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- ["PSo16NSObjectProtocol", "beaconManager"]
+- ["PSo16NSObjectProtocol", "beaconManagerDidStartAdvertising"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "getProximityUUID"]
+- !private ["PSo16NSObjectProtocol", "hidden"]
+- ["PSo16NSObjectProtocol", "image"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isEqualToNumber"]
+- ["PSo16NSObjectProtocol", "label"]
+- !private ["PSo16NSObjectProtocol", "minor"]
+- ["PSo16NSObjectProtocol", "preferredStatusBarStyle"]
+- ["PSo16NSObjectProtocol", "prepareBeaconManager"]
+- ["PSo16NSObjectProtocol", "prepareTempBeacons"]
+- !private ["PSo16NSObjectProtocol", "presentLocalNotificationNow"]
+- ["PSo16NSObjectProtocol", "proximityContentManager"]
+- !private ["PSo16NSObjectProtocol", "removeFromSuperview"]
+- !private ["PSo16NSObjectProtocol", "requestAlwaysAuthorization"]
+- !private ["PSo16NSObjectProtocol", "sharedApplication"]
+- !private ["PSo16NSObjectProtocol", "soundName"]
+- !private ["PSo16NSObjectProtocol", "startAnimating"]
+- !private ["PSo16NSObjectProtocol", "startMonitoringForRegion"]
+- !private ["PSo16NSObjectProtocol", "stopAnimating"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "isEqualToNumber"]
+- !private ["PSo14NSSecureCoding", "minor"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo7NSValue", "isEqualToNumber"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "BeaconDetails"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "BeaconID"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "DefinitionsConversion"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "ESTBeaconManager"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "String"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "UIApplication"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "UILocalNotification"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "UILocalNotificationDefaultSoundName"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "activityIndicator"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "allBeacons"]
+- ["P12Dissertation31ProximityContentManagerDelegate", "beaconManager"]
+- ["P12Dissertation31ProximityContentManagerDelegate", "beaconManagerDidStartAdvertising"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "image"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "label"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "prepareBeaconManager"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "prepareTempBeacons"]
+- ["P12Dissertation31ProximityContentManagerDelegate", "proximityContentManager"]
+- !private ["P12Dissertation31ProximityContentManagerDelegate", "view"]
+- ["P12Dissertation31ProximityContentManagerDelegate", ""]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "append"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps16RawRepresentable", "LightContent"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "append"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "hidden"]
+- !private ["PSo29UIAccessibilityIdentification", "removeFromSuperview"]
+- !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
+- !private ["PSo29UIAccessibilityIdentification", "stopAnimating"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["CSo23UIActivityIndicatorView", "removeFromSuperview"]
+- !private ["CSo23UIActivityIndicatorView", "startAnimating"]
+- !private ["CSo23UIActivityIndicatorView", "stopAnimating"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "hidden"]
+- !private ["PSo12UIAppearance", "removeFromSuperview"]
+- !private ["PSo12UIAppearance", "startAnimating"]
+- !private ["PSo12UIAppearance", "stopAnimating"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "BeaconDetails"]
+- !private ["PSo21UIAppearanceContainer", "BeaconID"]
+- !private ["PSo21UIAppearanceContainer", "DefinitionsConversion"]
+- !private ["PSo21UIAppearanceContainer", "ESTBeaconManager"]
+- !private ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "UIApplication"]
+- !private ["PSo21UIAppearanceContainer", "UILocalNotification"]
+- !private ["PSo21UIAppearanceContainer", "UILocalNotificationDefaultSoundName"]
+- ["PSo21UIAppearanceContainer", "activityIndicator"]
+- ["PSo21UIAppearanceContainer", "allBeacons"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- ["PSo21UIAppearanceContainer", "beaconManager"]
+- ["PSo21UIAppearanceContainer", "beaconManagerDidStartAdvertising"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "hidden"]
+- ["PSo21UIAppearanceContainer", "image"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "label"]
+- ["PSo21UIAppearanceContainer", "preferredStatusBarStyle"]
+- ["PSo21UIAppearanceContainer", "prepareBeaconManager"]
+- ["PSo21UIAppearanceContainer", "prepareTempBeacons"]
+- ["PSo21UIAppearanceContainer", "proximityContentManager"]
+- !private ["PSo21UIAppearanceContainer", "removeFromSuperview"]
+- !private ["PSo21UIAppearanceContainer", "startAnimating"]
+- !private ["PSo21UIAppearanceContainer", "stopAnimating"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo13UIApplication", "presentLocalNotificationNow"]
+- !private ["CSo13UIApplication", "sharedApplication"]
+- !private ["PSo18UIContentContainer", "BeaconDetails"]
+- !private ["PSo18UIContentContainer", "BeaconID"]
+- !private ["PSo18UIContentContainer", "DefinitionsConversion"]
+- !private ["PSo18UIContentContainer", "ESTBeaconManager"]
+- !private ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "UIApplication"]
+- !private ["PSo18UIContentContainer", "UILocalNotification"]
+- !private ["PSo18UIContentContainer", "UILocalNotificationDefaultSoundName"]
+- ["PSo18UIContentContainer", "activityIndicator"]
+- ["PSo18UIContentContainer", "allBeacons"]
+- ["PSo18UIContentContainer", "beaconManager"]
+- ["PSo18UIContentContainer", "beaconManagerDidStartAdvertising"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "image"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "label"]
+- ["PSo18UIContentContainer", "preferredStatusBarStyle"]
+- ["PSo18UIContentContainer", "prepareBeaconManager"]
+- ["PSo18UIContentContainer", "prepareTempBeacons"]
+- ["PSo18UIContentContainer", "proximityContentManager"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "hidden"]
+- !private ["PSo17UICoordinateSpace", "removeFromSuperview"]
+- !private ["PSo17UICoordinateSpace", "startAnimating"]
+- !private ["PSo17UICoordinateSpace", "stopAnimating"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "hidden"]
+- !private ["PSo13UIDynamicItem", "removeFromSuperview"]
+- !private ["PSo13UIDynamicItem", "startAnimating"]
+- !private ["PSo13UIDynamicItem", "stopAnimating"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "BeaconDetails"]
+- !private ["PSo18UIFocusEnvironment", "BeaconID"]
+- !private ["PSo18UIFocusEnvironment", "DefinitionsConversion"]
+- !private ["PSo18UIFocusEnvironment", "ESTBeaconManager"]
+- !private ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "UIApplication"]
+- !private ["PSo18UIFocusEnvironment", "UILocalNotification"]
+- !private ["PSo18UIFocusEnvironment", "UILocalNotificationDefaultSoundName"]
+- ["PSo18UIFocusEnvironment", "activityIndicator"]
+- ["PSo18UIFocusEnvironment", "allBeacons"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- ["PSo18UIFocusEnvironment", "beaconManager"]
+- ["PSo18UIFocusEnvironment", "beaconManagerDidStartAdvertising"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "hidden"]
+- ["PSo18UIFocusEnvironment", "image"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "label"]
+- ["PSo18UIFocusEnvironment", "preferredStatusBarStyle"]
+- ["PSo18UIFocusEnvironment", "prepareBeaconManager"]
+- ["PSo18UIFocusEnvironment", "prepareTempBeacons"]
+- ["PSo18UIFocusEnvironment", "proximityContentManager"]
+- !private ["PSo18UIFocusEnvironment", "removeFromSuperview"]
+- !private ["PSo18UIFocusEnvironment", "startAnimating"]
+- !private ["PSo18UIFocusEnvironment", "stopAnimating"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIImageView", "hidden"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo19UILocalNotification", "alertBody"]
+- !private ["CSo19UILocalNotification", "init"]
+- !private ["CSo19UILocalNotification", "soundName"]
+- ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "BeaconDetails"]
+- ["CSo11UIResponder", "BeaconID"]
+- ["CSo11UIResponder", "CLBeaconRegion"]
+- !private ["CSo11UIResponder", "DefinitionsConversion"]
+- ["CSo11UIResponder", "ESTBeaconManager"]
+- ["CSo11UIResponder", "ProximityContentManager"]
+- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIActivityIndicatorView"]
+- !private ["CSo11UIResponder", "UIApplication"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "UILocalNotification"]
+- !private ["CSo11UIResponder", "UILocalNotificationDefaultSoundName"]
+- ["CSo11UIResponder", "UIStatusBarStyle"]
+- ["CSo11UIResponder", "activityIndicator"]
+- ["CSo11UIResponder", "allBeacons"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- ["CSo11UIResponder", "beaconManager"]
+- ["CSo11UIResponder", "beaconManagerDidStartAdvertising"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "hidden"]
+- ["CSo11UIResponder", "image"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "label"]
+- ["CSo11UIResponder", "preferredStatusBarStyle"]
+- ["CSo11UIResponder", "prepareBeaconManager"]
+- ["CSo11UIResponder", "prepareTempBeacons"]
+- !private ["CSo11UIResponder", "presentLocalNotificationNow"]
+- ["CSo11UIResponder", "proximityContentManager"]
+- !private ["CSo11UIResponder", "removeFromSuperview"]
+- !private ["CSo11UIResponder", "sharedApplication"]
+- !private ["CSo11UIResponder", "startAnimating"]
+- !private ["CSo11UIResponder", "stopAnimating"]
+- !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "BeaconDetails"]
+- !private ["PSo16UIStateRestoring", "BeaconID"]
+- !private ["PSo16UIStateRestoring", "DefinitionsConversion"]
+- !private ["PSo16UIStateRestoring", "ESTBeaconManager"]
+- !private ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "UIApplication"]
+- !private ["PSo16UIStateRestoring", "UILocalNotification"]
+- !private ["PSo16UIStateRestoring", "UILocalNotificationDefaultSoundName"]
+- ["PSo16UIStateRestoring", "activityIndicator"]
+- ["PSo16UIStateRestoring", "allBeacons"]
+- ["PSo16UIStateRestoring", "beaconManager"]
+- ["PSo16UIStateRestoring", "beaconManagerDidStartAdvertising"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "image"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "label"]
+- ["PSo16UIStateRestoring", "preferredStatusBarStyle"]
+- ["PSo16UIStateRestoring", "prepareBeaconManager"]
+- ["PSo16UIStateRestoring", "prepareTempBeacons"]
+- ["PSo16UIStateRestoring", "proximityContentManager"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["OSC16UIStatusBarStyle", "LightContent"]
+- !private ["PSo18UITraitEnvironment", "BeaconDetails"]
+- !private ["PSo18UITraitEnvironment", "BeaconID"]
+- !private ["PSo18UITraitEnvironment", "DefinitionsConversion"]
+- !private ["PSo18UITraitEnvironment", "ESTBeaconManager"]
+- !private ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "UIApplication"]
+- !private ["PSo18UITraitEnvironment", "UILocalNotification"]
+- !private ["PSo18UITraitEnvironment", "UILocalNotificationDefaultSoundName"]
+- ["PSo18UITraitEnvironment", "activityIndicator"]
+- ["PSo18UITraitEnvironment", "allBeacons"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- ["PSo18UITraitEnvironment", "beaconManager"]
+- ["PSo18UITraitEnvironment", "beaconManagerDidStartAdvertising"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "hidden"]
+- ["PSo18UITraitEnvironment", "image"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "label"]
+- ["PSo18UITraitEnvironment", "preferredStatusBarStyle"]
+- ["PSo18UITraitEnvironment", "prepareBeaconManager"]
+- ["PSo18UITraitEnvironment", "prepareTempBeacons"]
+- ["PSo18UITraitEnvironment", "proximityContentManager"]
+- !private ["PSo18UITraitEnvironment", "removeFromSuperview"]
+- !private ["PSo18UITraitEnvironment", "startAnimating"]
+- !private ["PSo18UITraitEnvironment", "stopAnimating"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "hidden"]
+- !private ["CSo6UIView", "removeFromSuperview"]
+- !private ["CSo6UIView", "startAnimating"]
+- !private ["CSo6UIView", "stopAnimating"]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "BeaconDetails"]
+- ["CSo16UIViewController", "BeaconID"]
+- ["CSo16UIViewController", "CLBeaconRegion"]
+- !private ["CSo16UIViewController", "DefinitionsConversion"]
+- ["CSo16UIViewController", "ESTBeaconManager"]
+- ["CSo16UIViewController", "ProximityContentManager"]
+- !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIActivityIndicatorView"]
+- !private ["CSo16UIViewController", "UIApplication"]
+- ["CSo16UIViewController", "UIImageView"]
+- ["CSo16UIViewController", "UILabel"]
+- !private ["CSo16UIViewController", "UILocalNotification"]
+- !private ["CSo16UIViewController", "UILocalNotificationDefaultSoundName"]
+- ["CSo16UIViewController", "UIStatusBarStyle"]
+- ["CSo16UIViewController", "activityIndicator"]
+- ["CSo16UIViewController", "allBeacons"]
+- ["CSo16UIViewController", "beaconManager"]
+- ["CSo16UIViewController", "beaconManagerDidStartAdvertising"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "image"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "label"]
+- ["CSo16UIViewController", "preferredStatusBarStyle"]
+- ["CSo16UIViewController", "prepareBeaconManager"]
+- ["CSo16UIViewController", "prepareTempBeacons"]
+- ["CSo16UIViewController", "proximityContentManager"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- ["C12Dissertation14ViewController", "AnyObject"]
+- !private ["C12Dissertation14ViewController", "BeaconDetails"]
+- ["C12Dissertation14ViewController", "BeaconID"]
+- ["C12Dissertation14ViewController", "CLBeaconRegion"]
+- !private ["C12Dissertation14ViewController", "DefinitionsConversion"]
+- ["C12Dissertation14ViewController", "ESTBeaconManager"]
+- ["C12Dissertation14ViewController", "ProximityContentManager"]
+- !private ["C12Dissertation14ViewController", "String"]
+- ["C12Dissertation14ViewController", "UIActivityIndicatorView"]
+- !private ["C12Dissertation14ViewController", "UIApplication"]
+- ["C12Dissertation14ViewController", "UIImageView"]
+- ["C12Dissertation14ViewController", "UILabel"]
+- !private ["C12Dissertation14ViewController", "UILocalNotification"]
+- !private ["C12Dissertation14ViewController", "UILocalNotificationDefaultSoundName"]
+- ["C12Dissertation14ViewController", "UIStatusBarStyle"]
+- ["C12Dissertation14ViewController", "activityIndicator"]
+- ["C12Dissertation14ViewController", "allBeacons"]
+- ["C12Dissertation14ViewController", "beaconManager"]
+- ["C12Dissertation14ViewController", "beaconManagerDidStartAdvertising"]
+- ["C12Dissertation14ViewController", "deinit"]
+- ["C12Dissertation14ViewController", "didReceiveMemoryWarning"]
+- ["C12Dissertation14ViewController", "image"]
+- ["C12Dissertation14ViewController", "init"]
+- ["C12Dissertation14ViewController", "label"]
+- ["C12Dissertation14ViewController", "preferredStatusBarStyle"]
+- ["C12Dissertation14ViewController", "prepareBeaconManager"]
+- ["C12Dissertation14ViewController", "prepareTempBeacons"]
+- ["C12Dissertation14ViewController", "proximityContentManager"]
+- !private ["C12Dissertation14ViewController", "view"]
+- ["C12Dissertation14ViewController", "viewDidLoad"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "append"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "append"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["Ps12_Reflectable", "hidden"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "removeFromSuperview"]
+- !private ["Ps12_Reflectable", "startAnimating"]
+- !private ["Ps12_Reflectable", "stopAnimating"]
+- !private ["Ps12_Reflectable", "text"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "C12Dissertation13BeaconDetails"
+- "V12Dissertation8BeaconID"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo14CLBeaconRegion"
+- !private "CSo8CLRegion"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "CSo21DefinitionsConversion"
+- !private "Sd"
+- !private "CSo16ESTBeaconManager"
+- "PSo24ESTBeaconManagerDelegate"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo7NSValue"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- "P12Dissertation31ProximityContentManagerDelegate"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo23UIActivityIndicatorView"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo13UIApplication"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo11UIImageView"
+- !private "CSo7UILabel"
+- !private "CSo19UILocalNotification"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "OSC16UIStatusBarStyle"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- "C12Dissertation14ViewController"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Supporting Files/ObjCBridge.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/EstimoteSDK.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.swiftmodule"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTUtilityManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBluetoothBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDevice.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceNearable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceConnectable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDefinitions.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudSettingProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceNotificationProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceLocationBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconSettingsManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTPeripheralTypeUtility.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTPeripheral.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsCollection.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingBase.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsIBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEstimoteLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEstimoteTLM.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingReadWrite.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingReadOnly.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEddystoneUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEddystoneURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEddystoneTLM.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEddystoneEID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsDeviceInfo.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsGPIO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingConnectivityInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsConnectivity.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsSensors.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingsEddystoneConfigurationService.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfo.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceFilterBeaconV1.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceFilter.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceFilterLocationBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceFilterNearable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTLogger.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconManagerDelegate.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSecureBeaconManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSecureBeaconManagerDelegate.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconConnection.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconDefinitions.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTFirmwareInfoVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingConnectivityPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationConnectivityInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingOperation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationConnectivityPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerSmartPowerModeEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerFlipToSleepEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerDarkToSleepEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryLifetime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerMotionOnlyBroadcastingEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerSmartPowerModeEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerFlipToSleepEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerDarkToSleepEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationPowerBatteryLifetime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerScheduledAdvertisingEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerScheduledAdvertisingPeriod.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTimePeriod.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryPercentage.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryVoltage.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerScheduledAdvertisingEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerScheduledAdvertisingPeriod.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerBatteryPercentage.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerBatteryVoltage.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoFirmwareVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoApplicationVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoBootloaderVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoHardwareVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoUTCTime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoTags.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoGeoLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoName.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoColor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoIndoorLocationIdentifier.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoIndoorLocationName.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoUptime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoFirmwareVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoApplicationVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoBootloaderVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoHardwareVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoUTCTime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoTags.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoGeoLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoName.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoColor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoUptime.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconMajor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconMinor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconProximityUUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconSecureUUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconSecureUUIDPeriodScaler.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconNonStrictMode.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconMotionUUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingIBeaconMotionUUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMajor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMinor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconProximityUUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconSecureUUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconSecureUUIDPeriodScaler.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudOperationIBeaconNonStrictMode.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMotionUUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMotionUUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDInstance.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDNamespace.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDInstance.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDNamespace.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLData.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLData.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMpower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDPower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingGPIONotificationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTGPIOConfig.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTGPIOPortsData.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTGPIOPort.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingGPIOPortsData.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingGPIOConfigPort0.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingGPIOConfigPort1.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIONotificationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIOConfigPort0.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIOConfigPort1.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingSensorsAmbientLight.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingSensorsMotionNotificationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingSensorsTemperature.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsAmbientLight.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsMotionNotificationEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsTemperature.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNotificationMotion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNotificationGPIOData.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingEddystoneConfigurationServiceEnable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableDefinitions.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSimulatedNearableManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableSettingsManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationProtocol.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTPeripheralNearable.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingNearableInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingNearablePower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationNearableInterval.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationNearablePower.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationName.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationApplicationVersion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationHardware.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationMotionOnly.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconProximityUUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconMajor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconMinor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableOperationEddystoneURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTSettingNearableEddystoneURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBulkUpdater.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconUpdateConfig.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBeaconUpdateInfo.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTLocationBeaconBulkUpdater.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTLocationBeaconBulkUpdateConfiguration.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTriggerManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTrigger.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDateRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTProximityRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTemperatureRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTMotionRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTOrientationRule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNotificationTransporter.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystone.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneTLM.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneEID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneAttachment.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneFilter.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneFilterUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneFilterEID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneFilterURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTEddystoneFilterURLDomain.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTConfig.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTCloudManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetBeacons.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetJSON.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestBase.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetBeaconsDetails.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetBeaconsPublicDetails.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestBeaconColor.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestBeaconMac.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestAssignGPSLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestPutJSON.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestPostJSON.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestRegisterDevice.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetPendingSettings.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestCancelPendingSettings.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestDelete.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetSettingsHistory.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestGetNearables.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableFirmwareVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTNearableFirmwareUpdateVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTAnalyticsManager.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestAnalyticsTrack.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTAnalyticsEventVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestV2GetDeviceDetails.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestV2GetDevices.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestV2GetDevicesPending.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTBaseVO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceDetails.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceShadow.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceGeoLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceIndoorLocation.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettings.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsGeneral.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiser.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserIBeacon.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneUID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneURL.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneTLM.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneEID.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEstimoteTLM.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceStatusReport.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTDeviceSchedule.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTFirmwareInfoV4VO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationMotion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfoMotion.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationAmbientLight.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfoAmbientLight.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationTemperature.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfoTemperature.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationSystemStatus.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfoSystemStatus.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationMagnetometer.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryNotificationGPIO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTTelemetryInfoGPIO.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/EstimoteSDK.framework/Headers/ESTRequestBeaconDetails.h"
+- "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/DefinitionsConversion.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+interface-hash: "543ef46ab032b1369748053c2c3a53df"

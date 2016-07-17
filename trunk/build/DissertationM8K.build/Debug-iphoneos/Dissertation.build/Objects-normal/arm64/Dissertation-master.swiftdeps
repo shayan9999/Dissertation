@@ -1,0 +1,15 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "84e562795847129c783e22e469ec9084"
+build_time: [522113027, 254013000]
+inputs:
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/ProximityContentManager.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/BeaconContentFactory.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/BeaconDetailsStaticFactory.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/BeaconID.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/NearestBeaconManager.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/CachingContentFactory.swift": [521328730, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Supporting Files/Constants.swift": [522106859, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/ViewControllers/ViewController.swift": [522109543, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/AppDelegate.swift": [522110859, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/BeaconDetailsCloudFactory.swift": [522112448, 0]
+  "/Users/macbook/Workspace/Dissertation/trunk/DissertationM8K/Frameworks/Estimote/BeaconDetails.swift": [521328730, 0]
