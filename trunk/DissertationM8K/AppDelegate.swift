@@ -4,14 +4,30 @@
 
 import UIKit
 
+//#import <AWSCognito/AWSCognito.h>
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        
+        
+        // Setting up Estimote
         ESTConfig.setupAppID("dissertation-m8k", andAppToken: "59d81ff17324db3d77d9d4f0e7ad3b12")
+        
+        // Setting up AWS DynamoDB
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+                                                                identityPoolId:"us-east-1:e3ab1158-6f5a-4850-98cb-4397a9ce715c")
+        
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        
+        // Scaning DB
+        let dbManager  = SKDBManager()
+        dbManager.scanAllValues();
         
         if((launchOptions?[UIApplicationLaunchOptionsLocationKey]) != nil){
             NSLog("Opened App through notification")

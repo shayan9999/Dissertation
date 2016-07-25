@@ -3,22 +3,23 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dissertation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="Dissertation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for beacons …" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG9-FE-qhl">
-                                <rect key="frame" x="16" y="418" width="568" height="64"/>
+                                <rect key="frame" x="16" y="452" width="343" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="NCc-Uk-RBT"/>
                                 </constraints>
@@ -27,25 +28,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beacon" translatesAutoresizingMaskIntoConstraints="NO" id="c4s-G1-mae">
-                                <rect key="frame" x="220" y="158" width="160" height="210"/>
+                                <rect key="frame" x="108" y="192" width="160" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Ay1-2b-iZa"/>
                                     <constraint firstAttribute="width" constant="160" id="vKe-P1-u1R"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YOa-x4-yvX">
-                                <rect key="frame" x="282" y="490" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YOa-x4-yvX">
+                                <rect key="frame" x="170" y="524" width="37" height="37"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2F-cc-Kx5">
+                                <rect key="frame" x="16" y="27" width="86" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
+                                <state key="normal">
+                                    <string key="title">Show New
+Storyboard</string>
+                                    <color key="titleColor" red="0.95686274510000002" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.41568627450000001" green="0.63529411759999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHomeKitInterface:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahL-3h-YnU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.62745098039215685" green="0.66274509803921566" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="kG9-FE-qhl" secondAttribute="centerY" constant="-150" id="5Fd-WS-wDt"/>
                             <constraint firstItem="YOa-x4-yvX" firstAttribute="top" secondItem="kG9-FE-qhl" secondAttribute="bottom" constant="8" id="Abw-Ov-pWH"/>
+                            <constraint firstItem="w2F-cc-Kx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EO0-ab-Afc"/>
                             <constraint firstAttribute="centerY" secondItem="YOa-x4-yvX" secondAttribute="centerY" constant="-208.5" id="PIN-JD-NFd"/>
                             <constraint firstItem="kG9-FE-qhl" firstAttribute="top" secondItem="c4s-G1-mae" secondAttribute="bottom" constant="50" id="TU2-bQ-ezg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w2F-cc-Kx5" secondAttribute="bottom" constant="549" id="ZIP-KA-51h"/>
                             <constraint firstItem="kG9-FE-qhl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="bfl-9I-VoX"/>
                             <constraint firstAttribute="centerX" secondItem="c4s-G1-mae" secondAttribute="centerX" id="lfy-Ca-i0Q"/>
                             <constraint firstAttribute="centerX" secondItem="kG9-FE-qhl" secondAttribute="centerX" id="mGN-ad-EEE"/>
+                            <constraint firstItem="w2F-cc-Kx5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="v9U-eM-0Q1"/>
                             <constraint firstAttribute="centerX" secondItem="YOa-x4-yvX" secondAttribute="centerX" id="xQk-Fh-zXc"/>
                         </constraints>
                         <variation key="default">
@@ -54,6 +73,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="activityIndicator" destination="YOa-x4-yvX" id="WP2-Vm-eJ5"/>
                         <outlet property="image" destination="c4s-G1-mae" id="QNo-a8-ayx"/>
@@ -62,6 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="296" y="368"/>
         </scene>
     </scenes>
     <resources>
