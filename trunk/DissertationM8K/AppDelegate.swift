@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import CloudKit
 
 //#import <AWSCognito/AWSCognito.h>
 
@@ -13,9 +14,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UIApplication.sharedApplication().unregisterForRemoteNotifications();
+        self.initalizeExternalPlugins()
+        self.initializeNotificationsSettings()
+        
+        if((launchOptions?[UIApplicationLaunchOptionsLocationKey]) != nil){
+            NSLog("%%%%%%% Opened App through Location Notification")
+        }else if((launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey]) != nil){
+            self.resetBadgeCount()
+            NSLog("%%%%%%% Opened App through Remote Notification")
+        }
+
+        return true
+    }
+    
+    //MARK: - Application Global Setup
+    
+    func initalizeExternalPlugins(){
         
         // Setting up Estimote
         ESTConfig.setupAppID("dissertation-m8k", andAppToken: "59d81ff17324db3d77d9d4f0e7ad3b12")
+        
         
         // Setting up AWS DynamoDB
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
@@ -23,33 +42,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
-        
-        
-        // Scaning DB
-        let dbManager  = SKDBManager()
-        dbManager.scanAllValues();
-        
-        if((launchOptions?[UIApplicationLaunchOptionsLocationKey]) != nil){
-            NSLog("Opened App through notification")
-        }
-        
-        if(UIApplication.instancesRespondToSelector(#selector(UIApplication.registerUserNotificationSettings(_:)))){
-            let settingsForNotification = UIUserNotificationSettings.init(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-            application.registerUserNotificationSettings(settingsForNotification)
-        }
-
-        return true
     }
     
-    //MARK - Notifications Handlers
+    func initializeNotificationsSettings(){
+        
+        if UIApplication.sharedApplication().isRegisteredForRemoteNotifications() == false {
+            if(UIApplication.instancesRespondToSelector(#selector(UIApplication.registerUserNotificationSettings(_:)))){
+                let settingsForNotification = UIUserNotificationSettings.init(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+                UIApplication.sharedApplication().registerUserNotificationSettings(settingsForNotification)
+                UIApplication.sharedApplication().registerForRemoteNotifications()
+            }
+        }
+        
+        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
+            UIApplicationBackgroundFetchIntervalMinimum)
+    }
+    
+    
+    //MARK: - Notifications Handlers
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        print("###### Remote Notifications Registration Successful")
+        
+        //
+        let dbManager  = SKDBManager()
+        //dbManager.removeAllCloudKitSubscriptions()
+        dbManager.setupNotifications()
+    }
+    
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        let dbManager  = SKDBManager()
+        dbManager.scanAllValues()
+        completionHandler(.NewData)
+        
+        let localNotification = UILocalNotification()
+        localNotification.alertBody = "Just downloaded something in background"
+        application.presentLocalNotificationNow(localNotification)
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        
+        print("###### Local Notifications Registration Successful")
+    }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        print("###### Received Local Notification")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+
+        let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
+        
+        if cloudKitNotification.notificationType == CKNotificationType.Query {
+            // TODO: Do something with the information for the new values to be fetched
+            // TODO: Also can create notification on the basis of the information fetched
+            self.resetBadgeCount()
+            print("Notification: " + userInfo.description)
+        }
+        
+        print ("Notification: " + ((cloudKitNotification.alertBody ?? "").isEmpty ? "Default" : cloudKitNotification.alertBody!))
+        
+        completionHandler(.NewData);
         
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        
+    func resetBadgeCount(){
+        let badgeResetOperation = CKModifyBadgeOperation(badgeValue: 0)
+//        badgeResetOperation.modifyBadgeCompletionBlock = { (error) -> Void in
+//            if error != nil {
+//                print("Error resetting badge: \(error)")
+//            }
+//            else {
+//                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+//            }
+//        }
+        CKContainer.defaultContainer().addOperation(badgeResetOperation)
     }
+    
     
     //MARK - Application Lifecycle Handlers
 
@@ -65,6 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        application.applicationIconBadgeNumber = 0
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

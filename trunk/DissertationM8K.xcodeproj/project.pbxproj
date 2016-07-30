@@ -25,6 +25,10 @@
 		FAAD7CF51D3C440D008D6B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAD7CF21D3C440D008D6B1F /* Assets.xcassets */; };
 		FAAD7CFA1D3C4546008D6B1F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */; };
 		FAAD7CFC1D3C454B008D6B1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */; };
+		FAD181051D4C03DE009888C2 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181041D4C03DE009888C2 /* HomeKit.framework */; };
+		FAD181071D4C03E4009888C2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181061D4C03E4009888C2 /* HealthKit.framework */; };
+		FAD181091D4C03ED009888C2 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */; };
+		FAD1810B1D4C0406009888C2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD1810A1D4C0406009888C2 /* CloudKit.framework */; };
 		FAD196101D4681CA00919F64 /* SKTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1960F1D4681CA00919F64 /* SKTrigger.swift */; };
 		FAD196121D46889800919F64 /* SKDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196111D46889800919F64 /* SKDBManager.swift */; };
 		FAD1969A1D469B0D00919F64 /* HMCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196971D469B0D00919F64 /* HMCatalogViewController.swift */; };
@@ -124,6 +128,10 @@
 		FAAD7CF41D3C440D008D6B1F /* ObjCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAD181041D4C03DE009888C2 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		FAD181061D4C03E4009888C2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		FAD1810A1D4C0406009888C2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAD1960F1D4681CA00919F64 /* SKTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTrigger.swift; sourceTree = "<group>"; };
 		FAD196111D46889800919F64 /* SKDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDBManager.swift; sourceTree = "<group>"; };
 		FAD196971D469B0D00919F64 /* HMCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMCatalogViewController.swift; sourceTree = "<group>"; };
@@ -204,7 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAD7CFC1D3C454B008D6B1F /* CoreLocation.framework in Frameworks */,
+				FAD181051D4C03DE009888C2 /* HomeKit.framework in Frameworks */,
 				FAAD7CFA1D3C4546008D6B1F /* CoreBluetooth.framework in Frameworks */,
+				FAD181071D4C03E4009888C2 /* HealthKit.framework in Frameworks */,
+				FAD181091D4C03ED009888C2 /* ExternalAccessory.framework in Frameworks */,
+				FAD1810B1D4C0406009888C2 /* CloudKit.framework in Frameworks */,
 				FAAD7CEA1D3C4388008D6B1F /* EstimoteSDK.framework in Frameworks */,
 				85EEFCD452E60D7742E29A15 /* libPods-Dissertation.a in Frameworks */,
 			);
@@ -259,6 +271,10 @@
 		FAAD7CD61D3C4388008D6B1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAD1810A1D4C0406009888C2 /* CloudKit.framework */,
+				FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */,
+				FAD181061D4C03E4009888C2 /* HealthKit.framework */,
+				FAD181041D4C03DE009888C2 /* HomeKit.framework */,
 				FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */,
 				FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */,
 				FAAD7CD71D3C4388008D6B1F /* Estimote */,
@@ -572,6 +588,26 @@
 					AECF165A1B0E0B1000CC83B2 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = RQNGW26Y6M;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -656,7 +692,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    tags=\"TODO:\"\n    matches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\n    echo \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n    [ -z \"$matches\" ] || exit 1\nfi";
 		};
 		B06275C357F0B4095237651C /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -880,7 +916,7 @@
 				INFOPLIST_FILE = "DissertationM8K/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.HMCatalog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.Dissertation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DissertationM8K/Supporting Files/ObjCBridge.h";
@@ -901,7 +937,7 @@
 				INFOPLIST_FILE = "DissertationM8K/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.HMCatalog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.Dissertation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DissertationM8K/Supporting Files/ObjCBridge.h";
 			};

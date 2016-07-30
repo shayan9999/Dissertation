@@ -6,8 +6,10 @@
 //  Copyright © 2016 Orchard. All rights reserved.
 //
 
-import UIKit
 
-class Constants: NSObject {
+struct Constants{
+    
+    static let UDK_For_CloudKit_Changes_Notifications: String = "CLOUDKIT_CHANGES_NOTIFICATIONS_SET"
+    
 
 }
