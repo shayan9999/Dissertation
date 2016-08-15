@@ -73,28 +73,55 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
     }
     
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
-        let notification = UILocalNotification()
+        //let notification = UILocalNotification()
         var i = 0;
         for beaconID in self.allBeacons! {
             i = i+1
             if beaconID.asBeaconRegion.minor!.isEqualToNumber(region.minor!){
-                notification.alertBody = "ENTER region: Beacon" + String(i)
-                notification.soundName = UILocalNotificationDefaultSoundName
-                UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                
+                // Print which beacon's region we are entering
+                if let regionName = self.getNameForBeaconMinor(region.minor!){
+                    NSLog("Enter region: %@", regionName)
+                    
+                    let lastKnownBeaconMinor   = NSUserDefaults.standardUserDefaults().integerForKey(SKConstants.UDK_For_CloudKit_Last_Known_Beacon_Minor)
+                    
+                    if(lastKnownBeaconMinor != region.minor!){
+                        NSLog("---- New Room: %@", regionName)
+                        
+                        // Storing new room information in user defaults
+                        NSUserDefaults.standardUserDefaults().setInteger(region.minor!.integerValue, forKey: SKConstants.UDK_For_CloudKit_Last_Known_Beacon_Minor)
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        
+                        // Storing new room information in iCloud 
+                        SKDBManager.sharedInstance.writeNewRoomEntry(regionName, roomStartTime: NSDate.init() )
+                    }
+                    
+                    //if(NSUserDefaults.standardUserDefaults().valueForKey(UDK_For_CloudKit_Last_Known_Beacon_Minor))
+                }
+                
+                //notification.alertBody = "ENTER region: Beacon" + String(i)
+                //notification.soundName = UILocalNotificationDefaultSoundName
+                //UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             }
             
         }
     }
     
     func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
-        let notification = UILocalNotification()
+        //let notification = UILocalNotification()
         var i = 0;
         for beaconID in self.allBeacons! {
             i = i+1
             if beaconID.asBeaconRegion.minor!.isEqualToNumber(region.minor!){
-                notification.alertBody = "EXIT region: Beacon" + String(i)
-                notification.soundName = UILocalNotificationDefaultSoundName
-                UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                
+                // Print which beacon's region we are exiting
+                if let regionName = self.getNameForBeaconMinor(region.minor!){
+                    NSLog("EXIT region: %@", regionName)
+                }
+                
+                //notification.alertBody = "EXIT region: Beacon" + String(i)
+                //notification.soundName = UILocalNotificationDefaultSoundName
+                //UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             }
             
         }
@@ -104,7 +131,7 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
     
     func prepareTempBeacons(){
         //allBeacons = NSMutableArray(capacity: 3);
-        let beacon1: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:52022, minor:44312)
+        let beacon1: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:59901, minor:38842)
         let beacon2: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:50817, minor:7851)
         let beacon3: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:16286, minor:62081)
         
@@ -113,6 +140,22 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         allBeacons!.append(beacon2)
         allBeacons!.append(beacon3)
         
+    }
+    
+    func getNameForBeaconMinor(beaconMinor: NSNumber) -> NSString?{
+        var regionName: NSString?
+        
+        switch beaconMinor.integerValue {
+        case 38842: regionName = "Common Room"
+        case 7851:  regionName = "Kitchen"
+        case 62081: regionName = "Patio"
+        default:
+            NSLog("Error! should not try to get name for a minor value that is not in database")
+            assertionFailure()
+            regionName = nil
+        }
+        
+        return regionName
     }
     
     func prepareBeaconManager(){

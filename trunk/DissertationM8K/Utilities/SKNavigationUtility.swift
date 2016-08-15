@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NavigationUtility: NSObject {
+class SKNavigationUtility: NSObject {
     
     static func closeHomeKitSection(){
         LandingPageViewController.sharedInstance!.dismissViewControllerAnimated(true, completion: nil)

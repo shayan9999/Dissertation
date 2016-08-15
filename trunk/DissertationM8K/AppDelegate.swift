@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         self.initializeNotificationsSettings()
         
         if((launchOptions?[UIApplicationLaunchOptionsLocationKey]) != nil){
-            NSLog("%%%%%%% Opened App through Location Notification")
+            NSLog("### Opened App through Location Notification")
         }else if((launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey]) != nil){
             self.resetBadgeCount()
-            NSLog("%%%%%%% Opened App through Remote Notification")
+            NSLog("### Opened App through Remote Notification")
         }
 
         return true
@@ -58,39 +58,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
             UIApplicationBackgroundFetchIntervalMinimum)
     }
     
+    func resetBadgeCount(){
+        let badgeResetOperation = CKModifyBadgeOperation(badgeValue: 0)
+        CKContainer.defaultContainer().addOperation(badgeResetOperation)
+    }
+    
     
     //MARK: - Notifications Handlers
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         
-        print("###### Remote Notifications Registration Successful")
+        print("### Remote Notifications Registration Successful")
         
-        //
-        let dbManager  = SKDBManager()
-        //dbManager.removeAllCloudKitSubscriptions()
-        dbManager.setupNotifications()
-    }
-    
-    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        
-        let dbManager  = SKDBManager()
-        dbManager.scanAllValues()
-        completionHandler(.NewData)
-        
-        let localNotification = UILocalNotification()
-        localNotification.alertBody = "Just downloaded something in background"
-        application.presentLocalNotificationNow(localNotification)
+        //SKDBManager.sharedInstance().removeAllCloudKitSubscriptions()
+        SKDBManager.sharedInstance.setupCloudKitSubscriptions()
     }
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
         
-        print("###### Local Notifications Registration Successful")
+        print("### Local Notifications Registration Successful")
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        print("###### Received Local Notification")
+        print("### Received Local Notification")
     }
     
+    // Called when remote notification will trigger a background fetch routine
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 
         let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
@@ -108,21 +101,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
     }
     
-    func resetBadgeCount(){
-        let badgeResetOperation = CKModifyBadgeOperation(badgeValue: 0)
-//        badgeResetOperation.modifyBadgeCompletionBlock = { (error) -> Void in
-//            if error != nil {
-//                print("Error resetting badge: \(error)")
-//            }
-//            else {
-//                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-//            }
-//        }
-        CKContainer.defaultContainer().addOperation(badgeResetOperation)
+    //MARK: - Background Fetch Operations
+    
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        SKDBManager.sharedInstance.getAllTiggers()
+        completionHandler(.NewData)
+        
+        let localNotification = UILocalNotification()
+        localNotification.alertBody = "Just downloaded something in background"
+        application.presentLocalNotificationNow(localNotification)
     }
     
     
-    //MARK - Application Lifecycle Handlers
+    //MARK: - Application Lifecycle Handlers
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -11,6 +11,9 @@
 		AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
 		AECF16661B0E0B1000CC83B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16641B0E0B1000CC83B2 /* Main.storyboard */; };
 		AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */; };
+		FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7741D5CF960000FD6F5 /* SKEnums.swift */; };
+		FA26D7781D5CFD0A000FD6F5 /* HealthKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */; };
+		FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */; };
 		FAAD7CE31D3C4388008D6B1F /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */; };
 		FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */; };
 		FAAD7CE51D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */; };
@@ -99,8 +102,8 @@
 		FAD1972C1D469B5C00919F64 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F91D469B5C00919F64 /* AddRoomViewController.swift */; };
 		FAD1972D1D469B5C00919F64 /* ZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196FA1D469B5C00919F64 /* ZoneViewController.swift */; };
 		FAD197311D469BE900919F64 /* Dissertation.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAD197301D469BE900919F64 /* Dissertation.entitlements */; };
-		FAD197341D469C4900919F64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197331D469C4900919F64 /* Constants.swift */; };
-		FAD197361D46AEC900919F64 /* NavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* NavigationUtility.swift */; };
+		FAD197341D469C4900919F64 /* SKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197331D469C4900919F64 /* SKConstants.swift */; };
+		FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +114,9 @@
 		AECF16651B0E0B1000CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEFD99531BC5948700BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.debug.xcconfig"; sourceTree = "<group>"; };
+		FA26D7741D5CF960000FD6F5 /* SKEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEnums.swift; sourceTree = "<group>"; };
+		FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUtility.swift; sourceTree = "<group>"; };
+		FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEncouragement.swift; sourceTree = "<group>"; };
 		FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentFactory.swift; sourceTree = "<group>"; };
 		FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetails.swift; sourceTree = "<group>"; };
 		FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsCloudFactory.swift; sourceTree = "<group>"; };
@@ -202,8 +208,8 @@
 		FAD196F91D469B5C00919F64 /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
 		FAD196FA1D469B5C00919F64 /* ZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneViewController.swift; sourceTree = "<group>"; };
 		FAD197301D469BE900919F64 /* Dissertation.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dissertation.entitlements; sourceTree = "<group>"; };
-		FAD197331D469C4900919F64 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FAD197351D46AEC900919F64 /* NavigationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationUtility.swift; sourceTree = "<group>"; };
+		FAD197331D469C4900919F64 /* SKConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKConstants.swift; sourceTree = "<group>"; };
+		FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNavigationUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +265,7 @@
 		AECF165D1B0E0B1000CC83B2 /* Dissertation-Project */ = {
 			isa = PBXGroup;
 			children = (
+				FA26D7761D5CFCFE000FD6F5 /* HealthKitSection */,
 				FAD196961D469B0D00919F64 /* HomeKitSection */,
 				FAD1960E1D4681B300919F64 /* Models */,
 				FAD197321D469C3B00919F64 /* Utilities */,
@@ -266,6 +273,14 @@
 			);
 			name = "Dissertation-Project";
 			path = DissertationM8K;
+			sourceTree = "<group>";
+		};
+		FA26D7761D5CFCFE000FD6F5 /* HealthKitSection */ = {
+			isa = PBXGroup;
+			children = (
+				FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */,
+			);
+			path = HealthKitSection;
 			sourceTree = "<group>";
 		};
 		FAAD7CD61D3C4388008D6B1F /* Frameworks */ = {
@@ -328,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD1960F1D4681CA00919F64 /* SKTrigger.swift */,
+				FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */,
 				FAD196111D46889800919F64 /* SKDBManager.swift */,
 			);
 			path = Models;
@@ -545,8 +561,9 @@
 		FAD197321D469C3B00919F64 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FAD197331D469C4900919F64 /* Constants.swift */,
-				FAD197351D46AEC900919F64 /* NavigationUtility.swift */,
+				FA26D7741D5CF960000FD6F5 /* SKEnums.swift */,
+				FAD197331D469C4900919F64 /* SKConstants.swift */,
+				FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -588,6 +605,7 @@
 					AECF165A1B0E0B1000CC83B2 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = RQNGW26Y6M;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -717,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD1971B1D469B5C00919F64 /* CharacteristicSelectionViewController.swift in Sources */,
+				FA26D7781D5CFD0A000FD6F5 /* HealthKitUtility.swift in Sources */,
 				FAD196B31D469B4600919F64 /* UIAlertController+Convenience.swift in Sources */,
 				FAD197121D469B5C00919F64 /* ActionSetViewController.swift in Sources */,
 				FAD197021D469B5C00919F64 /* CharacteristicCell.swift in Sources */,
@@ -748,6 +767,7 @@
 				FAD1972C1D469B5C00919F64 /* AddRoomViewController.swift in Sources */,
 				FAD197221D469B5C00919F64 /* EventTriggerCreator.swift in Sources */,
 				FAD1971E1D469B5C00919F64 /* ConditionCell.swift in Sources */,
+				FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */,
 				FAD197041D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift in Sources */,
 				FAAD7CE61D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift in Sources */,
 				FAD197151D469B5C00919F64 /* HomeListViewController.swift in Sources */,
@@ -755,7 +775,7 @@
 				FAD197251D469B5C00919F64 /* LocationTriggerViewController.swift in Sources */,
 				FAD1972D1D469B5C00919F64 /* ZoneViewController.swift in Sources */,
 				FAD196B61D469B4600919F64 /* UITableViewController+Convenience.swift in Sources */,
-				FAD197341D469C4900919F64 /* Constants.swift in Sources */,
+				FAD197341D469C4900919F64 /* SKConstants.swift in Sources */,
 				FAAD7CE71D3C4388008D6B1F /* BeaconID.swift in Sources */,
 				FAD196FD1D469B5C00919F64 /* AccessoryBrowserViewController.swift in Sources */,
 				FAD196B21D469B4600919F64 /* NSPredicate+Condition.swift in Sources */,
@@ -778,7 +798,7 @@
 				FAD196B01D469B4600919F64 /* HMHome+Properties.swift in Sources */,
 				FAAD7CE81D3C4388008D6B1F /* CachingContentFactory.swift in Sources */,
 				FAD197261D469B5C00919F64 /* MapOverlayView.swift in Sources */,
-				FAD197361D46AEC900919F64 /* NavigationUtility.swift in Sources */,
+				FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */,
 				FAD197271D469B5C00919F64 /* MapViewController.swift in Sources */,
 				FAD197131D469B5C00919F64 /* HomeKitObjectCollection.swift in Sources */,
 				FAAD7CEF1D3C43C1008D6B1F /* LandingPageViewController.swift in Sources */,
@@ -791,6 +811,7 @@
 				FAD196AE1D469B4600919F64 /* HMCharacteristic+Properties.swift in Sources */,
 				FAD197181D469B5C00919F64 /* RoomViewController.swift in Sources */,
 				FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */,
+				FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */,
 				FAD197101D469B5C00919F64 /* ActionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +930,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DissertationM8K/Frameworks/Estimote",
@@ -930,6 +952,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DissertationM8K/Frameworks/Estimote",

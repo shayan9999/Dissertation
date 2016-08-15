@@ -8,20 +8,13 @@
 
 import UIKit
 
-class SKTrigger: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
+class SKTrigger{
     
     var name: String!;
     var id: NSInteger!;
-    var parameter: NSInteger!;
-    var category: NSInteger!;
-    var value: NSInteger!;
-    
-    static func dynamoDBTableName() -> String {
-        return "triggers";
-    }
-    
-    static func hashKeyAttribute() -> String {
-        return "HASH";
-    }
+    var relation: HealthDataTriggerRelation!;
+    var category: HealthDataCategory!;
+    var duration: HealthDataTriggerDuration!;
+    var constant: Double!;
 
 }
