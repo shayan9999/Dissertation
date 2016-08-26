@@ -10,11 +10,16 @@ import UIKit
 
 class SKTrigger{
     
-    var name: String!;
-    var id: NSInteger!;
-    var relation: HealthDataTriggerRelation!;
-    var category: HealthDataCategory!;
-    var duration: HealthDataTriggerDuration!;
-    var constant: Double!;
-
+    var name: String?;
+    var id: NSInteger?;
+    var relation: HealthDataTriggerRelation?;
+    var category: HealthDataCategory?;
+    var duration: HealthDataTriggerDuration?;
+    var constant: Double?;
+    
+    static func tableKeyForName()-> String {return "description"}
+    static func tableKeyForCategory()-> String {return "category"}
+    static func tableKeyForConstant()-> String {return "constant"}
+    static func tableKeyForDuration()-> String {return "duration"}
+    static func tableKeyForRelation()-> String {return "relation"}
 }

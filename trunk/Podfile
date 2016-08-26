@@ -4,25 +4,35 @@
 
 use_frameworks!
 
-target 'Dissertation' do
+target 'PatientApp' do
 
-    pod 'AWSAutoScaling'
-    pod 'AWSCloudWatch'
-    pod 'AWSCognito'
-    pod 'AWSCognitoIdentityProvider'
-    pod 'AWSDynamoDB'
-    pod 'AWSEC2'
-    pod 'AWSElasticLoadBalancing'
-    pod 'AWSIoT'
-    pod 'AWSKinesis'
-    pod 'AWSLambda'
-    pod 'AWSMachineLearning'
-    pod 'AWSMobileAnalytics'
-    pod 'AWSS3'
-    pod 'AWSSES'
-    pod 'AWSSimpleDB'
-    pod 'AWSSNS'
-    pod 'AWSSQS'
+#    pod 'AWSAutoScaling'
+#    pod 'AWSCloudWatch'
+#    pod 'AWSCognito'
+#    pod 'AWSCognitoIdentityProvider'
+#    pod 'AWSDynamoDB'
+#    pod 'AWSEC2'
+#    pod 'AWSElasticLoadBalancing'
+#    pod 'AWSIoT'
+#    pod 'AWSKinesis'
+#    pod 'AWSLambda'
+#    pod 'AWSMachineLearning'
+#    pod 'AWSMobileAnalytics'
+#    pod 'AWSS3'
+#    pod 'AWSSES'
+#    pod 'AWSSimpleDB'
+#    pod 'AWSSNS'
+#    pod 'AWSSQS'
+    pod 'Datez'
+    pod 'SVProgressHUD'
+    pod 'DOAlertController'
+end
 
+target 'CaretakerApp' do
+    pod 'Datez'
+    pod 'ScrollableGraphView'
+    pod 'ISTimeline', '~> 0.0.5'
+    pod 'SVProgressHUD'
+    pod 'DOAlertController'
 end
 

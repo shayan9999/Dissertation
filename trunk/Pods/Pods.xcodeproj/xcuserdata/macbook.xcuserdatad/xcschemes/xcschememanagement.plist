@@ -4,97 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AWSAutoScaling.xcscheme</key>
+		<key>DOAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSCloudWatch.xcscheme</key>
+		<key>Datez.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSCognito.xcscheme</key>
+		<key>ISTimeline.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSCognitoIdentityProvider.xcscheme</key>
+		<key>Pods-CaretakerApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSCore.xcscheme</key>
+		<key>Pods-PatientApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSDynamoDB.xcscheme</key>
+		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AWSEC2.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSElasticLoadBalancing.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSIoT.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSKinesis.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSLambda.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSMachineLearning.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSMobileAnalytics.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSS3.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSSES.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSSNS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSSQS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AWSSimpleDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dissertation.xcscheme</key>
+		<key>ScrollableGraphView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -102,97 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C38E98BEF937AED79BDE7E463CD5878</key>
+		<key>160A1220F863A57EEAAAF980B0C1F84C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1E0E391DDFD80715D5D46398B1FDF76E</key>
+		<key>25F13F98852A4349D8060038F08571F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C7B34EC3A628033A244CF7A1508AB8D</key>
+		<key>2620E11669D27C4FC067F6E0F7549242</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37DA8823B6E71A919A969C9729B2EC00</key>
+		<key>4670AE3FBCA0D315821AD235968DE08F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4187A5DFAC146115CF5D283EB9A121C4</key>
+		<key>5DDB59E8569DE2E43C52677AD05D65E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41CB259773DB27FC90329DAC2116B71D</key>
+		<key>9F8A912A7F631EB8BA33E40695CE2CB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D1D316CB9BD9BBE4169B95795828500</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>555CF66E5D087CB97CF592B388605B33</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5EA8D03578F9AA16EDEA592545858C6C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6303593F4DC062C401923B06E3B765E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>748C8B3AB8BC06217C07552A9EF3229D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>752C15C5550C13D37EA2BDA7AA6FC2C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7ADA487BF6E8CAB86345E2A90CDBBD89</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>901219B486CAC9F641B6BB4B7D5EB031</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A5D74149151C19435FBED7862908B355</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ABB86C28639C7AAD6EF20377352DFAE3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B05430D5F057D8F5E616DAFB92E2F72C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CEA448DB544C9DC1E5BF682A484D03DE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBE11441672D3687CCF361D5F810FB53</key>
+		<key>DC4CEECF232AF069CF9E5FE2BF3744C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

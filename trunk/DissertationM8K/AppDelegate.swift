@@ -4,6 +4,7 @@
 
 import UIKit
 import CloudKit
+import SVProgressHUD
 
 //#import <AWSCognito/AWSCognito.h>
 
@@ -37,11 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         
         // Setting up AWS DynamoDB
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-                                                                identityPoolId:"us-east-1:e3ab1158-6f5a-4850-98cb-4397a9ce715c")
+        //let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+        //                                                        identityPoolId:"us-east-1:e3ab1158-6f5a-4850-98cb-4397a9ce715c")
         
-        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        //let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        //AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        SVProgressHUD.setDefaultMaskType( SVProgressHUDMaskType.Gradient)
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Dark)
     }
     
     func initializeNotificationsSettings(){
@@ -111,6 +115,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         let localNotification = UILocalNotification()
         localNotification.alertBody = "Just downloaded something in background"
         application.presentLocalNotificationNow(localNotification)
+        
+        
     }
     
     

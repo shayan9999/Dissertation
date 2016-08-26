@@ -9,6 +9,9 @@
 import Foundation
 
 class SKEncouragement: NSObject{
-    var name: String!
-    var time: NSDate!
+    var name: String?
+    var time: NSDate?
+    
+    static func tableKeyForName()-> String {return "name"}
+    static func tableKeyForTime()-> String {return "timing"}
 }

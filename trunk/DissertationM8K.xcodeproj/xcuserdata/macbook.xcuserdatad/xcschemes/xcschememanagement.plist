@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Dissertation.xcscheme</key>
+		<key>CaretakerApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
+		<key>PatientApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>AECF165A1B0E0B1000CC83B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FABA3A241D624AAD00B70574</key>
 		<dict>
 			<key>primary</key>
 			<true/>

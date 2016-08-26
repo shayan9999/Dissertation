@@ -7,36 +7,188 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85EEFCD452E60D7742E29A15 /* libPods-Dissertation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44805096F10F280398ECDA5C /* libPods-Dissertation.a */; };
+		0863D6B6A35C4D03240B5069 /* Pods_CaretakerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815C3EFCD28E00F6AD048DE2 /* Pods_CaretakerApp.framework */; };
+		161AFA3720DDDAAC998ABA4F /* Pods_PatientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1024978350BCFC46ED5C5972 /* Pods_PatientApp.framework */; };
 		AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
-		AECF16661B0E0B1000CC83B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16641B0E0B1000CC83B2 /* Main.storyboard */; };
+		AECF16661B0E0B1000CC83B2 /* PatientApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16641B0E0B1000CC83B2 /* PatientApp.storyboard */; };
 		AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */; };
+		FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */; };
+		FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
+		FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
+		FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
 		FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7741D5CF960000FD6F5 /* SKEnums.swift */; };
-		FA26D7781D5CFD0A000FD6F5 /* HealthKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */; };
 		FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */; };
+		FA3942331D62243D007EB433 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */; };
+		FA3942341D62243D007EB433 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942171D62243D007EB433 /* SF-UI-Display-Bold.otf */; };
+		FA3942351D62243D007EB433 /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942181D62243D007EB433 /* SF-UI-Display-Heavy.otf */; };
+		FA3942361D62243D007EB433 /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942191D62243D007EB433 /* SF-UI-Display-Light.otf */; };
+		FA3942371D62243D007EB433 /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421A1D62243D007EB433 /* SF-UI-Display-Medium.otf */; };
+		FA3942381D62243D007EB433 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421B1D62243D007EB433 /* SF-UI-Display-Regular.otf */; };
+		FA3942391D62243D007EB433 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421C1D62243D007EB433 /* SF-UI-Display-Semibold.otf */; };
+		FA39423A1D62243D007EB433 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421D1D62243D007EB433 /* SF-UI-Display-Thin.otf */; };
+		FA39423B1D62243D007EB433 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421E1D62243D007EB433 /* SF-UI-Display-Ultralight.otf */; };
+		FA39423C1D62243D007EB433 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421F1D62243D007EB433 /* SF-UI-Text-Bold.otf */; };
+		FA39423D1D62243D007EB433 /* SF-UI-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942201D62243D007EB433 /* SF-UI-Text-BoldItalic.otf */; };
+		FA39423E1D62243D007EB433 /* SF-UI-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942211D62243D007EB433 /* SF-UI-Text-Heavy.otf */; };
+		FA39423F1D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942221D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf */; };
+		FA3942401D62243D007EB433 /* SF-UI-Text-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942231D62243D007EB433 /* SF-UI-Text-Italic.otf */; };
+		FA3942411D62243D007EB433 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942241D62243D007EB433 /* SF-UI-Text-Light.otf */; };
+		FA3942421D62243D007EB433 /* SF-UI-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942251D62243D007EB433 /* SF-UI-Text-LightItalic.otf */; };
+		FA3942431D62243D007EB433 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942261D62243D007EB433 /* SF-UI-Text-Medium.otf */; };
+		FA3942441D62243D007EB433 /* SF-UI-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942271D62243D007EB433 /* SF-UI-Text-MediumItalic.otf */; };
+		FA3942451D62243D007EB433 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942281D62243D007EB433 /* SF-UI-Text-Regular.otf */; };
+		FA3942461D62243D007EB433 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942291D62243D007EB433 /* SF-UI-Text-Semibold.otf */; };
+		FA3942471D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422A1D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf */; };
+		FA3942481D62243D007EB433 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422B1D62243D007EB433 /* TitilliumWeb-Black.ttf */; };
+		FA3942491D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422C1D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf */; };
+		FA39424A1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422D1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf */; };
+		FA39424B1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422E1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		FA39424C1D62243D007EB433 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422F1D62243D007EB433 /* TitilliumWeb-Italic.ttf */; };
+		FA39424D1D62243D007EB433 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942301D62243D007EB433 /* TitilliumWeb-LightItalic.ttf */; };
+		FA39424E1D62243D007EB433 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */; };
+		FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */; };
 		FAAD7CE31D3C4388008D6B1F /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */; };
 		FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */; };
 		FAAD7CE51D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */; };
 		FAAD7CE61D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDB1D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift */; };
 		FAAD7CE71D3C4388008D6B1F /* BeaconID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDC1D3C4388008D6B1F /* BeaconID.swift */; };
 		FAAD7CE81D3C4388008D6B1F /* CachingContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDD1D3C4388008D6B1F /* CachingContentFactory.swift */; };
-		FAAD7CE91D3C4388008D6B1F /* DefinitionsConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDF1D3C4388008D6B1F /* DefinitionsConversion.m */; };
 		FAAD7CEA1D3C4388008D6B1F /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CE01D3C4388008D6B1F /* EstimoteSDK.framework */; };
 		FAAD7CEB1D3C4388008D6B1F /* NearestBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CE11D3C4388008D6B1F /* NearestBeaconManager.swift */; };
 		FAAD7CEC1D3C4388008D6B1F /* ProximityContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CE21D3C4388008D6B1F /* ProximityContentManager.swift */; };
-		FAAD7CEF1D3C43C1008D6B1F /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CEE1D3C43C1008D6B1F /* LandingPageViewController.swift */; };
 		FAAD7CF51D3C440D008D6B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAD7CF21D3C440D008D6B1F /* Assets.xcassets */; };
 		FAAD7CFA1D3C4546008D6B1F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */; };
 		FAAD7CFC1D3C454B008D6B1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */; };
+		FABA3A1F1D62264500B70574 /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1C1D62264500B70574 /* Panton-ExtraBold.otf */; };
+		FABA3A201D62264500B70574 /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1D1D62264500B70574 /* Panton-Regular.otf */; };
+		FABA3A211D62264500B70574 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1E1D62264500B70574 /* Panton-Thin.otf */; };
+		FABA3A3C1D624AAD00B70574 /* ProximityContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CE21D3C4388008D6B1F /* ProximityContentManager.swift */; };
+		FABA3A401D624AAD00B70574 /* SKTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1960F1D4681CA00919F64 /* SKTrigger.swift */; };
+		FABA3A431D624AAD00B70574 /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */; };
+		FABA3A491D624AAD00B70574 /* SKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7741D5CF960000FD6F5 /* SKEnums.swift */; };
+		FABA3A4B1D624AAD00B70574 /* BeaconDetailsStaticFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDB1D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift */; };
+		FABA3A511D624AAD00B70574 /* SKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197331D469C4900919F64 /* SKConstants.swift */; };
+		FABA3A521D624AAD00B70574 /* BeaconID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDC1D3C4388008D6B1F /* BeaconID.swift */; };
+		FABA3A561D624AAD00B70574 /* NearestBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CE11D3C4388008D6B1F /* NearestBeaconManager.swift */; };
+		FABA3A671D624AAD00B70574 /* CachingContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDD1D3C4388008D6B1F /* CachingContentFactory.swift */; };
+		FABA3A6D1D624AAD00B70574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
+		FABA3A6E1D624AAD00B70574 /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */; };
+		FABA3A6F1D624AAD00B70574 /* SKDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196111D46889800919F64 /* SKDBManager.swift */; };
+		FABA3A751D624AAD00B70574 /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */; };
+		FABA3A761D624AAD00B70574 /* SKEncouragement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */; };
+		FABA3A791D624AAD00B70574 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */; };
+		FABA3A7A1D624AAD00B70574 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181041D4C03DE009888C2 /* HomeKit.framework */; };
+		FABA3A7B1D624AAD00B70574 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */; };
+		FABA3A7F1D624AAD00B70574 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAD7CE01D3C4388008D6B1F /* EstimoteSDK.framework */; };
+		FABA3A821D624AAD00B70574 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942301D62243D007EB433 /* TitilliumWeb-LightItalic.ttf */; };
+		FABA3A831D624AAD00B70574 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421C1D62243D007EB433 /* SF-UI-Display-Semibold.otf */; };
+		FABA3A841D624AAD00B70574 /* SF-UI-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942221D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf */; };
+		FABA3A851D624AAD00B70574 /* SF-UI-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942201D62243D007EB433 /* SF-UI-Text-BoldItalic.otf */; };
+		FABA3A871D624AAD00B70574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */; };
+		FABA3A881D624AAD00B70574 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		FABA3A891D624AAD00B70574 /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1D1D62264500B70574 /* Panton-Regular.otf */; };
+		FABA3A8A1D624AAD00B70574 /* SF-UI-Text-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942231D62243D007EB433 /* SF-UI-Text-Italic.otf */; };
+		FABA3A8B1D624AAD00B70574 /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942191D62243D007EB433 /* SF-UI-Display-Light.otf */; };
+		FABA3A8C1D624AAD00B70574 /* SF-UI-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942211D62243D007EB433 /* SF-UI-Text-Heavy.otf */; };
+		FABA3A8D1D624AAD00B70574 /* SF-UI-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942271D62243D007EB433 /* SF-UI-Text-MediumItalic.otf */; };
+		FABA3A8E1D624AAD00B70574 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1E1D62264500B70574 /* Panton-Thin.otf */; };
+		FABA3A8F1D624AAD00B70574 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421D1D62243D007EB433 /* SF-UI-Display-Thin.otf */; };
+		FABA3A911D624AAD00B70574 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942281D62243D007EB433 /* SF-UI-Text-Regular.otf */; };
+		FABA3A931D624AAD00B70574 /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422C1D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf */; };
+		FABA3A941D624AAD00B70574 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421E1D62243D007EB433 /* SF-UI-Display-Ultralight.otf */; };
+		FABA3A961D624AAD00B70574 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421B1D62243D007EB433 /* SF-UI-Display-Regular.otf */; };
+		FABA3A971D624AAD00B70574 /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422D1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf */; };
+		FABA3A981D624AAD00B70574 /* SF-UI-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942251D62243D007EB433 /* SF-UI-Text-LightItalic.otf */; };
+		FABA3A991D624AAD00B70574 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942261D62243D007EB433 /* SF-UI-Text-Medium.otf */; };
+		FABA3A9A1D624AAD00B70574 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422E1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		FABA3A9B1D624AAD00B70574 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */; };
+		FABA3A9C1D624AAD00B70574 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422F1D62243D007EB433 /* TitilliumWeb-Italic.ttf */; };
+		FABA3A9D1D624AAD00B70574 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421F1D62243D007EB433 /* SF-UI-Text-Bold.otf */; };
+		FABA3A9E1D624AAD00B70574 /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942181D62243D007EB433 /* SF-UI-Display-Heavy.otf */; };
+		FABA3AA11D624AAD00B70574 /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABA3A1C1D62264500B70574 /* Panton-ExtraBold.otf */; };
+		FABA3AA21D624AAD00B70574 /* Dissertation.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAD197301D469BE900919F64 /* Dissertation.entitlements */; };
+		FABA3AA31D624AAD00B70574 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422B1D62243D007EB433 /* TitilliumWeb-Black.ttf */; };
+		FABA3AA41D624AAD00B70574 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */; };
+		FABA3AA51D624AAD00B70574 /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39422A1D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf */; };
+		FABA3AA61D624AAD00B70574 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942291D62243D007EB433 /* SF-UI-Text-Semibold.otf */; };
+		FABA3AA71D624AAD00B70574 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942241D62243D007EB433 /* SF-UI-Text-Light.otf */; };
+		FABA3AA91D624AAD00B70574 /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA39421A1D62243D007EB433 /* SF-UI-Display-Medium.otf */; };
+		FABA3AAA1D624AAD00B70574 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942171D62243D007EB433 /* SF-UI-Display-Bold.otf */; };
+		FABA3AAB1D624AAD00B70574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAD7CF21D3C440D008D6B1F /* Assets.xcassets */; };
+		FABA3AB41D624ADD00B70574 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA3AB31D624ADD00B70574 /* CloudKit.framework */; };
+		FABA3AB51D624AED00B70574 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA3AB31D624ADD00B70574 /* CloudKit.framework */; };
+		FABA3AB71D624B0900B70574 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA3AB61D624B0900B70574 /* HealthKit.framework */; };
+		FABA3ABD1D62610D00B70574 /* SKNavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */; };
+		FABA3B0B1D62620A00B70574 /* HealthKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */; };
+		FABA3B0C1D62620A00B70574 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC31D62620A00B70574 /* FavoritesManager.swift */; };
+		FABA3B0D1D62620A00B70574 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC41D62620A00B70574 /* FavoritesViewController.swift */; };
+		FABA3B0E1D62620A00B70574 /* HMCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC51D62620A00B70574 /* HMCatalogViewController.swift */; };
+		FABA3B0F1D62620A00B70574 /* HomeKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AC61D62620A00B70574 /* HomeKit.storyboard */; };
+		FABA3B101D62620A00B70574 /* AccessoryBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC91D62620A00B70574 /* AccessoryBrowserViewController.swift */; };
+		FABA3B111D62620A00B70574 /* AccessoryUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ACA1D62620A00B70574 /* AccessoryUpdateController.swift */; };
+		FABA3B121D62620A00B70574 /* ControlsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ACB1D62620A00B70574 /* ControlsTableViewDataSource.swift */; };
+		FABA3B131D62620A00B70574 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ACC1D62620A00B70574 /* ControlsViewController.swift */; };
+		FABA3B141D62620A00B70574 /* ModifyAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ACD1D62620A00B70574 /* ModifyAccessoryViewController.swift */; };
+		FABA3B151D62620A00B70574 /* CharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AD01D62620A00B70574 /* CharacteristicCell.swift */; };
+		FABA3B161D62620A00B70574 /* CharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AD11D62620A00B70574 /* CharacteristicCell.xib */; };
+		FABA3B171D62620A00B70574 /* SegmentedControlCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AD21D62620A00B70574 /* SegmentedControlCharacteristicCell.swift */; };
+		FABA3B181D62620A00B70574 /* SegmentedControlCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AD31D62620A00B70574 /* SegmentedControlCharacteristicCell.xib */; };
+		FABA3B191D62620A00B70574 /* SliderCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AD41D62620A00B70574 /* SliderCharacteristicCell.swift */; };
+		FABA3B1A1D62620A00B70574 /* SliderCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AD51D62620A00B70574 /* SliderCharacteristicCell.xib */; };
+		FABA3B1B1D62620A00B70574 /* SwitchCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AD61D62620A00B70574 /* SwitchCharacteristicCell.swift */; };
+		FABA3B1C1D62620A00B70574 /* SwitchCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AD71D62620A00B70574 /* SwitchCharacteristicCell.xib */; };
+		FABA3B1D1D62620A00B70574 /* TextCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AD81D62620A00B70574 /* TextCharacteristicCell.swift */; };
+		FABA3B1E1D62620A00B70574 /* TextCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABA3AD91D62620A00B70574 /* TextCharacteristicCell.xib */; };
+		FABA3B1F1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ADA1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift */; };
+		FABA3B201D62620A00B70574 /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ADB1D62620A00B70574 /* CharacteristicsViewController.swift */; };
+		FABA3B211D62620A00B70574 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ADC1D62620A00B70574 /* ServiceCell.swift */; };
+		FABA3B221D62620A00B70574 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ADD1D62620A00B70574 /* ServicesViewController.swift */; };
+		FABA3B231D62620A00B70574 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3ADF1D62620A00B70574 /* ActionCell.swift */; };
+		FABA3B241D62620A00B70574 /* ActionSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE01D62620A00B70574 /* ActionSetCreator.swift */; };
+		FABA3B251D62620A00B70574 /* ActionSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE11D62620A00B70574 /* ActionSetViewController.swift */; };
+		FABA3B261D62620A00B70574 /* HomeKitObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE21D62620A00B70574 /* HomeKitObjectCollection.swift */; };
+		FABA3B271D62620A00B70574 /* HomeListConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE31D62620A00B70574 /* HomeListConfigurationViewController.swift */; };
+		FABA3B281D62620A00B70574 /* HomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE41D62620A00B70574 /* HomeListViewController.swift */; };
+		FABA3B291D62620A00B70574 /* HomeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE51D62620A00B70574 /* HomeStore.swift */; };
+		FABA3B2A1D62620A00B70574 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE61D62620A00B70574 /* HomeViewController.swift */; };
+		FABA3B2B1D62620A00B70574 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AE81D62620A00B70574 /* RoomViewController.swift */; };
+		FABA3B2C1D62620A00B70574 /* AddServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AEA1D62620A00B70574 /* AddServicesViewController.swift */; };
+		FABA3B2D1D62620A00B70574 /* ServiceGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AEB1D62620A00B70574 /* ServiceGroupViewController.swift */; };
+		FABA3B2E1D62620A00B70574 /* CharacteristicSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AEF1D62620A00B70574 /* CharacteristicSelectionViewController.swift */; };
+		FABA3B2F1D62620A00B70574 /* CharacteristicTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF01D62620A00B70574 /* CharacteristicTriggerCreator.swift */; };
+		FABA3B301D62620A00B70574 /* CharacteristicTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF11D62620A00B70574 /* CharacteristicTriggerViewController.swift */; };
+		FABA3B311D62620A00B70574 /* ConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF31D62620A00B70574 /* ConditionCell.swift */; };
+		FABA3B321D62620A00B70574 /* SegmentedTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF41D62620A00B70574 /* SegmentedTimeCell.swift */; };
+		FABA3B331D62620A00B70574 /* TimeConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF51D62620A00B70574 /* TimeConditionViewController.swift */; };
+		FABA3B341D62620A00B70574 /* TimePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF61D62620A00B70574 /* TimePickerCell.swift */; };
+		FABA3B351D62620A00B70574 /* EventTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF71D62620A00B70574 /* EventTriggerCreator.swift */; };
+		FABA3B361D62620A00B70574 /* EventTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AF81D62620A00B70574 /* EventTriggerViewController.swift */; };
+		FABA3B371D62620A00B70574 /* LocationTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AFA1D62620A00B70574 /* LocationTriggerCreator.swift */; };
+		FABA3B381D62620A00B70574 /* LocationTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AFB1D62620A00B70574 /* LocationTriggerViewController.swift */; };
+		FABA3B391D62620A00B70574 /* MapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AFD1D62620A00B70574 /* MapOverlayView.swift */; };
+		FABA3B3A1D62620A00B70574 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AFE1D62620A00B70574 /* MapViewController.swift */; };
+		FABA3B3B1D62620A00B70574 /* TimerTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B001D62620A00B70574 /* TimerTriggerCreator.swift */; };
+		FABA3B3C1D62620A00B70574 /* TimerTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B011D62620A00B70574 /* TimerTriggerViewController.swift */; };
+		FABA3B3D1D62620A00B70574 /* TriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B021D62620A00B70574 /* TriggerCreator.swift */; };
+		FABA3B3E1D62620A00B70574 /* TriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B031D62620A00B70574 /* TriggerViewController.swift */; };
+		FABA3B3F1D62620A00B70574 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B051D62620A00B70574 /* AddRoomViewController.swift */; };
+		FABA3B401D62620A00B70574 /* ZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B061D62620A00B70574 /* ZoneViewController.swift */; };
+		FABA3B411D62620A00B70574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B071D62620A00B70574 /* TabBarController.swift */; };
+		FABA3B421D62620A00B70574 /* HomeControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B091D62620A00B70574 /* HomeControlViewController.swift */; };
+		FABA3B431D62620A00B70574 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3B0A1D62620A00B70574 /* LandingPageViewController.swift */; };
+		FAC9F3191D6298C3000826DD /* DefinitionsConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC9F3181D6298C3000826DD /* DefinitionsConversion.m */; };
+		FAC9F31A1D6298C3000826DD /* DefinitionsConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC9F3181D6298C3000826DD /* DefinitionsConversion.m */; };
+		FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
+		FACBADAE1D6F55F700C6FD2E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACBADAD1D6F55F700C6FD2E /* ExternalAccessory.framework */; };
+		FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */; };
+		FACBADB41D6F6C1200C6FD2E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB21D6F6C1200C6FD2E /* bg.jpg */; };
+		FACBADB51D6F6C1200C6FD2E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB21D6F6C1200C6FD2E /* bg.jpg */; };
+		FACBADB61D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
+		FACBADB71D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
+		FACBADC61D6F6E0500C6FD2E /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A71D469B4600919F64 /* UIColor+Custom.swift */; };
 		FAD181051D4C03DE009888C2 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181041D4C03DE009888C2 /* HomeKit.framework */; };
-		FAD181071D4C03E4009888C2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181061D4C03E4009888C2 /* HealthKit.framework */; };
-		FAD181091D4C03ED009888C2 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */; };
-		FAD1810B1D4C0406009888C2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD1810A1D4C0406009888C2 /* CloudKit.framework */; };
 		FAD196101D4681CA00919F64 /* SKTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1960F1D4681CA00919F64 /* SKTrigger.swift */; };
 		FAD196121D46889800919F64 /* SKDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196111D46889800919F64 /* SKDBManager.swift */; };
-		FAD1969A1D469B0D00919F64 /* HMCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196971D469B0D00919F64 /* HMCatalogViewController.swift */; };
-		FAD1969B1D469B0D00919F64 /* HomeKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD196981D469B0D00919F64 /* HomeKit.storyboard */; };
-		FAD1969C1D469B0D00919F64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196991D469B0D00919F64 /* TabBarController.swift */; };
 		FAD196AB1D469B4600919F64 /* Array+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1969E1D469B4600919F64 /* Array+Sorting.swift */; };
 		FAD196AC1D469B4600919F64 /* CNMutablePostalAddress+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1969F1D469B4600919F64 /* CNMutablePostalAddress+Convenience.swift */; };
 		FAD196AD1D469B4600919F64 /* HMActionSet+BuiltIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A01D469B4600919F64 /* HMActionSet+BuiltIn.swift */; };
@@ -50,99 +202,150 @@
 		FAD196B51D469B4600919F64 /* UIStoryboardSegue+IntendedDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A81D469B4600919F64 /* UIStoryboardSegue+IntendedDestination.swift */; };
 		FAD196B61D469B4600919F64 /* UITableViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A91D469B4600919F64 /* UITableViewController+Convenience.swift */; };
 		FAD196B71D469B4600919F64 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196AA1D469B4600919F64 /* UIViewController+Convenience.swift */; };
-		FAD196FB1D469B5C00919F64 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196B91D469B5C00919F64 /* FavoritesManager.swift */; };
-		FAD196FC1D469B5C00919F64 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196BA1D469B5C00919F64 /* FavoritesViewController.swift */; };
-		FAD196FD1D469B5C00919F64 /* AccessoryBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196BD1D469B5C00919F64 /* AccessoryBrowserViewController.swift */; };
-		FAD196FE1D469B5C00919F64 /* AccessoryUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196BE1D469B5C00919F64 /* AccessoryUpdateController.swift */; };
-		FAD196FF1D469B5C00919F64 /* ControlsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196BF1D469B5C00919F64 /* ControlsTableViewDataSource.swift */; };
-		FAD197001D469B5C00919F64 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196C01D469B5C00919F64 /* ControlsViewController.swift */; };
-		FAD197011D469B5C00919F64 /* ModifyAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196C11D469B5C00919F64 /* ModifyAccessoryViewController.swift */; };
-		FAD197021D469B5C00919F64 /* CharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196C41D469B5C00919F64 /* CharacteristicCell.swift */; };
-		FAD197031D469B5C00919F64 /* CharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD196C51D469B5C00919F64 /* CharacteristicCell.xib */; };
-		FAD197041D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196C61D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift */; };
-		FAD197051D469B5C00919F64 /* SegmentedControlCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD196C71D469B5C00919F64 /* SegmentedControlCharacteristicCell.xib */; };
-		FAD197061D469B5C00919F64 /* SliderCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196C81D469B5C00919F64 /* SliderCharacteristicCell.swift */; };
-		FAD197071D469B5C00919F64 /* SliderCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD196C91D469B5C00919F64 /* SliderCharacteristicCell.xib */; };
-		FAD197081D469B5C00919F64 /* SwitchCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196CA1D469B5C00919F64 /* SwitchCharacteristicCell.swift */; };
-		FAD197091D469B5C00919F64 /* SwitchCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD196CB1D469B5C00919F64 /* SwitchCharacteristicCell.xib */; };
-		FAD1970A1D469B5C00919F64 /* TextCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196CC1D469B5C00919F64 /* TextCharacteristicCell.swift */; };
-		FAD1970B1D469B5C00919F64 /* TextCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD196CD1D469B5C00919F64 /* TextCharacteristicCell.xib */; };
-		FAD1970C1D469B5C00919F64 /* CharacteristicsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196CE1D469B5C00919F64 /* CharacteristicsTableViewDataSource.swift */; };
-		FAD1970D1D469B5C00919F64 /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196CF1D469B5C00919F64 /* CharacteristicsViewController.swift */; };
-		FAD1970E1D469B5C00919F64 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D01D469B5C00919F64 /* ServiceCell.swift */; };
-		FAD1970F1D469B5C00919F64 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D11D469B5C00919F64 /* ServicesViewController.swift */; };
-		FAD197101D469B5C00919F64 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D31D469B5C00919F64 /* ActionCell.swift */; };
-		FAD197111D469B5C00919F64 /* ActionSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D41D469B5C00919F64 /* ActionSetCreator.swift */; };
-		FAD197121D469B5C00919F64 /* ActionSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D51D469B5C00919F64 /* ActionSetViewController.swift */; };
-		FAD197131D469B5C00919F64 /* HomeKitObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D61D469B5C00919F64 /* HomeKitObjectCollection.swift */; };
-		FAD197141D469B5C00919F64 /* HomeListConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D71D469B5C00919F64 /* HomeListConfigurationViewController.swift */; };
-		FAD197151D469B5C00919F64 /* HomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D81D469B5C00919F64 /* HomeListViewController.swift */; };
-		FAD197161D469B5C00919F64 /* HomeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196D91D469B5C00919F64 /* HomeStore.swift */; };
-		FAD197171D469B5C00919F64 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196DA1D469B5C00919F64 /* HomeViewController.swift */; };
-		FAD197181D469B5C00919F64 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196DC1D469B5C00919F64 /* RoomViewController.swift */; };
-		FAD197191D469B5C00919F64 /* AddServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196DE1D469B5C00919F64 /* AddServicesViewController.swift */; };
-		FAD1971A1D469B5C00919F64 /* ServiceGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196DF1D469B5C00919F64 /* ServiceGroupViewController.swift */; };
-		FAD1971B1D469B5C00919F64 /* CharacteristicSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E31D469B5C00919F64 /* CharacteristicSelectionViewController.swift */; };
-		FAD1971C1D469B5C00919F64 /* CharacteristicTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E41D469B5C00919F64 /* CharacteristicTriggerCreator.swift */; };
-		FAD1971D1D469B5C00919F64 /* CharacteristicTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E51D469B5C00919F64 /* CharacteristicTriggerViewController.swift */; };
-		FAD1971E1D469B5C00919F64 /* ConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E71D469B5C00919F64 /* ConditionCell.swift */; };
-		FAD1971F1D469B5C00919F64 /* SegmentedTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E81D469B5C00919F64 /* SegmentedTimeCell.swift */; };
-		FAD197201D469B5C00919F64 /* TimeConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196E91D469B5C00919F64 /* TimeConditionViewController.swift */; };
-		FAD197211D469B5C00919F64 /* TimePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196EA1D469B5C00919F64 /* TimePickerCell.swift */; };
-		FAD197221D469B5C00919F64 /* EventTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196EB1D469B5C00919F64 /* EventTriggerCreator.swift */; };
-		FAD197231D469B5C00919F64 /* EventTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196EC1D469B5C00919F64 /* EventTriggerViewController.swift */; };
-		FAD197241D469B5C00919F64 /* LocationTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196EE1D469B5C00919F64 /* LocationTriggerCreator.swift */; };
-		FAD197251D469B5C00919F64 /* LocationTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196EF1D469B5C00919F64 /* LocationTriggerViewController.swift */; };
-		FAD197261D469B5C00919F64 /* MapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F11D469B5C00919F64 /* MapOverlayView.swift */; };
-		FAD197271D469B5C00919F64 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F21D469B5C00919F64 /* MapViewController.swift */; };
-		FAD197281D469B5C00919F64 /* TimerTriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F41D469B5C00919F64 /* TimerTriggerCreator.swift */; };
-		FAD197291D469B5C00919F64 /* TimerTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F51D469B5C00919F64 /* TimerTriggerViewController.swift */; };
-		FAD1972A1D469B5C00919F64 /* TriggerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F61D469B5C00919F64 /* TriggerCreator.swift */; };
-		FAD1972B1D469B5C00919F64 /* TriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F71D469B5C00919F64 /* TriggerViewController.swift */; };
-		FAD1972C1D469B5C00919F64 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196F91D469B5C00919F64 /* AddRoomViewController.swift */; };
-		FAD1972D1D469B5C00919F64 /* ZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196FA1D469B5C00919F64 /* ZoneViewController.swift */; };
 		FAD197311D469BE900919F64 /* Dissertation.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAD197301D469BE900919F64 /* Dissertation.entitlements */; };
 		FAD197341D469C4900919F64 /* SKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197331D469C4900919F64 /* SKConstants.swift */; };
 		FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */; };
+		FADFF95B1D626CB0000B50D9 /* CaretakerApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADFF9591D626CAF000B50D9 /* CaretakerApp.storyboard */; };
+		FADFF95E1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		097F55A5FFA0923377F2F053 /* Pods-Dissertation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.release.xcconfig"; sourceTree = "<group>"; };
-		44805096F10F280398ECDA5C /* libPods-Dissertation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dissertation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AECF165B1B0E0B1000CC83B2 /* Dissertation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dissertation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB1A7413C9067F28EC2B30C /* Pods-CaretakerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaretakerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaretakerApp/Pods-CaretakerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0ECD561E91B735C7FC2A19D3 /* Pods-Dissertation-Caretaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation-Caretaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation-Caretaker/Pods-Dissertation-Caretaker.release.xcconfig"; sourceTree = "<group>"; };
+		1024978350BCFC46ED5C5972 /* Pods_PatientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7DF09F19EB91F39955093E /* Pods-PatientApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatientApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PatientApp/Pods-PatientApp.release.xcconfig"; sourceTree = "<group>"; };
+		3D88F7C29B527ACAEDFFBC4D /* Pods-Dissertation-Caretaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation-Caretaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation-Caretaker/Pods-Dissertation-Caretaker.debug.xcconfig"; sourceTree = "<group>"; };
+		5967D1A5AE0DE273FF38AE27 /* Pods_Dissertation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dissertation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		815C3EFCD28E00F6AD048DE2 /* Pods_CaretakerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaretakerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C39E2D0DC496838D0BB46FA /* Pods-PatientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatientApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PatientApp/Pods-PatientApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AECF165B1B0E0B1000CC83B2 /* PatientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DissertationM8K/AppDelegate.swift; sourceTree = "<group>"; };
-		AECF16651B0E0B1000CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AECF16651B0E0B1000CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PatientApp.storyboard; sourceTree = "<group>"; };
 		AEFD99531BC5948700BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7A05A5ADFE02200B14053C0 /* Pods_Dissertation_Caretaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dissertation_Caretaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.debug.xcconfig"; sourceTree = "<group>"; };
+		FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRoomData.swift; sourceTree = "<group>"; };
+		FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStepsCount.swift; sourceTree = "<group>"; };
 		FA26D7741D5CF960000FD6F5 /* SKEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEnums.swift; sourceTree = "<group>"; };
-		FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUtility.swift; sourceTree = "<group>"; };
 		FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEncouragement.swift; sourceTree = "<group>"; };
+		FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
+		FA3942171D62243D007EB433 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		FA3942181D62243D007EB433 /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
+		FA3942191D62243D007EB433 /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		FA39421A1D62243D007EB433 /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		FA39421B1D62243D007EB433 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		FA39421C1D62243D007EB433 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
+		FA39421D1D62243D007EB433 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
+		FA39421E1D62243D007EB433 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		FA39421F1D62243D007EB433 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
+		FA3942201D62243D007EB433 /* SF-UI-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		FA3942211D62243D007EB433 /* SF-UI-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Heavy.otf"; sourceTree = "<group>"; };
+		FA3942221D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		FA3942231D62243D007EB433 /* SF-UI-Text-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Italic.otf"; sourceTree = "<group>"; };
+		FA3942241D62243D007EB433 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		FA3942251D62243D007EB433 /* SF-UI-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		FA3942261D62243D007EB433 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		FA3942271D62243D007EB433 /* SF-UI-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		FA3942281D62243D007EB433 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		FA3942291D62243D007EB433 /* SF-UI-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Semibold.otf"; sourceTree = "<group>"; };
+		FA39422A1D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		FA39422B1D62243D007EB433 /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
+		FA39422C1D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FA39422D1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FA39422E1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FA39422F1D62243D007EB433 /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
+		FA3942301D62243D007EB433 /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
+		FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsMovementViewController.swift; sourceTree = "<group>"; };
 		FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentFactory.swift; sourceTree = "<group>"; };
 		FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetails.swift; sourceTree = "<group>"; };
 		FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsCloudFactory.swift; sourceTree = "<group>"; };
 		FAAD7CDB1D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsStaticFactory.swift; sourceTree = "<group>"; };
 		FAAD7CDC1D3C4388008D6B1F /* BeaconID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconID.swift; sourceTree = "<group>"; };
 		FAAD7CDD1D3C4388008D6B1F /* CachingContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingContentFactory.swift; sourceTree = "<group>"; };
-		FAAD7CDE1D3C4388008D6B1F /* DefinitionsConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionsConversion.h; sourceTree = "<group>"; };
-		FAAD7CDF1D3C4388008D6B1F /* DefinitionsConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsConversion.m; sourceTree = "<group>"; };
 		FAAD7CE01D3C4388008D6B1F /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		FAAD7CE11D3C4388008D6B1F /* NearestBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestBeaconManager.swift; sourceTree = "<group>"; };
 		FAAD7CE21D3C4388008D6B1F /* ProximityContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityContentManager.swift; sourceTree = "<group>"; };
-		FAAD7CEE1D3C43C1008D6B1F /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		FAAD7CF21D3C440D008D6B1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAD7CF31D3C440D008D6B1F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAD7CF41D3C440D008D6B1F /* ObjCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FABA3A1C1D62264500B70574 /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraBold.otf"; sourceTree = "<group>"; };
+		FABA3A1D1D62264500B70574 /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
+		FABA3A1E1D62264500B70574 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
+		FABA3AB11D624AAD00B70574 /* CaretakerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaretakerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABA3AB21D624AAE00B70574 /* Dissertation copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dissertation copy-Info.plist"; path = "/Users/macbook/Workspace/Dissertation/Dissertation/trunk/Dissertation copy-Info.plist"; sourceTree = "<absolute>"; };
+		FABA3AB31D624ADD00B70574 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FABA3AB61D624B0900B70574 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUtility.swift; sourceTree = "<group>"; };
+		FABA3AC31D62620A00B70574 /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		FABA3AC41D62620A00B70574 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		FABA3AC51D62620A00B70574 /* HMCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMCatalogViewController.swift; sourceTree = "<group>"; };
+		FABA3AC61D62620A00B70574 /* HomeKit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeKit.storyboard; sourceTree = "<group>"; };
+		FABA3AC91D62620A00B70574 /* AccessoryBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryBrowserViewController.swift; sourceTree = "<group>"; };
+		FABA3ACA1D62620A00B70574 /* AccessoryUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryUpdateController.swift; sourceTree = "<group>"; };
+		FABA3ACB1D62620A00B70574 /* ControlsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsTableViewDataSource.swift; sourceTree = "<group>"; };
+		FABA3ACC1D62620A00B70574 /* ControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
+		FABA3ACD1D62620A00B70574 /* ModifyAccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAccessoryViewController.swift; sourceTree = "<group>"; };
+		FABA3AD01D62620A00B70574 /* CharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicCell.swift; sourceTree = "<group>"; };
+		FABA3AD11D62620A00B70574 /* CharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacteristicCell.xib; sourceTree = "<group>"; };
+		FABA3AD21D62620A00B70574 /* SegmentedControlCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlCharacteristicCell.swift; sourceTree = "<group>"; };
+		FABA3AD31D62620A00B70574 /* SegmentedControlCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlCharacteristicCell.xib; sourceTree = "<group>"; };
+		FABA3AD41D62620A00B70574 /* SliderCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCharacteristicCell.swift; sourceTree = "<group>"; };
+		FABA3AD51D62620A00B70574 /* SliderCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCharacteristicCell.xib; sourceTree = "<group>"; };
+		FABA3AD61D62620A00B70574 /* SwitchCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCharacteristicCell.swift; sourceTree = "<group>"; };
+		FABA3AD71D62620A00B70574 /* SwitchCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCharacteristicCell.xib; sourceTree = "<group>"; };
+		FABA3AD81D62620A00B70574 /* TextCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCharacteristicCell.swift; sourceTree = "<group>"; };
+		FABA3AD91D62620A00B70574 /* TextCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCharacteristicCell.xib; sourceTree = "<group>"; };
+		FABA3ADA1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicsTableViewDataSource.swift; sourceTree = "<group>"; };
+		FABA3ADB1D62620A00B70574 /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
+		FABA3ADC1D62620A00B70574 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		FABA3ADD1D62620A00B70574 /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		FABA3ADF1D62620A00B70574 /* ActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		FABA3AE01D62620A00B70574 /* ActionSetCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetCreator.swift; sourceTree = "<group>"; };
+		FABA3AE11D62620A00B70574 /* ActionSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetViewController.swift; sourceTree = "<group>"; };
+		FABA3AE21D62620A00B70574 /* HomeKitObjectCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKitObjectCollection.swift; sourceTree = "<group>"; };
+		FABA3AE31D62620A00B70574 /* HomeListConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListConfigurationViewController.swift; sourceTree = "<group>"; };
+		FABA3AE41D62620A00B70574 /* HomeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListViewController.swift; sourceTree = "<group>"; };
+		FABA3AE51D62620A00B70574 /* HomeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStore.swift; sourceTree = "<group>"; };
+		FABA3AE61D62620A00B70574 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FABA3AE81D62620A00B70574 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		FABA3AEA1D62620A00B70574 /* AddServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServicesViewController.swift; sourceTree = "<group>"; };
+		FABA3AEB1D62620A00B70574 /* ServiceGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGroupViewController.swift; sourceTree = "<group>"; };
+		FABA3AEF1D62620A00B70574 /* CharacteristicSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicSelectionViewController.swift; sourceTree = "<group>"; };
+		FABA3AF01D62620A00B70574 /* CharacteristicTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicTriggerCreator.swift; sourceTree = "<group>"; };
+		FABA3AF11D62620A00B70574 /* CharacteristicTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicTriggerViewController.swift; sourceTree = "<group>"; };
+		FABA3AF31D62620A00B70574 /* ConditionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionCell.swift; sourceTree = "<group>"; };
+		FABA3AF41D62620A00B70574 /* SegmentedTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedTimeCell.swift; sourceTree = "<group>"; };
+		FABA3AF51D62620A00B70574 /* TimeConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeConditionViewController.swift; sourceTree = "<group>"; };
+		FABA3AF61D62620A00B70574 /* TimePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerCell.swift; sourceTree = "<group>"; };
+		FABA3AF71D62620A00B70574 /* EventTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTriggerCreator.swift; sourceTree = "<group>"; };
+		FABA3AF81D62620A00B70574 /* EventTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTriggerViewController.swift; sourceTree = "<group>"; };
+		FABA3AFA1D62620A00B70574 /* LocationTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerCreator.swift; sourceTree = "<group>"; };
+		FABA3AFB1D62620A00B70574 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; };
+		FABA3AFD1D62620A00B70574 /* MapOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverlayView.swift; sourceTree = "<group>"; };
+		FABA3AFE1D62620A00B70574 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FABA3B001D62620A00B70574 /* TimerTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTriggerCreator.swift; sourceTree = "<group>"; };
+		FABA3B011D62620A00B70574 /* TimerTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTriggerViewController.swift; sourceTree = "<group>"; };
+		FABA3B021D62620A00B70574 /* TriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerCreator.swift; sourceTree = "<group>"; };
+		FABA3B031D62620A00B70574 /* TriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerViewController.swift; sourceTree = "<group>"; };
+		FABA3B051D62620A00B70574 /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
+		FABA3B061D62620A00B70574 /* ZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneViewController.swift; sourceTree = "<group>"; };
+		FABA3B071D62620A00B70574 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FABA3B091D62620A00B70574 /* HomeControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeControlViewController.swift; sourceTree = "<group>"; };
+		FABA3B0A1D62620A00B70574 /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		FAC9F3171D6298C3000826DD /* DefinitionsConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionsConversion.h; sourceTree = "<group>"; };
+		FAC9F3181D6298C3000826DD /* DefinitionsConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsConversion.m; sourceTree = "<group>"; };
+		FACBADAD1D6F55F700C6FD2E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
+		FACBADB21D6F6C1200C6FD2E /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		FACBADB31D6F6C1200C6FD2E /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
 		FAD181041D4C03DE009888C2 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
-		FAD181061D4C03E4009888C2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
-		FAD1810A1D4C0406009888C2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAD1960F1D4681CA00919F64 /* SKTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTrigger.swift; sourceTree = "<group>"; };
 		FAD196111D46889800919F64 /* SKDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDBManager.swift; sourceTree = "<group>"; };
-		FAD196971D469B0D00919F64 /* HMCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMCatalogViewController.swift; sourceTree = "<group>"; };
-		FAD196981D469B0D00919F64 /* HomeKit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeKit.storyboard; sourceTree = "<group>"; };
-		FAD196991D469B0D00919F64 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FAD1969E1D469B4600919F64 /* Array+Sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Sorting.swift"; sourceTree = "<group>"; };
 		FAD1969F1D469B4600919F64 /* CNMutablePostalAddress+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNMutablePostalAddress+Convenience.swift"; sourceTree = "<group>"; };
 		FAD196A01D469B4600919F64 /* HMActionSet+BuiltIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMActionSet+BuiltIn.swift"; sourceTree = "<group>"; };
@@ -156,60 +359,12 @@
 		FAD196A81D469B4600919F64 /* UIStoryboardSegue+IntendedDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+IntendedDestination.swift"; sourceTree = "<group>"; };
 		FAD196A91D469B4600919F64 /* UITableViewController+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Convenience.swift"; sourceTree = "<group>"; };
 		FAD196AA1D469B4600919F64 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
-		FAD196B91D469B5C00919F64 /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
-		FAD196BA1D469B5C00919F64 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		FAD196BD1D469B5C00919F64 /* AccessoryBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryBrowserViewController.swift; sourceTree = "<group>"; };
-		FAD196BE1D469B5C00919F64 /* AccessoryUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryUpdateController.swift; sourceTree = "<group>"; };
-		FAD196BF1D469B5C00919F64 /* ControlsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsTableViewDataSource.swift; sourceTree = "<group>"; };
-		FAD196C01D469B5C00919F64 /* ControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
-		FAD196C11D469B5C00919F64 /* ModifyAccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyAccessoryViewController.swift; sourceTree = "<group>"; };
-		FAD196C41D469B5C00919F64 /* CharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicCell.swift; sourceTree = "<group>"; };
-		FAD196C51D469B5C00919F64 /* CharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacteristicCell.xib; sourceTree = "<group>"; };
-		FAD196C61D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlCharacteristicCell.swift; sourceTree = "<group>"; };
-		FAD196C71D469B5C00919F64 /* SegmentedControlCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlCharacteristicCell.xib; sourceTree = "<group>"; };
-		FAD196C81D469B5C00919F64 /* SliderCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCharacteristicCell.swift; sourceTree = "<group>"; };
-		FAD196C91D469B5C00919F64 /* SliderCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCharacteristicCell.xib; sourceTree = "<group>"; };
-		FAD196CA1D469B5C00919F64 /* SwitchCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCharacteristicCell.swift; sourceTree = "<group>"; };
-		FAD196CB1D469B5C00919F64 /* SwitchCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCharacteristicCell.xib; sourceTree = "<group>"; };
-		FAD196CC1D469B5C00919F64 /* TextCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCharacteristicCell.swift; sourceTree = "<group>"; };
-		FAD196CD1D469B5C00919F64 /* TextCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCharacteristicCell.xib; sourceTree = "<group>"; };
-		FAD196CE1D469B5C00919F64 /* CharacteristicsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicsTableViewDataSource.swift; sourceTree = "<group>"; };
-		FAD196CF1D469B5C00919F64 /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
-		FAD196D01D469B5C00919F64 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
-		FAD196D11D469B5C00919F64 /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
-		FAD196D31D469B5C00919F64 /* ActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
-		FAD196D41D469B5C00919F64 /* ActionSetCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetCreator.swift; sourceTree = "<group>"; };
-		FAD196D51D469B5C00919F64 /* ActionSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetViewController.swift; sourceTree = "<group>"; };
-		FAD196D61D469B5C00919F64 /* HomeKitObjectCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKitObjectCollection.swift; sourceTree = "<group>"; };
-		FAD196D71D469B5C00919F64 /* HomeListConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListConfigurationViewController.swift; sourceTree = "<group>"; };
-		FAD196D81D469B5C00919F64 /* HomeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListViewController.swift; sourceTree = "<group>"; };
-		FAD196D91D469B5C00919F64 /* HomeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStore.swift; sourceTree = "<group>"; };
-		FAD196DA1D469B5C00919F64 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FAD196DC1D469B5C00919F64 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
-		FAD196DE1D469B5C00919F64 /* AddServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServicesViewController.swift; sourceTree = "<group>"; };
-		FAD196DF1D469B5C00919F64 /* ServiceGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGroupViewController.swift; sourceTree = "<group>"; };
-		FAD196E31D469B5C00919F64 /* CharacteristicSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicSelectionViewController.swift; sourceTree = "<group>"; };
-		FAD196E41D469B5C00919F64 /* CharacteristicTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicTriggerCreator.swift; sourceTree = "<group>"; };
-		FAD196E51D469B5C00919F64 /* CharacteristicTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicTriggerViewController.swift; sourceTree = "<group>"; };
-		FAD196E71D469B5C00919F64 /* ConditionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionCell.swift; sourceTree = "<group>"; };
-		FAD196E81D469B5C00919F64 /* SegmentedTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedTimeCell.swift; sourceTree = "<group>"; };
-		FAD196E91D469B5C00919F64 /* TimeConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeConditionViewController.swift; sourceTree = "<group>"; };
-		FAD196EA1D469B5C00919F64 /* TimePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerCell.swift; sourceTree = "<group>"; };
-		FAD196EB1D469B5C00919F64 /* EventTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTriggerCreator.swift; sourceTree = "<group>"; };
-		FAD196EC1D469B5C00919F64 /* EventTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTriggerViewController.swift; sourceTree = "<group>"; };
-		FAD196EE1D469B5C00919F64 /* LocationTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerCreator.swift; sourceTree = "<group>"; };
-		FAD196EF1D469B5C00919F64 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; };
-		FAD196F11D469B5C00919F64 /* MapOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverlayView.swift; sourceTree = "<group>"; };
-		FAD196F21D469B5C00919F64 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		FAD196F41D469B5C00919F64 /* TimerTriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTriggerCreator.swift; sourceTree = "<group>"; };
-		FAD196F51D469B5C00919F64 /* TimerTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTriggerViewController.swift; sourceTree = "<group>"; };
-		FAD196F61D469B5C00919F64 /* TriggerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerCreator.swift; sourceTree = "<group>"; };
-		FAD196F71D469B5C00919F64 /* TriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerViewController.swift; sourceTree = "<group>"; };
-		FAD196F91D469B5C00919F64 /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
-		FAD196FA1D469B5C00919F64 /* ZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneViewController.swift; sourceTree = "<group>"; };
 		FAD197301D469BE900919F64 /* Dissertation.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dissertation.entitlements; sourceTree = "<group>"; };
 		FAD197331D469C4900919F64 /* SKConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKConstants.swift; sourceTree = "<group>"; };
 		FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNavigationUtility.swift; sourceTree = "<group>"; };
+		FADFF95A1D626CB0000B50D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DissertationM8K/Base.lproj/CaretakerApp.storyboard; sourceTree = "<group>"; };
+		FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretakerLandingPageViewController.swift; sourceTree = "<group>"; };
+		FFDF69FA438FDA88A06730D7 /* Pods-CaretakerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaretakerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaretakerApp/Pods-CaretakerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,11 +375,24 @@
 				FAAD7CFC1D3C454B008D6B1F /* CoreLocation.framework in Frameworks */,
 				FAD181051D4C03DE009888C2 /* HomeKit.framework in Frameworks */,
 				FAAD7CFA1D3C4546008D6B1F /* CoreBluetooth.framework in Frameworks */,
-				FAD181071D4C03E4009888C2 /* HealthKit.framework in Frameworks */,
-				FAD181091D4C03ED009888C2 /* ExternalAccessory.framework in Frameworks */,
-				FAD1810B1D4C0406009888C2 /* CloudKit.framework in Frameworks */,
+				FABA3AB41D624ADD00B70574 /* CloudKit.framework in Frameworks */,
+				FABA3AB71D624B0900B70574 /* HealthKit.framework in Frameworks */,
 				FAAD7CEA1D3C4388008D6B1F /* EstimoteSDK.framework in Frameworks */,
-				85EEFCD452E60D7742E29A15 /* libPods-Dissertation.a in Frameworks */,
+				FACBADAE1D6F55F700C6FD2E /* ExternalAccessory.framework in Frameworks */,
+				161AFA3720DDDAAC998ABA4F /* Pods_PatientApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABA3A781D624AAD00B70574 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABA3A791D624AAD00B70574 /* CoreLocation.framework in Frameworks */,
+				FABA3A7A1D624AAD00B70574 /* HomeKit.framework in Frameworks */,
+				FABA3A7B1D624AAD00B70574 /* CoreBluetooth.framework in Frameworks */,
+				FABA3AB51D624AED00B70574 /* CloudKit.framework in Frameworks */,
+				FABA3A7F1D624AAD00B70574 /* EstimoteSDK.framework in Frameworks */,
+				0863D6B6A35C4D03240B5069 /* Pods_CaretakerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +404,12 @@
 			children = (
 				F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */,
 				097F55A5FFA0923377F2F053 /* Pods-Dissertation.release.xcconfig */,
+				3D88F7C29B527ACAEDFFBC4D /* Pods-Dissertation-Caretaker.debug.xcconfig */,
+				0ECD561E91B735C7FC2A19D3 /* Pods-Dissertation-Caretaker.release.xcconfig */,
+				0CB1A7413C9067F28EC2B30C /* Pods-CaretakerApp.debug.xcconfig */,
+				FFDF69FA438FDA88A06730D7 /* Pods-CaretakerApp.release.xcconfig */,
+				9C39E2D0DC496838D0BB46FA /* Pods-PatientApp.debug.xcconfig */,
+				2E7DF09F19EB91F39955093E /* Pods-PatientApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -244,20 +418,23 @@
 			isa = PBXGroup;
 			children = (
 				AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */,
-				AECF16641B0E0B1000CC83B2 /* Main.storyboard */,
+				AECF16641B0E0B1000CC83B2 /* PatientApp.storyboard */,
+				FADFF9591D626CAF000B50D9 /* CaretakerApp.storyboard */,
 				AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */,
 				FAAD7CF11D3C440D008D6B1F /* Supporting Files */,
 				AECF165D1B0E0B1000CC83B2 /* Dissertation-Project */,
 				FAAD7CD61D3C4388008D6B1F /* Frameworks */,
 				AECF165C1B0E0B1000CC83B2 /* Products */,
 				23C224774D051499A8CD44D2 /* Pods */,
+				FABA3AB21D624AAE00B70574 /* Dissertation copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		AECF165C1B0E0B1000CC83B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AECF165B1B0E0B1000CC83B2 /* Dissertation.app */,
+				AECF165B1B0E0B1000CC83B2 /* PatientApp.app */,
+				FABA3AB11D624AAD00B70574 /* CaretakerApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,35 +442,68 @@
 		AECF165D1B0E0B1000CC83B2 /* Dissertation-Project */ = {
 			isa = PBXGroup;
 			children = (
-				FA26D7761D5CFCFE000FD6F5 /* HealthKitSection */,
-				FAD196961D469B0D00919F64 /* HomeKitSection */,
-				FAD1960E1D4681B300919F64 /* Models */,
 				FAD197321D469C3B00919F64 /* Utilities */,
-				FAAD7CED1D3C43C1008D6B1F /* Controllers */,
+				FAD1960E1D4681B300919F64 /* Models */,
+				FABA3ABE1D62620A00B70574 /* PatientApp */,
+				FABA3AB81D624BF600B70574 /* CaretakerApp */,
 			);
 			name = "Dissertation-Project";
 			path = DissertationM8K;
 			sourceTree = "<group>";
 		};
-		FA26D7761D5CFCFE000FD6F5 /* HealthKitSection */ = {
+		FA3942151D62243D007EB433 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FA26D7771D5CFD0A000FD6F5 /* HealthKitUtility.swift */,
+				FABA3A1C1D62264500B70574 /* Panton-ExtraBold.otf */,
+				FABA3A1D1D62264500B70574 /* Panton-Regular.otf */,
+				FABA3A1E1D62264500B70574 /* Panton-Thin.otf */,
+				FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */,
+				FA3942171D62243D007EB433 /* SF-UI-Display-Bold.otf */,
+				FA3942181D62243D007EB433 /* SF-UI-Display-Heavy.otf */,
+				FA3942191D62243D007EB433 /* SF-UI-Display-Light.otf */,
+				FA39421A1D62243D007EB433 /* SF-UI-Display-Medium.otf */,
+				FA39421B1D62243D007EB433 /* SF-UI-Display-Regular.otf */,
+				FA39421C1D62243D007EB433 /* SF-UI-Display-Semibold.otf */,
+				FA39421D1D62243D007EB433 /* SF-UI-Display-Thin.otf */,
+				FA39421E1D62243D007EB433 /* SF-UI-Display-Ultralight.otf */,
+				FA39421F1D62243D007EB433 /* SF-UI-Text-Bold.otf */,
+				FA3942201D62243D007EB433 /* SF-UI-Text-BoldItalic.otf */,
+				FA3942211D62243D007EB433 /* SF-UI-Text-Heavy.otf */,
+				FA3942221D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf */,
+				FA3942231D62243D007EB433 /* SF-UI-Text-Italic.otf */,
+				FA3942241D62243D007EB433 /* SF-UI-Text-Light.otf */,
+				FA3942251D62243D007EB433 /* SF-UI-Text-LightItalic.otf */,
+				FA3942261D62243D007EB433 /* SF-UI-Text-Medium.otf */,
+				FA3942271D62243D007EB433 /* SF-UI-Text-MediumItalic.otf */,
+				FA3942281D62243D007EB433 /* SF-UI-Text-Regular.otf */,
+				FA3942291D62243D007EB433 /* SF-UI-Text-Semibold.otf */,
+				FA39422A1D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf */,
+				FA39422B1D62243D007EB433 /* TitilliumWeb-Black.ttf */,
+				FA39422C1D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf */,
+				FA39422D1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf */,
+				FA39422E1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf */,
+				FA39422F1D62243D007EB433 /* TitilliumWeb-Italic.ttf */,
+				FA3942301D62243D007EB433 /* TitilliumWeb-LightItalic.ttf */,
+				FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */,
+				FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */,
 			);
-			path = HealthKitSection;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		FAAD7CD61D3C4388008D6B1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAD1810A1D4C0406009888C2 /* CloudKit.framework */,
-				FAD181081D4C03ED009888C2 /* ExternalAccessory.framework */,
-				FAD181061D4C03E4009888C2 /* HealthKit.framework */,
+				FACBADAD1D6F55F700C6FD2E /* ExternalAccessory.framework */,
+				FAAD7CD71D3C4388008D6B1F /* Estimote */,
+				FABA3AB61D624B0900B70574 /* HealthKit.framework */,
+				FABA3AB31D624ADD00B70574 /* CloudKit.framework */,
 				FAD181041D4C03DE009888C2 /* HomeKit.framework */,
 				FAAD7CFB1D3C454B008D6B1F /* CoreLocation.framework */,
 				FAAD7CF91D3C4546008D6B1F /* CoreBluetooth.framework */,
-				FAAD7CD71D3C4388008D6B1F /* Estimote */,
-				44805096F10F280398ECDA5C /* libPods-Dissertation.a */,
+				5967D1A5AE0DE273FF38AE27 /* Pods_Dissertation.framework */,
+				E7A05A5ADFE02200B14053C0 /* Pods_Dissertation_Caretaker.framework */,
+				815C3EFCD28E00F6AD048DE2 /* Pods_CaretakerApp.framework */,
+				1024978350BCFC46ED5C5972 /* Pods_PatientApp.framework */,
 			);
 			name = Frameworks;
 			path = DissertationM8K/Frameworks;
@@ -303,8 +513,6 @@
 			isa = PBXGroup;
 			children = (
 				FAAD7CE01D3C4388008D6B1F /* EstimoteSDK.framework */,
-				FAAD7CDE1D3C4388008D6B1F /* DefinitionsConversion.h */,
-				FAAD7CDF1D3C4388008D6B1F /* DefinitionsConversion.m */,
 				FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */,
 				FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */,
 				FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */,
@@ -317,18 +525,11 @@
 			path = Estimote;
 			sourceTree = "<group>";
 		};
-		FAAD7CED1D3C43C1008D6B1F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				FAAD7CEE1D3C43C1008D6B1F /* LandingPageViewController.swift */,
-			);
-			name = Controllers;
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		FAAD7CF11D3C440D008D6B1F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FACBADB11D6F6C1200C6FD2E /* resources */,
+				FA3942151D62243D007EB433 /* Fonts */,
 				FAD197301D469BE900919F64 /* Dissertation.entitlements */,
 				FAAD7CF21D3C440D008D6B1F /* Assets.xcassets */,
 				FAAD7CF31D3C440D008D6B1F /* Info.plist */,
@@ -339,31 +540,256 @@
 			path = "DissertationM8K/Supporting Files";
 			sourceTree = "<group>";
 		};
+		FABA3AB81D624BF600B70574 /* CaretakerApp */ = {
+			isa = PBXGroup;
+			children = (
+				FADFF95C1D626D4B000B50D9 /* ViewControllers */,
+			);
+			path = CaretakerApp;
+			sourceTree = "<group>";
+		};
+		FABA3ABE1D62620A00B70574 /* PatientApp */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3B081D62620A00B70574 /* ViewController */,
+				FABA3ABF1D62620A00B70574 /* HealthKitSection */,
+				FABA3AC11D62620A00B70574 /* HomeKitSection */,
+			);
+			path = PatientApp;
+			sourceTree = "<group>";
+		};
+		FABA3ABF1D62620A00B70574 /* HealthKitSection */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */,
+			);
+			path = HealthKitSection;
+			sourceTree = "<group>";
+		};
+		FABA3AC11D62620A00B70574 /* HomeKitSection */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AC51D62620A00B70574 /* HMCatalogViewController.swift */,
+				FABA3B071D62620A00B70574 /* TabBarController.swift */,
+				FABA3AC61D62620A00B70574 /* HomeKit.storyboard */,
+				FABA3AC71D62620A00B70574 /* Homes */,
+				FABA3AC21D62620A00B70574 /* Favorites */,
+			);
+			path = HomeKitSection;
+			sourceTree = "<group>";
+		};
+		FABA3AC21D62620A00B70574 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AC31D62620A00B70574 /* FavoritesManager.swift */,
+				FABA3AC41D62620A00B70574 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		FABA3AC71D62620A00B70574 /* Homes */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AC81D62620A00B70574 /* Accessories */,
+				FABA3ADE1D62620A00B70574 /* Action Sets */,
+				FABA3AE21D62620A00B70574 /* HomeKitObjectCollection.swift */,
+				FABA3AE31D62620A00B70574 /* HomeListConfigurationViewController.swift */,
+				FABA3AE41D62620A00B70574 /* HomeListViewController.swift */,
+				FABA3AE51D62620A00B70574 /* HomeStore.swift */,
+				FABA3AE61D62620A00B70574 /* HomeViewController.swift */,
+				FABA3AE71D62620A00B70574 /* Rooms */,
+				FABA3AE91D62620A00B70574 /* Service Groups */,
+				FABA3AEC1D62620A00B70574 /* Triggers */,
+				FABA3B041D62620A00B70574 /* Zones */,
+			);
+			path = Homes;
+			sourceTree = "<group>";
+		};
+		FABA3AC81D62620A00B70574 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AC91D62620A00B70574 /* AccessoryBrowserViewController.swift */,
+				FABA3ACA1D62620A00B70574 /* AccessoryUpdateController.swift */,
+				FABA3ACB1D62620A00B70574 /* ControlsTableViewDataSource.swift */,
+				FABA3ACC1D62620A00B70574 /* ControlsViewController.swift */,
+				FABA3ACD1D62620A00B70574 /* ModifyAccessoryViewController.swift */,
+				FABA3ACE1D62620A00B70574 /* Services */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
+		FABA3ACE1D62620A00B70574 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3ACF1D62620A00B70574 /* Characteristic Cells */,
+				FABA3ADA1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift */,
+				FABA3ADB1D62620A00B70574 /* CharacteristicsViewController.swift */,
+				FABA3ADC1D62620A00B70574 /* ServiceCell.swift */,
+				FABA3ADD1D62620A00B70574 /* ServicesViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FABA3ACF1D62620A00B70574 /* Characteristic Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AD01D62620A00B70574 /* CharacteristicCell.swift */,
+				FABA3AD11D62620A00B70574 /* CharacteristicCell.xib */,
+				FABA3AD21D62620A00B70574 /* SegmentedControlCharacteristicCell.swift */,
+				FABA3AD31D62620A00B70574 /* SegmentedControlCharacteristicCell.xib */,
+				FABA3AD41D62620A00B70574 /* SliderCharacteristicCell.swift */,
+				FABA3AD51D62620A00B70574 /* SliderCharacteristicCell.xib */,
+				FABA3AD61D62620A00B70574 /* SwitchCharacteristicCell.swift */,
+				FABA3AD71D62620A00B70574 /* SwitchCharacteristicCell.xib */,
+				FABA3AD81D62620A00B70574 /* TextCharacteristicCell.swift */,
+				FABA3AD91D62620A00B70574 /* TextCharacteristicCell.xib */,
+			);
+			path = "Characteristic Cells";
+			sourceTree = "<group>";
+		};
+		FABA3ADE1D62620A00B70574 /* Action Sets */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3ADF1D62620A00B70574 /* ActionCell.swift */,
+				FABA3AE01D62620A00B70574 /* ActionSetCreator.swift */,
+				FABA3AE11D62620A00B70574 /* ActionSetViewController.swift */,
+			);
+			path = "Action Sets";
+			sourceTree = "<group>";
+		};
+		FABA3AE71D62620A00B70574 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AE81D62620A00B70574 /* RoomViewController.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		FABA3AE91D62620A00B70574 /* Service Groups */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AEA1D62620A00B70574 /* AddServicesViewController.swift */,
+				FABA3AEB1D62620A00B70574 /* ServiceGroupViewController.swift */,
+			);
+			path = "Service Groups";
+			sourceTree = "<group>";
+		};
+		FABA3AEC1D62620A00B70574 /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AED1D62620A00B70574 /* Event */,
+				FABA3AFF1D62620A00B70574 /* Timer */,
+				FABA3B021D62620A00B70574 /* TriggerCreator.swift */,
+				FABA3B031D62620A00B70574 /* TriggerViewController.swift */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
+		FABA3AED1D62620A00B70574 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AEE1D62620A00B70574 /* Characteristic */,
+				FABA3AF21D62620A00B70574 /* Conditions */,
+				FABA3AF71D62620A00B70574 /* EventTriggerCreator.swift */,
+				FABA3AF81D62620A00B70574 /* EventTriggerViewController.swift */,
+				FABA3AF91D62620A00B70574 /* Location */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		FABA3AEE1D62620A00B70574 /* Characteristic */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AEF1D62620A00B70574 /* CharacteristicSelectionViewController.swift */,
+				FABA3AF01D62620A00B70574 /* CharacteristicTriggerCreator.swift */,
+				FABA3AF11D62620A00B70574 /* CharacteristicTriggerViewController.swift */,
+			);
+			path = Characteristic;
+			sourceTree = "<group>";
+		};
+		FABA3AF21D62620A00B70574 /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AF31D62620A00B70574 /* ConditionCell.swift */,
+				FABA3AF41D62620A00B70574 /* SegmentedTimeCell.swift */,
+				FABA3AF51D62620A00B70574 /* TimeConditionViewController.swift */,
+				FABA3AF61D62620A00B70574 /* TimePickerCell.swift */,
+			);
+			path = Conditions;
+			sourceTree = "<group>";
+		};
+		FABA3AF91D62620A00B70574 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AFA1D62620A00B70574 /* LocationTriggerCreator.swift */,
+				FABA3AFB1D62620A00B70574 /* LocationTriggerViewController.swift */,
+				FABA3AFC1D62620A00B70574 /* Mapping */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		FABA3AFC1D62620A00B70574 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3AFD1D62620A00B70574 /* MapOverlayView.swift */,
+				FABA3AFE1D62620A00B70574 /* MapViewController.swift */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		FABA3AFF1D62620A00B70574 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3B001D62620A00B70574 /* TimerTriggerCreator.swift */,
+				FABA3B011D62620A00B70574 /* TimerTriggerViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		FABA3B041D62620A00B70574 /* Zones */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3B051D62620A00B70574 /* AddRoomViewController.swift */,
+				FABA3B061D62620A00B70574 /* ZoneViewController.swift */,
+			);
+			path = Zones;
+			sourceTree = "<group>";
+		};
+		FABA3B081D62620A00B70574 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FABA3B091D62620A00B70574 /* HomeControlViewController.swift */,
+				FABA3B0A1D62620A00B70574 /* LandingPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FACBADB11D6F6C1200C6FD2E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FACBADB21D6F6C1200C6FD2E /* bg.jpg */,
+				FACBADB31D6F6C1200C6FD2E /* bg2.jpg */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		FAD1960E1D4681B300919F64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				FAD1960F1D4681CA00919F64 /* SKTrigger.swift */,
 				FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */,
+				FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */,
+				FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */,
 				FAD196111D46889800919F64 /* SKDBManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FAD196961D469B0D00919F64 /* HomeKitSection */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196B81D469B5C00919F64 /* Favorites */,
-				FAD196BB1D469B5C00919F64 /* Homes */,
-				FAD196971D469B0D00919F64 /* HMCatalogViewController.swift */,
-				FAD196991D469B0D00919F64 /* TabBarController.swift */,
-				FAD196981D469B0D00919F64 /* HomeKit.storyboard */,
-			);
-			path = HomeKitSection;
-			sourceTree = "<group>";
-		};
 		FAD1969D1D469B4600919F64 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FAC9F3171D6298C3000826DD /* DefinitionsConversion.h */,
+				FAC9F3181D6298C3000826DD /* DefinitionsConversion.m */,
 				FAD1969E1D469B4600919F64 /* Array+Sorting.swift */,
 				FAD1969F1D469B4600919F64 /* CNMutablePostalAddress+Convenience.swift */,
 				FAD196A01D469B4600919F64 /* HMActionSet+BuiltIn.swift */,
@@ -381,183 +807,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		FAD196B81D469B5C00919F64 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196B91D469B5C00919F64 /* FavoritesManager.swift */,
-				FAD196BA1D469B5C00919F64 /* FavoritesViewController.swift */,
-			);
-			path = Favorites;
-			sourceTree = "<group>";
-		};
-		FAD196BB1D469B5C00919F64 /* Homes */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196BC1D469B5C00919F64 /* Accessories */,
-				FAD196D21D469B5C00919F64 /* Action Sets */,
-				FAD196D61D469B5C00919F64 /* HomeKitObjectCollection.swift */,
-				FAD196D71D469B5C00919F64 /* HomeListConfigurationViewController.swift */,
-				FAD196D81D469B5C00919F64 /* HomeListViewController.swift */,
-				FAD196D91D469B5C00919F64 /* HomeStore.swift */,
-				FAD196DA1D469B5C00919F64 /* HomeViewController.swift */,
-				FAD196DB1D469B5C00919F64 /* Rooms */,
-				FAD196DD1D469B5C00919F64 /* Service Groups */,
-				FAD196E01D469B5C00919F64 /* Triggers */,
-				FAD196F81D469B5C00919F64 /* Zones */,
-			);
-			path = Homes;
-			sourceTree = "<group>";
-		};
-		FAD196BC1D469B5C00919F64 /* Accessories */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196BD1D469B5C00919F64 /* AccessoryBrowserViewController.swift */,
-				FAD196BE1D469B5C00919F64 /* AccessoryUpdateController.swift */,
-				FAD196BF1D469B5C00919F64 /* ControlsTableViewDataSource.swift */,
-				FAD196C01D469B5C00919F64 /* ControlsViewController.swift */,
-				FAD196C11D469B5C00919F64 /* ModifyAccessoryViewController.swift */,
-				FAD196C21D469B5C00919F64 /* Services */,
-			);
-			path = Accessories;
-			sourceTree = "<group>";
-		};
-		FAD196C21D469B5C00919F64 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196C31D469B5C00919F64 /* Characteristic Cells */,
-				FAD196CE1D469B5C00919F64 /* CharacteristicsTableViewDataSource.swift */,
-				FAD196CF1D469B5C00919F64 /* CharacteristicsViewController.swift */,
-				FAD196D01D469B5C00919F64 /* ServiceCell.swift */,
-				FAD196D11D469B5C00919F64 /* ServicesViewController.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		FAD196C31D469B5C00919F64 /* Characteristic Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196C41D469B5C00919F64 /* CharacteristicCell.swift */,
-				FAD196C51D469B5C00919F64 /* CharacteristicCell.xib */,
-				FAD196C61D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift */,
-				FAD196C71D469B5C00919F64 /* SegmentedControlCharacteristicCell.xib */,
-				FAD196C81D469B5C00919F64 /* SliderCharacteristicCell.swift */,
-				FAD196C91D469B5C00919F64 /* SliderCharacteristicCell.xib */,
-				FAD196CA1D469B5C00919F64 /* SwitchCharacteristicCell.swift */,
-				FAD196CB1D469B5C00919F64 /* SwitchCharacteristicCell.xib */,
-				FAD196CC1D469B5C00919F64 /* TextCharacteristicCell.swift */,
-				FAD196CD1D469B5C00919F64 /* TextCharacteristicCell.xib */,
-			);
-			path = "Characteristic Cells";
-			sourceTree = "<group>";
-		};
-		FAD196D21D469B5C00919F64 /* Action Sets */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196D31D469B5C00919F64 /* ActionCell.swift */,
-				FAD196D41D469B5C00919F64 /* ActionSetCreator.swift */,
-				FAD196D51D469B5C00919F64 /* ActionSetViewController.swift */,
-			);
-			path = "Action Sets";
-			sourceTree = "<group>";
-		};
-		FAD196DB1D469B5C00919F64 /* Rooms */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196DC1D469B5C00919F64 /* RoomViewController.swift */,
-			);
-			path = Rooms;
-			sourceTree = "<group>";
-		};
-		FAD196DD1D469B5C00919F64 /* Service Groups */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196DE1D469B5C00919F64 /* AddServicesViewController.swift */,
-				FAD196DF1D469B5C00919F64 /* ServiceGroupViewController.swift */,
-			);
-			path = "Service Groups";
-			sourceTree = "<group>";
-		};
-		FAD196E01D469B5C00919F64 /* Triggers */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196E11D469B5C00919F64 /* Event */,
-				FAD196F31D469B5C00919F64 /* Timer */,
-				FAD196F61D469B5C00919F64 /* TriggerCreator.swift */,
-				FAD196F71D469B5C00919F64 /* TriggerViewController.swift */,
-			);
-			path = Triggers;
-			sourceTree = "<group>";
-		};
-		FAD196E11D469B5C00919F64 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196E21D469B5C00919F64 /* Characteristic */,
-				FAD196E61D469B5C00919F64 /* Conditions */,
-				FAD196EB1D469B5C00919F64 /* EventTriggerCreator.swift */,
-				FAD196EC1D469B5C00919F64 /* EventTriggerViewController.swift */,
-				FAD196ED1D469B5C00919F64 /* Location */,
-			);
-			path = Event;
-			sourceTree = "<group>";
-		};
-		FAD196E21D469B5C00919F64 /* Characteristic */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196E31D469B5C00919F64 /* CharacteristicSelectionViewController.swift */,
-				FAD196E41D469B5C00919F64 /* CharacteristicTriggerCreator.swift */,
-				FAD196E51D469B5C00919F64 /* CharacteristicTriggerViewController.swift */,
-			);
-			path = Characteristic;
-			sourceTree = "<group>";
-		};
-		FAD196E61D469B5C00919F64 /* Conditions */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196E71D469B5C00919F64 /* ConditionCell.swift */,
-				FAD196E81D469B5C00919F64 /* SegmentedTimeCell.swift */,
-				FAD196E91D469B5C00919F64 /* TimeConditionViewController.swift */,
-				FAD196EA1D469B5C00919F64 /* TimePickerCell.swift */,
-			);
-			path = Conditions;
-			sourceTree = "<group>";
-		};
-		FAD196ED1D469B5C00919F64 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196EE1D469B5C00919F64 /* LocationTriggerCreator.swift */,
-				FAD196EF1D469B5C00919F64 /* LocationTriggerViewController.swift */,
-				FAD196F01D469B5C00919F64 /* Mapping */,
-			);
-			path = Location;
-			sourceTree = "<group>";
-		};
-		FAD196F01D469B5C00919F64 /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196F11D469B5C00919F64 /* MapOverlayView.swift */,
-				FAD196F21D469B5C00919F64 /* MapViewController.swift */,
-			);
-			path = Mapping;
-			sourceTree = "<group>";
-		};
-		FAD196F31D469B5C00919F64 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196F41D469B5C00919F64 /* TimerTriggerCreator.swift */,
-				FAD196F51D469B5C00919F64 /* TimerTriggerViewController.swift */,
-			);
-			path = Timer;
-			sourceTree = "<group>";
-		};
-		FAD196F81D469B5C00919F64 /* Zones */ = {
-			isa = PBXGroup;
-			children = (
-				FAD196F91D469B5C00919F64 /* AddRoomViewController.swift */,
-				FAD196FA1D469B5C00919F64 /* ZoneViewController.swift */,
-			);
-			path = Zones;
-			sourceTree = "<group>";
-		};
 		FAD197321D469C3B00919F64 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,12 +817,22 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		FADFF95C1D626D4B000B50D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */,
+				FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */,
+				FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AECF165A1B0E0B1000CC83B2 /* Dissertation */ = {
+		AECF165A1B0E0B1000CC83B2 /* PatientApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "Dissertation" */;
+			buildConfigurationList = AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "PatientApp" */;
 			buildPhases = (
 				A351A67690C9C13847655A73 /* Check Pods Manifest.lock */,
 				AED499A41BDA532C00445E08 /* Check TODOs */,
@@ -587,9 +846,30 @@
 			);
 			dependencies = (
 			);
-			name = Dissertation;
+			name = PatientApp;
 			productName = DissertationM8K;
-			productReference = AECF165B1B0E0B1000CC83B2 /* Dissertation.app */;
+			productReference = AECF165B1B0E0B1000CC83B2 /* PatientApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FABA3A241D624AAD00B70574 /* CaretakerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABA3AAE1D624AAD00B70574 /* Build configuration list for PBXNativeTarget "CaretakerApp" */;
+			buildPhases = (
+				FABA3A251D624AAD00B70574 /* Check Pods Manifest.lock */,
+				FABA3A261D624AAD00B70574 /* Check TODOs */,
+				FABA3A271D624AAD00B70574 /* Sources */,
+				FABA3A781D624AAD00B70574 /* Frameworks */,
+				FABA3A811D624AAD00B70574 /* Resources */,
+				FABA3AAC1D624AAD00B70574 /* Embed Pods Frameworks */,
+				FABA3AAD1D624AAD00B70574 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaretakerApp;
+			productName = DissertationM8K;
+			productReference = FABA3AB11D624AAD00B70574 /* CaretakerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -627,6 +907,23 @@
 							};
 						};
 					};
+					FABA3A241D624AAD00B70574 = {
+						DevelopmentTeam = RQNGW26Y6M;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = AECF16561B0E0B1000CC83B2 /* Build configuration list for PBXProject "DissertationM8K" */;
@@ -642,7 +939,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AECF165A1B0E0B1000CC83B2 /* Dissertation */,
+				AECF165A1B0E0B1000CC83B2 /* PatientApp */,
+				FABA3A241D624AAD00B70574 /* CaretakerApp */,
 			);
 		};
 /* End PBXProject section */
@@ -652,16 +950,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD197091D469B5C00919F64 /* SwitchCharacteristicCell.xib in Resources */,
+				FA39424D1D62243D007EB433 /* TitilliumWeb-LightItalic.ttf in Resources */,
+				FA3942391D62243D007EB433 /* SF-UI-Display-Semibold.otf in Resources */,
+				FA39423F1D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf in Resources */,
+				FA39423D1D62243D007EB433 /* SF-UI-Text-BoldItalic.otf in Resources */,
 				AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */,
-				FAD197071D469B5C00919F64 /* SliderCharacteristicCell.xib in Resources */,
-				FAD197051D469B5C00919F64 /* SegmentedControlCharacteristicCell.xib in Resources */,
-				FAD197031D469B5C00919F64 /* CharacteristicCell.xib in Resources */,
-				FAD1970B1D469B5C00919F64 /* TextCharacteristicCell.xib in Resources */,
-				AECF16661B0E0B1000CC83B2 /* Main.storyboard in Resources */,
+				FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				FABA3A201D62264500B70574 /* Panton-Regular.otf in Resources */,
+				FA3942401D62243D007EB433 /* SF-UI-Text-Italic.otf in Resources */,
+				FA3942361D62243D007EB433 /* SF-UI-Display-Light.otf in Resources */,
+				FACBADB41D6F6C1200C6FD2E /* bg.jpg in Resources */,
+				FA39423E1D62243D007EB433 /* SF-UI-Text-Heavy.otf in Resources */,
+				FA3942441D62243D007EB433 /* SF-UI-Text-MediumItalic.otf in Resources */,
+				FABA3A211D62264500B70574 /* Panton-Thin.otf in Resources */,
+				FA39423A1D62243D007EB433 /* SF-UI-Display-Thin.otf in Resources */,
+				FA3942451D62243D007EB433 /* SF-UI-Text-Regular.otf in Resources */,
+				FA3942491D62243D007EB433 /* TitilliumWeb-BoldItalic.ttf in Resources */,
+				FA39423B1D62243D007EB433 /* SF-UI-Display-Ultralight.otf in Resources */,
+				FA3942381D62243D007EB433 /* SF-UI-Display-Regular.otf in Resources */,
+				FABA3B1A1D62620A00B70574 /* SliderCharacteristicCell.xib in Resources */,
+				FABA3B1C1D62620A00B70574 /* SwitchCharacteristicCell.xib in Resources */,
+				FA39424A1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				FA3942421D62243D007EB433 /* SF-UI-Text-LightItalic.otf in Resources */,
+				FA3942431D62243D007EB433 /* SF-UI-Text-Medium.otf in Resources */,
+				FA39424B1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				FABA3B1E1D62620A00B70574 /* TextCharacteristicCell.xib in Resources */,
+				FA39424E1D62243D007EB433 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				FABA3B0F1D62620A00B70574 /* HomeKit.storyboard in Resources */,
+				FA39424C1D62243D007EB433 /* TitilliumWeb-Italic.ttf in Resources */,
+				FA39423C1D62243D007EB433 /* SF-UI-Text-Bold.otf in Resources */,
+				FA3942351D62243D007EB433 /* SF-UI-Display-Heavy.otf in Resources */,
+				AECF16661B0E0B1000CC83B2 /* PatientApp.storyboard in Resources */,
+				FACBADB61D6F6C1200C6FD2E /* bg2.jpg in Resources */,
+				FABA3A1F1D62264500B70574 /* Panton-ExtraBold.otf in Resources */,
+				FABA3B161D62620A00B70574 /* CharacteristicCell.xib in Resources */,
 				FAD197311D469BE900919F64 /* Dissertation.entitlements in Resources */,
-				FAD1969B1D469B0D00919F64 /* HomeKit.storyboard in Resources */,
+				FA3942481D62243D007EB433 /* TitilliumWeb-Black.ttf in Resources */,
+				FA3942331D62243D007EB433 /* SF-UI-Display-Black.otf in Resources */,
+				FA3942471D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
+				FA3942461D62243D007EB433 /* SF-UI-Text-Semibold.otf in Resources */,
+				FABA3B181D62620A00B70574 /* SegmentedControlCharacteristicCell.xib in Resources */,
+				FA3942411D62243D007EB433 /* SF-UI-Text-Light.otf in Resources */,
+				FA3942371D62243D007EB433 /* SF-UI-Display-Medium.otf in Resources */,
+				FA3942341D62243D007EB433 /* SF-UI-Display-Bold.otf in Resources */,
 				FAAD7CF51D3C440D008D6B1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABA3A811D624AAD00B70574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABA3A821D624AAD00B70574 /* TitilliumWeb-LightItalic.ttf in Resources */,
+				FABA3A831D624AAD00B70574 /* SF-UI-Display-Semibold.otf in Resources */,
+				FABA3A841D624AAD00B70574 /* SF-UI-Text-HeavyItalic.otf in Resources */,
+				FABA3A851D624AAD00B70574 /* SF-UI-Text-BoldItalic.otf in Resources */,
+				FABA3A871D624AAD00B70574 /* LaunchScreen.storyboard in Resources */,
+				FABA3A881D624AAD00B70574 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				FABA3A891D624AAD00B70574 /* Panton-Regular.otf in Resources */,
+				FABA3A8A1D624AAD00B70574 /* SF-UI-Text-Italic.otf in Resources */,
+				FABA3A8B1D624AAD00B70574 /* SF-UI-Display-Light.otf in Resources */,
+				FADFF95B1D626CB0000B50D9 /* CaretakerApp.storyboard in Resources */,
+				FABA3A8C1D624AAD00B70574 /* SF-UI-Text-Heavy.otf in Resources */,
+				FABA3A8D1D624AAD00B70574 /* SF-UI-Text-MediumItalic.otf in Resources */,
+				FACBADB51D6F6C1200C6FD2E /* bg.jpg in Resources */,
+				FABA3A8E1D624AAD00B70574 /* Panton-Thin.otf in Resources */,
+				FABA3A8F1D624AAD00B70574 /* SF-UI-Display-Thin.otf in Resources */,
+				FABA3A911D624AAD00B70574 /* SF-UI-Text-Regular.otf in Resources */,
+				FABA3A931D624AAD00B70574 /* TitilliumWeb-BoldItalic.ttf in Resources */,
+				FABA3A941D624AAD00B70574 /* SF-UI-Display-Ultralight.otf in Resources */,
+				FABA3A961D624AAD00B70574 /* SF-UI-Display-Regular.otf in Resources */,
+				FABA3A971D624AAD00B70574 /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				FABA3A981D624AAD00B70574 /* SF-UI-Text-LightItalic.otf in Resources */,
+				FABA3A991D624AAD00B70574 /* SF-UI-Text-Medium.otf in Resources */,
+				FABA3A9A1D624AAD00B70574 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				FABA3A9B1D624AAD00B70574 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				FABA3A9C1D624AAD00B70574 /* TitilliumWeb-Italic.ttf in Resources */,
+				FABA3A9D1D624AAD00B70574 /* SF-UI-Text-Bold.otf in Resources */,
+				FABA3A9E1D624AAD00B70574 /* SF-UI-Display-Heavy.otf in Resources */,
+				FABA3AA11D624AAD00B70574 /* Panton-ExtraBold.otf in Resources */,
+				FABA3AA21D624AAD00B70574 /* Dissertation.entitlements in Resources */,
+				FABA3AA31D624AAD00B70574 /* TitilliumWeb-Black.ttf in Resources */,
+				FABA3AA41D624AAD00B70574 /* SF-UI-Display-Black.otf in Resources */,
+				FACBADB71D6F6C1200C6FD2E /* bg2.jpg in Resources */,
+				FABA3AA51D624AAD00B70574 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
+				FABA3AA61D624AAD00B70574 /* SF-UI-Text-Semibold.otf in Resources */,
+				FABA3AA71D624AAD00B70574 /* SF-UI-Text-Light.otf in Resources */,
+				FABA3AA91D624AAD00B70574 /* SF-UI-Display-Medium.otf in Resources */,
+				FABA3AAA1D624AAD00B70574 /* SF-UI-Display-Bold.otf in Resources */,
+				FABA3AAB1D624AAD00B70574 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +1057,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PatientApp/Pods-PatientApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A351A67690C9C13847655A73 /* Check Pods Manifest.lock */ = {
@@ -724,7 +1101,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PatientApp/Pods-PatientApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABA3A251D624AAD00B70574 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FABA3A261D624AAD00B70574 /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    tags=\"TODO:\"\n    matches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\n    echo \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n    [ -z \"$matches\" ] || exit 1\nfi";
+		};
+		FABA3AAC1D624AAD00B70574 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaretakerApp/Pods-CaretakerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABA3AAD1D624AAD00B70574 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaretakerApp/Pods-CaretakerApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -734,97 +1170,129 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD1971B1D469B5C00919F64 /* CharacteristicSelectionViewController.swift in Sources */,
-				FA26D7781D5CFD0A000FD6F5 /* HealthKitUtility.swift in Sources */,
+				FABA3B321D62620A00B70574 /* SegmentedTimeCell.swift in Sources */,
 				FAD196B31D469B4600919F64 /* UIAlertController+Convenience.swift in Sources */,
-				FAD197121D469B5C00919F64 /* ActionSetViewController.swift in Sources */,
-				FAD197021D469B5C00919F64 /* CharacteristicCell.swift in Sources */,
-				FAD196FB1D469B5C00919F64 /* FavoritesManager.swift in Sources */,
-				FAD1969A1D469B0D00919F64 /* HMCatalogViewController.swift in Sources */,
-				FAD1972B1D469B5C00919F64 /* TriggerViewController.swift in Sources */,
-				FAD197081D469B5C00919F64 /* SwitchCharacteristicCell.swift in Sources */,
-				FAD197001D469B5C00919F64 /* ControlsViewController.swift in Sources */,
-				FAD1969C1D469B0D00919F64 /* TabBarController.swift in Sources */,
-				FAD1971A1D469B5C00919F64 /* ServiceGroupViewController.swift in Sources */,
-				FAD197011D469B5C00919F64 /* ModifyAccessoryViewController.swift in Sources */,
-				FAD1972A1D469B5C00919F64 /* TriggerCreator.swift in Sources */,
 				FAD196AB1D469B4600919F64 /* Array+Sorting.swift in Sources */,
-				FAD197211D469B5C00919F64 /* TimePickerCell.swift in Sources */,
-				FAD197111D469B5C00919F64 /* ActionSetCreator.swift in Sources */,
-				FAD197191D469B5C00919F64 /* AddServicesViewController.swift in Sources */,
 				FAD196AD1D469B4600919F64 /* HMActionSet+BuiltIn.swift in Sources */,
-				FAD1970A1D469B5C00919F64 /* TextCharacteristicCell.swift in Sources */,
 				FAAD7CEC1D3C4388008D6B1F /* ProximityContentManager.swift in Sources */,
 				FAD196B41D469B4600919F64 /* UIColor+Custom.swift in Sources */,
 				FAD196AF1D469B4600919F64 /* HMEventTrigger+Convenience.swift in Sources */,
-				FAD197161D469B5C00919F64 /* HomeStore.swift in Sources */,
+				FABA3B121D62620A00B70574 /* ControlsTableViewDataSource.swift in Sources */,
+				FABA3B111D62620A00B70574 /* AccessoryUpdateController.swift in Sources */,
+				FABA3B381D62620A00B70574 /* LocationTriggerViewController.swift in Sources */,
 				FAD196101D4681CA00919F64 /* SKTrigger.swift in Sources */,
-				FAD197241D469B5C00919F64 /* LocationTriggerCreator.swift in Sources */,
-				FAD196FE1D469B5C00919F64 /* AccessoryUpdateController.swift in Sources */,
+				FABA3B2E1D62620A00B70574 /* CharacteristicSelectionViewController.swift in Sources */,
+				FABA3B231D62620A00B70574 /* ActionCell.swift in Sources */,
+				FABA3B191D62620A00B70574 /* SliderCharacteristicCell.swift in Sources */,
 				FAAD7CE31D3C4388008D6B1F /* BeaconContentFactory.swift in Sources */,
-				FAD197171D469B5C00919F64 /* HomeViewController.swift in Sources */,
-				FAD1970E1D469B5C00919F64 /* ServiceCell.swift in Sources */,
-				FAD1972C1D469B5C00919F64 /* AddRoomViewController.swift in Sources */,
-				FAD197221D469B5C00919F64 /* EventTriggerCreator.swift in Sources */,
-				FAD1971E1D469B5C00919F64 /* ConditionCell.swift in Sources */,
 				FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */,
-				FAD197041D469B5C00919F64 /* SegmentedControlCharacteristicCell.swift in Sources */,
+				FABA3B141D62620A00B70574 /* ModifyAccessoryViewController.swift in Sources */,
 				FAAD7CE61D3C4388008D6B1F /* BeaconDetailsStaticFactory.swift in Sources */,
-				FAD197151D469B5C00919F64 /* HomeListViewController.swift in Sources */,
-				FAD197201D469B5C00919F64 /* TimeConditionViewController.swift in Sources */,
-				FAD197251D469B5C00919F64 /* LocationTriggerViewController.swift in Sources */,
-				FAD1972D1D469B5C00919F64 /* ZoneViewController.swift in Sources */,
+				FAC9F3191D6298C3000826DD /* DefinitionsConversion.m in Sources */,
+				FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */,
+				FABA3B401D62620A00B70574 /* ZoneViewController.swift in Sources */,
+				FABA3B0D1D62620A00B70574 /* FavoritesViewController.swift in Sources */,
+				FABA3B211D62620A00B70574 /* ServiceCell.swift in Sources */,
+				FABA3B331D62620A00B70574 /* TimeConditionViewController.swift in Sources */,
+				FABA3B2F1D62620A00B70574 /* CharacteristicTriggerCreator.swift in Sources */,
 				FAD196B61D469B4600919F64 /* UITableViewController+Convenience.swift in Sources */,
+				FABA3B101D62620A00B70574 /* AccessoryBrowserViewController.swift in Sources */,
+				FABA3B391D62620A00B70574 /* MapOverlayView.swift in Sources */,
 				FAD197341D469C4900919F64 /* SKConstants.swift in Sources */,
+				FABA3B411D62620A00B70574 /* TabBarController.swift in Sources */,
+				FABA3B1B1D62620A00B70574 /* SwitchCharacteristicCell.swift in Sources */,
+				FABA3B201D62620A00B70574 /* CharacteristicsViewController.swift in Sources */,
+				FABA3B131D62620A00B70574 /* ControlsViewController.swift in Sources */,
+				FABA3B2B1D62620A00B70574 /* RoomViewController.swift in Sources */,
+				FABA3B1D1D62620A00B70574 /* TextCharacteristicCell.swift in Sources */,
+				FABA3B271D62620A00B70574 /* HomeListConfigurationViewController.swift in Sources */,
+				FABA3B2D1D62620A00B70574 /* ServiceGroupViewController.swift in Sources */,
+				FABA3B431D62620A00B70574 /* LandingPageViewController.swift in Sources */,
+				FABA3B341D62620A00B70574 /* TimePickerCell.swift in Sources */,
+				FABA3B241D62620A00B70574 /* ActionSetCreator.swift in Sources */,
+				FABA3B1F1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift in Sources */,
+				FABA3B2C1D62620A00B70574 /* AddServicesViewController.swift in Sources */,
+				FABA3B301D62620A00B70574 /* CharacteristicTriggerViewController.swift in Sources */,
+				FABA3B151D62620A00B70574 /* CharacteristicCell.swift in Sources */,
+				FABA3B3A1D62620A00B70574 /* MapViewController.swift in Sources */,
+				FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */,
+				FABA3B291D62620A00B70574 /* HomeStore.swift in Sources */,
+				FABA3B3D1D62620A00B70574 /* TriggerCreator.swift in Sources */,
+				FABA3B3B1D62620A00B70574 /* TimerTriggerCreator.swift in Sources */,
 				FAAD7CE71D3C4388008D6B1F /* BeaconID.swift in Sources */,
-				FAD196FD1D469B5C00919F64 /* AccessoryBrowserViewController.swift in Sources */,
 				FAD196B21D469B4600919F64 /* NSPredicate+Condition.swift in Sources */,
-				FAD197141D469B5C00919F64 /* HomeListConfigurationViewController.swift in Sources */,
+				FABA3B0E1D62620A00B70574 /* HMCatalogViewController.swift in Sources */,
 				FAAD7CEB1D3C4388008D6B1F /* NearestBeaconManager.swift in Sources */,
-				FAD1970D1D469B5C00919F64 /* CharacteristicsViewController.swift in Sources */,
-				FAD197281D469B5C00919F64 /* TimerTriggerCreator.swift in Sources */,
-				FAD1971D1D469B5C00919F64 /* CharacteristicTriggerViewController.swift in Sources */,
-				FAD197231D469B5C00919F64 /* EventTriggerViewController.swift in Sources */,
+				FABA3B351D62620A00B70574 /* EventTriggerCreator.swift in Sources */,
 				FAD196AC1D469B4600919F64 /* CNMutablePostalAddress+Convenience.swift in Sources */,
-				FAD196FC1D469B5C00919F64 /* FavoritesViewController.swift in Sources */,
-				FAD196FF1D469B5C00919F64 /* ControlsTableViewDataSource.swift in Sources */,
+				FABA3B371D62620A00B70574 /* LocationTriggerCreator.swift in Sources */,
 				FAD196B51D469B4600919F64 /* UIStoryboardSegue+IntendedDestination.swift in Sources */,
-				FAD197061D469B5C00919F64 /* SliderCharacteristicCell.swift in Sources */,
-				FAD197291D469B5C00919F64 /* TimerTriggerViewController.swift in Sources */,
-				FAD1971C1D469B5C00919F64 /* CharacteristicTriggerCreator.swift in Sources */,
-				FAD1970C1D469B5C00919F64 /* CharacteristicsTableViewDataSource.swift in Sources */,
+				FABA3B3F1D62620A00B70574 /* AddRoomViewController.swift in Sources */,
+				FABA3B261D62620A00B70574 /* HomeKitObjectCollection.swift in Sources */,
 				FAD196B11D469B4600919F64 /* HMService+Properties.swift in Sources */,
-				FAD1970F1D469B5C00919F64 /* ServicesViewController.swift in Sources */,
 				FAD196B01D469B4600919F64 /* HMHome+Properties.swift in Sources */,
+				FABA3B251D62620A00B70574 /* ActionSetViewController.swift in Sources */,
 				FAAD7CE81D3C4388008D6B1F /* CachingContentFactory.swift in Sources */,
-				FAD197261D469B5C00919F64 /* MapOverlayView.swift in Sources */,
+				FABA3B2A1D62620A00B70574 /* HomeViewController.swift in Sources */,
 				FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */,
-				FAD197271D469B5C00919F64 /* MapViewController.swift in Sources */,
-				FAD197131D469B5C00919F64 /* HomeKitObjectCollection.swift in Sources */,
-				FAAD7CEF1D3C43C1008D6B1F /* LandingPageViewController.swift in Sources */,
 				AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */,
+				FABA3B0C1D62620A00B70574 /* FavoritesManager.swift in Sources */,
+				FABA3B281D62620A00B70574 /* HomeListViewController.swift in Sources */,
+				FABA3B3E1D62620A00B70574 /* TriggerViewController.swift in Sources */,
 				FAAD7CE51D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift in Sources */,
 				FAD196121D46889800919F64 /* SKDBManager.swift in Sources */,
-				FAD1971F1D469B5C00919F64 /* SegmentedTimeCell.swift in Sources */,
-				FAAD7CE91D3C4388008D6B1F /* DefinitionsConversion.m in Sources */,
+				FABA3B421D62620A00B70574 /* HomeControlViewController.swift in Sources */,
+				FABA3B171D62620A00B70574 /* SegmentedControlCharacteristicCell.swift in Sources */,
+				FABA3B311D62620A00B70574 /* ConditionCell.swift in Sources */,
+				FABA3B3C1D62620A00B70574 /* TimerTriggerViewController.swift in Sources */,
+				FABA3B0B1D62620A00B70574 /* HealthKitUtility.swift in Sources */,
+				FABA3B361D62620A00B70574 /* EventTriggerViewController.swift in Sources */,
 				FAD196B71D469B4600919F64 /* UIViewController+Convenience.swift in Sources */,
 				FAD196AE1D469B4600919F64 /* HMCharacteristic+Properties.swift in Sources */,
-				FAD197181D469B5C00919F64 /* RoomViewController.swift in Sources */,
 				FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */,
+				FABA3B221D62620A00B70574 /* ServicesViewController.swift in Sources */,
 				FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */,
-				FAD197101D469B5C00919F64 /* ActionCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABA3A271D624AAD00B70574 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABA3A3C1D624AAD00B70574 /* ProximityContentManager.swift in Sources */,
+				FABA3A401D624AAD00B70574 /* SKTrigger.swift in Sources */,
+				FABA3A431D624AAD00B70574 /* BeaconContentFactory.swift in Sources */,
+				FABA3A491D624AAD00B70574 /* SKEnums.swift in Sources */,
+				FABA3A4B1D624AAD00B70574 /* BeaconDetailsStaticFactory.swift in Sources */,
+				FABA3A511D624AAD00B70574 /* SKConstants.swift in Sources */,
+				FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */,
+				FABA3A521D624AAD00B70574 /* BeaconID.swift in Sources */,
+				FAC9F31A1D6298C3000826DD /* DefinitionsConversion.m in Sources */,
+				FABA3A561D624AAD00B70574 /* NearestBeaconManager.swift in Sources */,
+				FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */,
+				FADFF95E1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift in Sources */,
+				FABA3A671D624AAD00B70574 /* CachingContentFactory.swift in Sources */,
+				FABA3A6D1D624AAD00B70574 /* AppDelegate.swift in Sources */,
+				FACBADC61D6F6E0500C6FD2E /* UIColor+Custom.swift in Sources */,
+				FABA3ABD1D62610D00B70574 /* SKNavigationUtility.swift in Sources */,
+				FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */,
+				FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */,
+				FABA3A6E1D624AAD00B70574 /* BeaconDetailsCloudFactory.swift in Sources */,
+				FABA3A6F1D624AAD00B70574 /* SKDBManager.swift in Sources */,
+				FABA3A751D624AAD00B70574 /* BeaconDetails.swift in Sources */,
+				FABA3A761D624AAD00B70574 /* SKEncouragement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AECF16641B0E0B1000CC83B2 /* Main.storyboard */ = {
+		AECF16641B0E0B1000CC83B2 /* PatientApp.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AECF16651B0E0B1000CC83B2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PatientApp.storyboard;
 			path = DissertationM8K;
 			sourceTree = "<group>";
 		};
@@ -835,6 +1303,14 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = DissertationM8K;
+			sourceTree = "<group>";
+		};
+		FADFF9591D626CAF000B50D9 /* CaretakerApp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FADFF95A1D626CB0000B50D9 /* Base */,
+			);
+			name = CaretakerApp.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -925,7 +1401,7 @@
 		};
 		AECF167B1B0E0B1000CC83B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */;
+			baseConfigurationReference = 9C39E2D0DC496838D0BB46FA /* Pods-PatientApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
@@ -938,6 +1414,54 @@
 				INFOPLIST_FILE = "DissertationM8K/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DPATIENTAPP -DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.patientapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DissertationM8K/Supporting Files/ObjCBridge.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AECF167C1B0E0B1000CC83B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7DF09F19EB91F39955093E /* Pods-PatientApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DissertationM8K/Frameworks/Estimote",
+				);
+				INFOPLIST_FILE = "DissertationM8K/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DPATIENTAPP -DRELEASE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.patientapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DissertationM8K/Supporting Files/ObjCBridge.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FABA3AAF1D624AAD00B70574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB1A7413C9067F28EC2B30C /* Pods-CaretakerApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DissertationM8K/Frameworks/Estimote",
+				);
+				INFOPLIST_FILE = "Dissertation copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DCARETAKERAPP -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.Dissertation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -945,9 +1469,9 @@
 			};
 			name = Debug;
 		};
-		AECF167C1B0E0B1000CC83B2 /* Release */ = {
+		FABA3AB01D624AAD00B70574 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 097F55A5FFA0923377F2F053 /* Pods-Dissertation.release.xcconfig */;
+			baseConfigurationReference = FFDF69FA438FDA88A06730D7 /* Pods-CaretakerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "DissertationM8K/Supporting Files/Dissertation.entitlements";
@@ -957,9 +1481,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/DissertationM8K/Frameworks/Estimote",
 				);
-				INFOPLIST_FILE = "DissertationM8K/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Dissertation copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DCARETAKERAPP -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orchrd.Dissertation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DissertationM8K/Supporting Files/ObjCBridge.h";
@@ -978,11 +1503,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "Dissertation" */ = {
+		AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "PatientApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AECF167B1B0E0B1000CC83B2 /* Debug */,
 				AECF167C1B0E0B1000CC83B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABA3AAE1D624AAD00B70574 /* Build configuration list for PBXNativeTarget "CaretakerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABA3AAF1D624AAD00B70574 /* Debug */,
+				FABA3AB01D624AAD00B70574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

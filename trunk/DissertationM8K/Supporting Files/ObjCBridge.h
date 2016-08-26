@@ -5,7 +5,3 @@
 #import <EstimoteSDK/EstimoteSDK.h>
 #import <EstimoteSDK/ESTRequestBeaconDetails.h>
 #import "DefinitionsConversion.h"
-#import <AWSCore/AWSCore.h>
-#import <AWSCognito/AWSCognito.h>
-#import <AWSDynamoDB/AWSDynamoDBObjectMapper.h>
-#import <AWSDynamoDB/AWSDynamoDB.h>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YQr-xm-XCP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Panton-ExtraBold.otf">
+            <string>Panton-ExtraBold</string>
+            <string>Panton-ExtraBold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Landing Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="PatientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Pgq-iL-8Oc">
+                                <rect key="frame" x="-1" y="0.0" width="376" height="667"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for beacons …" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG9-FE-qhl">
+                                <rect key="frame" x="16" y="452" width="343" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="NCc-Uk-RBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B83265A8-BB7E-4A60-B4C8-4F9C5115BCBB" translatesAutoresizingMaskIntoConstraints="NO" id="c4s-G1-mae">
+                                <rect key="frame" x="108" y="192" width="160" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="Ay1-2b-iZa"/>
+                                    <constraint firstAttribute="width" constant="160" id="vKe-P1-u1R"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YOa-x4-yvX">
+                                <rect key="frame" x="169" y="524" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="w2F-cc-Kx5">
+                                <rect key="frame" x="7" y="592" width="361" height="60"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.52941176469999995" blue="0.65490196079999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IO8-0o-ZCD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Panton-ExtraBold" family="Panton" pointSize="19"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
+                                <state key="normal" title="Home Settings">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHomeKitSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5K-y0-IWB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="40d-2T-ghd">
+                                <rect key="frame" x="16" y="40" width="188" height="200"/>
+                                <color key="backgroundColor" red="0.41568627450000001" green="0.63529411759999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Q5Y-5I-qm4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Panton-ExtraBold" family="Panton" pointSize="19"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
+                                <state key="normal">
+                                    <string key="title">Control
+Devices</string>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHomeKitControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1x-DV-OvB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.73215490107913672" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pgq-iL-8Oc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3cl-zu-5PE"/>
+                            <constraint firstAttribute="centerY" secondItem="kG9-FE-qhl" secondAttribute="centerY" constant="-150" id="5Fd-WS-wDt"/>
+                            <constraint firstItem="YOa-x4-yvX" firstAttribute="top" secondItem="kG9-FE-qhl" secondAttribute="bottom" constant="8" id="Abw-Ov-pWH"/>
+                            <constraint firstItem="40d-2T-ghd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Ehd-dp-SFb"/>
+                            <constraint firstItem="40d-2T-ghd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Jrj-Ry-Ry8"/>
+                            <constraint firstItem="w2F-cc-Kx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="750" constant="-7" id="L9n-m9-SB1"/>
+                            <constraint firstItem="Pgq-iL-8Oc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="MN6-DA-bk6"/>
+                            <constraint firstAttribute="centerY" secondItem="YOa-x4-yvX" secondAttribute="centerY" constant="-208.5" id="PIN-JD-NFd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w2F-cc-Kx5" secondAttribute="trailing" constant="-9" id="R6Q-fM-VTc"/>
+                            <constraint firstItem="kG9-FE-qhl" firstAttribute="top" secondItem="c4s-G1-mae" secondAttribute="bottom" constant="50" id="TU2-bQ-ezg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w2F-cc-Kx5" secondAttribute="bottom" constant="551" id="ZIP-KA-51h"/>
+                            <constraint firstItem="Pgq-iL-8Oc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="act-Qx-Tgm"/>
+                            <constraint firstItem="kG9-FE-qhl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="bfl-9I-VoX"/>
+                            <constraint firstItem="Pgq-iL-8Oc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lLY-TR-yIA"/>
+                            <constraint firstAttribute="centerX" secondItem="c4s-G1-mae" secondAttribute="centerX" id="lfy-Ca-i0Q"/>
+                            <constraint firstAttribute="centerX" secondItem="kG9-FE-qhl" secondAttribute="centerX" id="mGN-ad-EEE"/>
+                            <constraint firstItem="w2F-cc-Kx5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p5R-ZH-ADI"/>
+                            <constraint firstAttribute="centerX" secondItem="YOa-x4-yvX" secondAttribute="centerX" id="xQk-Fh-zXc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="40d-2T-ghd" secondAttribute="leading" id="xvY-a3-maT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w2F-cc-Kx5" secondAttribute="bottom" constant="15" id="xwW-dC-jSQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PIN-JD-NFd"/>
+                                <exclude reference="ZIP-KA-51h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="d4U-ab-r44"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="YOa-x4-yvX" id="WP2-Vm-eJ5"/>
+                        <outlet property="image" destination="c4s-G1-mae" id="QNo-a8-ayx"/>
+                        <outlet property="label" destination="kG9-FE-qhl" id="h1N-h3-mxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203.5" y="327.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6db-hs-6Uz">
+            <objects>
+                <navigationController id="YQr-xm-XCP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gfg-Y4-aeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H4g-jk-sn7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6X-ox-Bb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="B83265A8-BB7E-4A60-B4C8-4F9C5115BCBB" width="143" height="208">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGSUpYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEAcI
+ERYbHCUmJysyNzo9Q0ZVJG51bGzUCQoLDA0ODxBWJGNsYXNzXE5TSW1hZ2VGbGFnc1ZOU1JlcHNXTlND
+b2xvcoAPEgDAAACAAoAN0hIJExVaTlMub2JqZWN0c6EUgAOADNISCRcaohgZgASABYALEADVHR4fIAkh
+GyIjJFZOU1NpemVfEA9OU0JpdHNQZXJTYW1wbGVfEBBOU0NvbG9yU3BhY2VOYW1lWU5TUERGRGF0YYAG
+gAeACIAKWnsxNDMsIDIwOH1fEBlOU0NhbGlicmF0ZWRSR0JDb2xvclNwYWNl0igJKSpXTlMuZGF0YU8R
+CLIlUERGLTEuNQolte2u+wozIDAgb2JqCjw8IC9MZW5ndGggNCAwIFIKICAgL0ZpbHRlciAvRmxhdGVE
+ZWNvZGUKPj4Kc3RyZWFtCnicbZZLjiQ3DET3eYq8gNMi9T+Gj2A0MDOL6oXt+wN+QWZWzwCDWpSCKfEb
+pPTPYad+/34///y7nN//O6Zfzf200S+zdn6es1+12Fsw5zW6vs+r9fmGs1y1tfPjERw26+Ve38f577Of
+j/obfpxjX73VtwC1trU9Tyc8ftL/bAj77X388e5X7z/OH++A0GhzKKB67fXG2HX02LRrl/oF3/HcgrGu
+ucbxnMZ8N/+yl5Dt5VqjvgVyb+fhuR6Uuo87+J22zd5nH89+dfy3sXw7rK5rNTyq81puyEJSPf5LHYlV
+Av4jFP4nudV/a1JsbpcvpXnh0PkKgU0PvKTCS0S9y2W9BgwN4IbjaLB2uXUkUzYP6SD/go7U6jWxJKhi
+AduwgL2LBFbaVamqF4u0vULiPo8UzR2CwmbhUVFS6rXWTDx6Vqqg3Qs260bHbOycIahOdFM+Wm5YQ5Vc
+3gLaUBDN8E5Rjvj+OhtRw3EJjLQD+2xQe3fK2YR9KWYorjTWjScBrcm+sPe3QNBqQrQB+/IjseXxXnN7
+wbxggm4CrefZ4i03+6BAuwV1gFb2EXhSY+LXMrNLnaN4YBuB6g3LCmgJ29jsLljHrb3uJAQOOLXesew/
+iet9ygIWmPcHCHpQ3mWUUEhgFGVJ1TmHqN5UowdBYdaQJMAZvNHSe57p6wiMA+9vkPpZTzkBrzasq51Q
+gsZgZRqsEEFzCtWFV4J7BFRCIXCJrU6jClh8gx2BIFbNMn6cYv+GaEF5UV3dQUoRlAKh6B3fp9foQlBl
+HoJmVSjusG0J1y2SgBt5AReNF+Cgs/mboSIYjcx3MrxtJ58wUrmDhmsrvYNBDEctKoQLgFbbcaMP4b7b
+18fZPKvCetF3JUj2cW7mAJ9coy5amPTuCeMtWiQlyi0Ctx0wmhGYaJJhUF016gG52E1imqkgTCv1hEmy
+dIIWKvDHGf6+EoJGXBmqiYdCxqRI/cpRxi2Rw24r9z9wDu+WKMzuoaloRmbwG+lVZjKBiVnyIJkJyRCp
+zoXp6ukb80JMpZotZhD5V63MVzik8Actzlzrmgih2DICW9k/kth9Z4U/nj4W1hYjT/4V5SVb1EdkmiEU
+s3+NyPjrpNOXxh5KxHltKarVEWOz0i4SobXUGFA7Tv04WlJX59Sgn5p6U2NTPKtSPAlvhxY1PgKoWCSo
+1whekfWqGW7r2fKz0t3SjuWp1aPYn1LDPGMPHzI1xDQXMS8Ueya0ZBZ8RZu9znHnqu+rRqGaUs61Pu4Z
+TpU0WLiMolovDekqQdjNkMnZwgXTGF54suSByka/qmrwaXHN3t2MGysmXy9BzoiX4XkegyinjGqeMIko
+8p5KmQyoFhlq1NPpeHnfUfx5Uism7T3icJrR0no8AqzPvEjEBKJSq+KBrpyzo2RY3JUthoRY1WskisE1
+Ur+lQfqGeUE69CyBQjvoBp4eGnssFFO4DKavgTOypmEEZWpcXGGRliIZoW+FBUaBLNCYu2OAltTQIXdR
+F40xDNeHI/pMz4GTECtn4lYHHokjJdRbGaU7lp5DccG+zretXe584q9Syd9oyihNWBpTjReKmLOyPaZm
+Foj3A17Qeho+4E0P6oGjII+7TzeZxOuWJafmcV8+b4M02MNgv32oqgIhz+DJZ9BV7b/igZH01SsFQduR
+ZEvD7nEX5VDp3C2D+uUO6cTxW2eGOvLhUmOUfcp707vgKcWoMY371D2YbzHd2xZD8jbCySOe1lZvyV7x
+vtyR37ChrpcN/73Zb8dfx/+rS1g+CmVuZHN0cmVhbQplbmRvYmoKNCAwIG9iagogICAxMzI1CmVuZG9i
+agoyIDAgb2JqCjw8CiAgIC9FeHRHU3RhdGUgPDwKICAgICAgL2EwIDw8IC9DQSAxIC9jYSAxID4+CiAg
+ID4+Cj4+CmVuZG9iago1IDAgb2JqCjw8IC9UeXBlIC9QYWdlCiAgIC9QYXJlbnQgMSAwIFIKICAgL01l
+ZGlhQm94IFsgMCAwIDE0Mi43NTEwOTIgMjA3LjI4NTYwOCBdCiAgIC9Db250ZW50cyAzIDAgUgogICAv
+R3JvdXAgPDwKICAgICAgL1R5cGUgL0dyb3VwCiAgICAgIC9TIC9UcmFuc3BhcmVuY3kKICAgICAgL0kg
+dHJ1ZQogICAgICAvQ1MgL0RldmljZVJHQgogICA+PgogICAvUmVzb3VyY2VzIDIgMCBSCj4+CmVuZG9i
+agoxIDAgb2JqCjw8IC9UeXBlIC9QYWdlcwogICAvS2lkcyBbIDUgMCBSIF0KICAgL0NvdW50IDEKPj4K
+ZW5kb2JqCjYgMCBvYmoKPDwgL0NyZWF0b3IgKGNhaXJvIDEuMTQuMiAoaHR0cDovL2NhaXJvZ3JhcGhp
+Y3Mub3JnKSkKICAgL1Byb2R1Y2VyIChjYWlybyAxLjE0LjIgKGh0dHA6Ly9jYWlyb2dyYXBoaWNzLm9y
+ZykpCj4+CmVuZG9iago3IDAgb2JqCjw8IC9UeXBlIC9DYXRhbG9nCiAgIC9QYWdlcyAxIDAgUgo+Pgpl
+bmRvYmoKeHJlZgowIDgKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAxNzQwIDAwMDAwIG4gCjAwMDAw
+MDE0NDAgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAxNDE3IDAwMDAwIG4gCjAwMDAw
+MDE1MTIgMDAwMDAgbiAKMDAwMDAwMTgwNSAwMDAwMCBuIAowMDAwMDAxOTMyIDAwMDAwIG4gCnRyYWls
+ZXIKPDwgL1NpemUgOAogICAvUm9vdCA3IDAgUgogICAvSW5mbyA2IDAgUgo+PgpzdGFydHhyZWYKMTk4
+NAolJUVPRgqACdIsLS4vWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNNdXRhYmxlRGF0YaMuMDFWTlNEYXRh
+WE5TT2JqZWN00iwtMzRdTlNQREZJbWFnZVJlcKM1NjFdTlNQREZJbWFnZVJlcFpOU0ltYWdlUmVw0iwt
+ODlXTlNBcnJheaI4MdIsLTs8Xk5TTXV0YWJsZUFycmF5ozs4MdM+PwlAQUJXTlNXaGl0ZVxOU0NvbG9y
+U3BhY2VEMCAwABADgA7SLC1ERVdOU0NvbG9yokQx0iwtR0hXTlNJbWFnZaJHMV8QD05TS2V5ZWRBcmNo
+aXZlctFLTFRyb290gAEACAARABoAIwAtADIANwBKAFAAWQBgAG0AdAB8AH4AgwCFAIcAjACXAJkAmwCd
+AKIApQCnAKkAqwCtALgAvwDRAOQA7gDwAPIA9AD2AQEBHQEiASoJ4AniCecJ8gn7CgkKDQoUCh0KIgow
+CjQKQgpNClIKWgpdCmIKcQp1CnwKhAqRCpYKmAqaCp8KpwqqCq8Ktwq6CswKzwrUAAAAAAAAAgEAAAAA
+AAAATQAAAAAAAAAAAAAAAAAACtY
+</mutableData>
+        </image>
+        <image name="bg2.jpg" width="2732" height="2732"/>
+    </resources>
+</document>

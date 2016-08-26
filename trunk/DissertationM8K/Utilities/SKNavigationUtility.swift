@@ -10,8 +10,12 @@ import UIKit
 
 class SKNavigationUtility: NSObject {
     
+    #if PATIENTAPP
+    
     static func closeHomeKitSection(){
         LandingPageViewController.sharedInstance!.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    #endif
 
 }
