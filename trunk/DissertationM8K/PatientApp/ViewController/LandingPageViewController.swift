@@ -37,7 +37,7 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         self.prepareTempBeacons()
         
         // This will initialize and fetch data from HealthKit
-        SKDBManager.sharedInstance.refreshCloudDataForStepsCount()
+        SKDBManager.sharedInstance.syncCloudDataForStepsCount()
         
         
         for beaconID: BeaconID in self.allBeacons! {

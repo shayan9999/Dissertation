@@ -9,6 +9,7 @@
 import Foundation
 import ScrollableGraphView
 import SVProgressHUD
+import DOAlertController.Swift
 
 class HealthDataViewController : UIViewController {
     
@@ -34,22 +35,36 @@ class HealthDataViewController : UIViewController {
     
     @IBAction func toggleCriticalData(sender: AnyObject) {
         
+        let button = sender as! UIButton;
+        
+        if(self.criticalLabels.count <= 0){
+            let alertController = UIAlertController.init(title: "No Data", message: "There is no critical data in the current set", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return;
+        }
+        
         if !isShowingCriticalData{
-
-            graphView.barLineColor = UIColor.colorFromHex("#232323")
-            graphView.barColor = UIColor.colorFromHex("#232323")
-            graphView.backgroundFillColor = UIColor.colorFromHex("#333333")
-            graphView.referenceLineLabelColor = UIColor.redColor()
             
-            //self.graphView.setData(self.criticalValues, withLabels: self.criticalLabels)
+            graphView.shouldAnimateOnStartup = true
+            graphView.barLineColor = UIColor.colorFromHex("#232323")
+            graphView.barColor = UIColor.redColor()
+            graphView.backgroundFillColor = UIColor.colorFromHex("#333333")
+            graphView.referenceLineLabelColor = UIColor.whiteColor()
+            
+            //self.graphView.setData([1,2,3,4,5,6], withLabels: ["", "", "", "", "", ""])
+            button.setTitle("Show All", forState: UIControlState.Normal)
+            self.graphView.setData(self.criticalValues, withLabels: self.criticalLabels)
             isShowingCriticalData = true;
         }else{
+            graphView.shouldAnimateOnStartup = true
             graphView.barLineColor = UIColor.colorFromHex("#777777")
             graphView.barColor = UIColor.colorFromHex("#555555")
             graphView.backgroundFillColor = UIColor.colorFromHex("#333333")
             graphView.referenceLineLabelColor = UIColor.whiteColor()
             
             self.graphView.setData(self.values, withLabels: self.labels)
+            button.setTitle("Critical", forState: UIControlState.Normal)
             isShowingCriticalData = false;
         }
         
@@ -69,10 +84,10 @@ class HealthDataViewController : UIViewController {
     
     func initializeGraphView(){
         
-        graphView.shouldAnimateOnStartup = true
+        graphView.shouldAnimateOnStartup = false
         graphView.shouldAdaptRange = true
         graphView.adaptAnimationType = ScrollableGraphViewAnimationType.EaseOut
-        graphView.animationDuration = 1.5
+        graphView.animationDuration = 0.4
         //graphView.rangeMax = 50
         //graphView.shouldRangeAlwaysStartAtZero = true
         
@@ -85,7 +100,7 @@ class HealthDataViewController : UIViewController {
     
     func loadGraphViewData(){
         SVProgressHUD.showWithStatus("Loading...");
-        self.graphView.setData([1,2,3,4,5,6], withLabels: ["", "", "", "", "", ""])
+        self.graphView.setData([1000,2000,3999, 4999, 5000, 4000], withLabels: ["Date", "Date", "Date", "Date", "Date", "Date"])
         
         SKDBManager.sharedInstance.getPatientStepsCountData { (stepsRetrieved) in
             // Setting data and labels now
@@ -98,13 +113,16 @@ class HealthDataViewController : UIViewController {
                 self.values.append(Double(stepsData.total!))
                 self.labels.append(dateFormatter.stringFromDate(stepsData.day!))
                 
-                if stepsData.total < 50 {
+                if stepsData.total! <= 2000 {
                     self.criticalValues.append(Double(stepsData.total!))
                     self.criticalLabels.append(dateFormatter.stringFromDate(stepsData.day!))
                 }
             }
-            self.isShowingCriticalData = false
-            self.graphView.setData(self.values, withLabels: self.labels)
+            
+            dispatch_sync(dispatch_get_main_queue()) {
+                self.isShowingCriticalData = false
+                self.graphView.setData(self.values, withLabels: self.labels)
+            }
         }
     }
     

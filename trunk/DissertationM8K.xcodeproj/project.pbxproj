@@ -186,6 +186,8 @@
 		FACBADB61D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
 		FACBADB71D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
 		FACBADC61D6F6E0500C6FD2E /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A71D469B4600919F64 /* UIColor+Custom.swift */; };
+		FACDE4CE1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */; };
+		FACDE4CF1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */; };
 		FAD181051D4C03DE009888C2 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD181041D4C03DE009888C2 /* HomeKit.framework */; };
 		FAD196101D4681CA00919F64 /* SKTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1960F1D4681CA00919F64 /* SKTrigger.swift */; };
 		FAD196121D46889800919F64 /* SKDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196111D46889800919F64 /* SKDBManager.swift */; };
@@ -343,6 +345,7 @@
 		FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
 		FACBADB21D6F6C1200C6FD2E /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		FACBADB31D6F6C1200C6FD2E /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNotificationsUtility.swift; sourceTree = "<group>"; };
 		FAD181041D4C03DE009888C2 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		FAD1960F1D4681CA00919F64 /* SKTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTrigger.swift; sourceTree = "<group>"; };
 		FAD196111D46889800919F64 /* SKDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDBManager.swift; sourceTree = "<group>"; };
@@ -813,6 +816,7 @@
 				FA26D7741D5CF960000FD6F5 /* SKEnums.swift */,
 				FAD197331D469C4900919F64 /* SKConstants.swift */,
 				FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */,
+				FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1191,6 +1195,7 @@
 				FAC9F3191D6298C3000826DD /* DefinitionsConversion.m in Sources */,
 				FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */,
 				FABA3B401D62620A00B70574 /* ZoneViewController.swift in Sources */,
+				FACDE4CE1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */,
 				FABA3B0D1D62620A00B70574 /* FavoritesViewController.swift in Sources */,
 				FABA3B211D62620A00B70574 /* ServiceCell.swift in Sources */,
 				FABA3B331D62620A00B70574 /* TimeConditionViewController.swift in Sources */,
@@ -1269,6 +1274,7 @@
 				FABA3A521D624AAD00B70574 /* BeaconID.swift in Sources */,
 				FAC9F31A1D6298C3000826DD /* DefinitionsConversion.m in Sources */,
 				FABA3A561D624AAD00B70574 /* NearestBeaconManager.swift in Sources */,
+				FACDE4CF1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */,
 				FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */,
 				FADFF95E1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift in Sources */,
 				FABA3A671D624AAD00B70574 /* CachingContentFactory.swift in Sources */,

@@ -12,9 +12,9 @@ class SKTrigger{
     
     var name: String?;
     var id: NSInteger?;
-    var relation: HealthDataTriggerRelation?;
-    var category: HealthDataCategory?;
-    var duration: HealthDataTriggerDuration?;
+    var relation: SKHealthDataTriggerRelation?;
+    var category: SKHealthDataCategory?;
+    var duration: SKHealthDataTriggerDuration?;
     var constant: Double?;
     
     static func tableKeyForName()-> String {return "description"}

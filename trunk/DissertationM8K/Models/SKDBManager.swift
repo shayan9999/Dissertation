@@ -86,7 +86,7 @@ class SKDBManager: NSObject {
         
         
         //MARK:- CloudKit: StepsCount Data
-        func refreshCloudDataForStepsCount(){
+        func syncCloudDataForStepsCount(){
             
             // To get all steps data we have before last written date
             //TODO: Save HealthKit data based on whether or not it is saved already
@@ -209,69 +209,44 @@ class SKDBManager: NSObject {
             
         }
         
-        /*
-        let scanExpression = AWSDynamoDBScanExpression()
-        scanExpression.limit = 20
+    }
+    
+    //MARK:- CloudKit: Encouragements
+    
+    func getAllEncouragements(completion: ((encouragementsReceived: [SKEncouragement]!) -> ())?){
         
-        dynamoDBManager.scan( SKTrigger.self, expression:  scanExpression).continueWithSuccessBlock { (task: AWSTask) -> AnyObject? in
-            
-            if((task.result) != nil){
-                let pagingOutput : AWSDynamoDBPaginatedOutput = task.result as! AWSDynamoDBPaginatedOutput;
-                for item in pagingOutput.items{
-                    let trigger = item as! SKTrigger;
-                    print("Name: " + trigger.name);
+        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Encouragements, predicate: NSPredicate(value: true));
+        
+        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+            if error == nil {
+                
+                var encouragements = [SKEncouragement]()
+                
+                for result in results!{
+                    let encouragement       = SKEncouragement()
+                    encouragement.name      = result.objectForKey(SKEncouragement.tableKeyForName()) as? String
+                    encouragement.timeofDay = result.objectForKey(SKEncouragement.tableKeyForTimeOfDay()) as? NSDate
+                    let timingOption        = result.objectForKey(SKEncouragement.tableKeyForTiming()) as? NSInteger
+                    encouragement.timing    = SKEncouragementDataTiming(rawValue: timingOption!)
+                    encouragements.append(encouragement)
                 }
+                
+                completion?(encouragementsReceived: encouragements)
+            }
+            else{
+                print(error?.localizedDescription)
             }
             
-            return nil;
         }
-        */
         
     }
-    
-    // Set up subscriptions for cloud database changes
-    // Use case: New Triggers added by Caretaker, New Encouragements added by CareTaker
-    
-    func setupCloudKitSubscriptions(){
-        
-        let alreadySet = NSUserDefaults.standardUserDefaults().boolForKey(SKConstants.UDK_For_CloudKit_Changes_Notifications)
-        
-        if alreadySet == false{
-            
-            //let recordID  = CKRecordID(recordName: "1");
-            
-            //TODO: update this to map one patient to his caretaker
-            //let predicate       = NSPredicate(format: "pair_id = %ld", 1)
-            let predicate         = NSPredicate(value: true)
-            let subscription = CKSubscription(recordType: SKConstants.ICloud_Table_Name_For_Triggers, predicate: predicate, options: CKSubscriptionOptions.FiresOnRecordCreation)
-            
-            let notificationInfo = CKNotificationInfo()
-            //notificationInfo.alertBody = "Your caretaker has added a new Trigger for you. Open the app to update settings now"
-            //notificationInfo.shouldBadge = true
-            notificationInfo.shouldSendContentAvailable = true
-            subscription.notificationInfo = notificationInfo
-            
-            self.getPublicDB().saveSubscription(subscription, completionHandler: { (subscription, error) in
-                
-                if error != nil{
-                    print(error?.localizedDescription)
-                    //assertionFailure()
-                }else{
-                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: SKConstants.UDK_For_CloudKit_Changes_Notifications)
-                }
-                
-            })
-            
-        }
-    }
-
     
     //MARK:- CareTaker App Functions
     
     func getRoomMovementDataForDate(theDate: NSDate, completion: ((NSArray?) -> Void)?){
                 
         let queryPredicate  = self.predicateForDayFromDate(theDate)
-        let sortDescriptor  = NSSortDescriptor(key: "start_time", ascending: true)
+        let sortDescriptor  = NSSortDescriptor(key: SKRoomData.tableKeyForStartTime(), ascending: true)
         
         let query           = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Room_Data, predicate: queryPredicate);
         query.sortDescriptors = [sortDescriptor]
@@ -289,9 +264,9 @@ class SKDBManager: NSObject {
                     for record in recordsArray!{
                         
                         let roomData = SKRoomData.init()
-                        roomData.name       = record.objectForKey("name") as? String
-                        roomData.end_time   = record.objectForKey("end_time") as? NSDate
-                        roomData.start_time = record.objectForKey("start_time") as? NSDate
+                        roomData.name       = record.objectForKey(SKRoomData.tableKeyForName()) as? String
+                        roomData.end_time   = record.objectForKey(SKRoomData.tableKeyForEndTime()) as? NSDate
+                        roomData.start_time = record.objectForKey(SKRoomData.tableKeyForStartTime()) as? NSDate
                         
                         roomDataArray.addObject(roomData)
                         
@@ -322,6 +297,57 @@ class SKDBManager: NSObject {
         
         return publicDB
     }
+    
+    // Set up subscriptions for cloud database changes
+    // Use case: New Triggers added by Caretaker, New Encouragements added by CareTaker
+    
+    func setupCloudKitSubscriptions(){
+        
+        let alreadySet = NSUserDefaults.standardUserDefaults().boolForKey(SKConstants.UDK_For_CloudKit_Changes_Notifications)
+        
+        if alreadySet == false{
+            
+            // Adding Suscription for Encouagement table when any new data is added
+            
+            let predicate         = NSPredicate(value: true)
+            let subscription = CKSubscription(recordType: SKConstants.ICloud_Table_Name_For_Encouragements, predicate: predicate, options: CKSubscriptionOptions.FiresOnRecordCreation)
+            
+            let notificationInfo = CKNotificationInfo()
+            notificationInfo.shouldSendContentAvailable = true
+            subscription.notificationInfo = notificationInfo
+            
+            self.getPublicDB().saveSubscription(subscription, completionHandler: { (sub, error) in
+                
+                if error != nil{
+                    print(error?.localizedDescription)
+                    //assertionFailure()
+                }else{
+                    print("### Saved Encouragements ADDITION subscription")
+                }
+                
+            })
+            
+            // Adding Suscription for Encouagement table when any data is deleted
+            
+            let subscription2 = CKSubscription(recordType: SKConstants.ICloud_Table_Name_For_Encouragements, predicate: predicate, options: CKSubscriptionOptions.FiresOnRecordDeletion)
+            subscription2.notificationInfo = notificationInfo
+            
+            self.getPublicDB().saveSubscription(subscription2, completionHandler: { (sub, error) in
+                
+                if error != nil{
+                    print(error?.localizedDescription)
+                    //assertionFailure()
+                }else{
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: SKConstants.UDK_For_CloudKit_Changes_Notifications)
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                    print("### Saved Encouragements DELETION subscription")
+                }
+                
+            })
+            
+        }
+    }
+
     
     // Removes all subscriptions on cloud data changes
     func removeAllCloudKitSubscriptions(){
@@ -358,7 +384,7 @@ class SKDBManager: NSObject {
     func performCloudKitBulkOperation(operation: CKModifyRecordsOperation){
         
         operation.perRecordCompletionBlock = {(record: CKRecord?, error: NSError?) -> Void in
-            NSLog("Saved Record: %@", record!.debugDescription)
+            NSLog("Saved Record: %@", record!.recordID)
         }
         
         //Start operation

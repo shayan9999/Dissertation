@@ -19,6 +19,7 @@ struct SKConstants{
     /* STRINGS */
     static let ICloud_Table_Name_For_Room_Data                      = "RoomData"
     static let ICloud_Table_Name_For_Triggers                       = "Triggers"
+    static let ICloud_Table_Name_For_Encouragements                 = "Encouragements"
     static let ICloud_Table_Name_For_StepsCount                     = "StepsCount"
     
     #if PATIENTAPP

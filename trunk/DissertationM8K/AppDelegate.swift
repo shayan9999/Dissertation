@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         print("### Remote Notifications Registration Successful")
         
-        //SKDBManager.sharedInstance().removeAllCloudKitSubscriptions()
+        //SKDBManager.sharedInstance.removeAllCloudKitSubscriptions()
         SKDBManager.sharedInstance.setupCloudKitSubscriptions()
     }
     
@@ -92,31 +92,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
         let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
         
+        // This will execute when one of the CloudKit subscriptions was triggered.
         if cloudKitNotification.notificationType == CKNotificationType.Query {
-            // TODO: Do something with the information for the new values to be fetched
-            // TODO: Also can create notification on the basis of the information fetched
+
+            //let queryNotification = cloudKitNotification as! CKQueryNotification
+            //let recordID = queryNotification.recordID
+            
             self.resetBadgeCount()
             print("Notification: " + userInfo.description)
+            SKNotificationsUtility.syncNotificationsForEncouragements()
         }
         
-        print ("Notification: " + ((cloudKitNotification.alertBody ?? "").isEmpty ? "Default" : cloudKitNotification.alertBody!))
-        
         completionHandler(.NewData);
-        
     }
     
     //MARK: - Background Fetch Operations
     
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        SKDBManager.sharedInstance.getAllTiggers()
-        completionHandler(.NewData)
+        //SKDBManager.sharedInstance.getAllTiggers()
+        SKDBManager.sharedInstance.syncCloudDataForStepsCount();
         
         let localNotification = UILocalNotification()
         localNotification.alertBody = "Just downloaded something in background"
         application.presentLocalNotificationNow(localNotification)
         
-        
+        completionHandler(.NewData)
     }
     
     

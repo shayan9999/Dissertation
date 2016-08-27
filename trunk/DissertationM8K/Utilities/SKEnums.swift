@@ -9,19 +9,19 @@
 import HealthKit
 
 
-enum HealthDataCategory: Int {
+enum SKHealthDataCategory: Int {
     case StepsCount = 1, FallCount, HeartRate, BloodPressure, Sleep 
 }
-enum HealthDataTriggerRelation: Int {
+enum SKHealthDataTriggerRelation: Int {
     case GreaterThan = 1, LessThan, EqualTo
 }
 
-enum HealthDataTriggerDuration: Int {
+enum SKHealthDataTriggerDuration: Int {
     case PerDay = 1, PerWeek, PerMonth
 }
 
-enum EncouragementDataTiming: Int{
-    case EveryDay = 1, OnWeekends, OnWeekdays, EveryWeek, EveryMonth
+enum SKEncouragementDataTiming: Int{
+    case Once = 1, EveryDay, OnWeekdays, EveryWeek, EveryMonth
 }
 
 
