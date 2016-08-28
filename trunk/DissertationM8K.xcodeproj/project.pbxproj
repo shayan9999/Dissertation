@@ -16,6 +16,7 @@
 		FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
+		FA216A881D726B28003E19D6 /* EncouragementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */; };
 		FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7741D5CF960000FD6F5 /* SKEnums.swift */; };
 		FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */; };
 		FA3942331D62243D007EB433 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */; };
@@ -229,6 +230,7 @@
 		F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.debug.xcconfig"; sourceTree = "<group>"; };
 		FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRoomData.swift; sourceTree = "<group>"; };
 		FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStepsCount.swift; sourceTree = "<group>"; };
+		FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncouragementsViewController.swift; sourceTree = "<group>"; };
 		FA26D7741D5CF960000FD6F5 /* SKEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEnums.swift; sourceTree = "<group>"; };
 		FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEncouragement.swift; sourceTree = "<group>"; };
 		FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
@@ -827,6 +829,7 @@
 				FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */,
 				FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */,
 				FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */,
+				FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1218,6 +1221,7 @@
 				FABA3B1F1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift in Sources */,
 				FABA3B2C1D62620A00B70574 /* AddServicesViewController.swift in Sources */,
 				FABA3B301D62620A00B70574 /* CharacteristicTriggerViewController.swift in Sources */,
+				FA216A881D726B28003E19D6 /* EncouragementsViewController.swift in Sources */,
 				FABA3B151D62620A00B70574 /* CharacteristicCell.swift in Sources */,
 				FABA3B3A1D62620A00B70574 /* MapViewController.swift in Sources */,
 				FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */,
