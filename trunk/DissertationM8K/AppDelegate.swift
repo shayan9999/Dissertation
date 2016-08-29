@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UIApplication.sharedApplication().unregisterForRemoteNotifications();
         self.initalizeExternalPlugins()
         self.initializeNotificationsSettings()
         
@@ -35,14 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         // Setting up Estimote
         ESTConfig.setupAppID("dissertation-m8k", andAppToken: "59d81ff17324db3d77d9d4f0e7ad3b12")
-        
-        
-        // Setting up AWS DynamoDB
-        //let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-        //                                                        identityPoolId:"us-east-1:e3ab1158-6f5a-4850-98cb-4397a9ce715c")
-        
-        //let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-        //AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
         
         SVProgressHUD.setDefaultMaskType( SVProgressHUDMaskType.Gradient)
         SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Dark)
@@ -74,8 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         print("### Remote Notifications Registration Successful")
         
-        //SKDBManager.sharedInstance.removeAllCloudKitSubscriptions()
-        SKDBManager.sharedInstance.setupCloudKitSubscriptions()
+        #if PATIENTAPP
+            //SKDBManager.sharedInstance.removeAllCloudKitSubscriptions()
+            SKDBManager.sharedInstance.setupCloudKitSubscriptions()
+        #endif
     }
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
@@ -90,32 +83,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     // Called when remote notification will trigger a background fetch routine
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 
-        let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
+        #if PATIENTAPP
         
-        // This will execute when one of the CloudKit subscriptions was triggered.
-        if cloudKitNotification.notificationType == CKNotificationType.Query {
-
-            //let queryNotification = cloudKitNotification as! CKQueryNotification
-            //let recordID = queryNotification.recordID
+            let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
             
-            self.resetBadgeCount()
-            print("Notification: " + userInfo.description)
-            SKNotificationsUtility.syncNotificationsForEncouragements()
-        }
+            // This will execute when one of the CloudKit subscriptions was triggered.
+            if cloudKitNotification.notificationType == CKNotificationType.Query {
+
+                //let queryNotification = cloudKitNotification as! CKQueryNotification
+                //let recordID = queryNotification.recordID
+                
+                self.resetBadgeCount()
+                print("Notification: " + userInfo.description)
+                SKNotificationsUtility.syncNotificationsForEncouragements()
+            }
+            
+        #endif
         
         completionHandler(.NewData);
     }
     
     //MARK: - Background Fetch Operations
-    
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        //SKDBManager.sharedInstance.getAllTiggers()
-        SKDBManager.sharedInstance.syncCloudDataForStepsCount();
-        
-        let localNotification = UILocalNotification()
-        localNotification.alertBody = "Just downloaded something in background"
-        application.presentLocalNotificationNow(localNotification)
+        #if PATIENTAPP
+            
+            SKDBManager.sharedInstance.syncCloudDataForStepsCount();
+            
+            let localNotification = UILocalNotification()
+            localNotification.alertBody = "Just downloaded something in background"
+            application.presentLocalNotificationNow(localNotification)
+            
+        #endif
         
         completionHandler(.NewData)
     }

@@ -7,11 +7,75 @@
 //
 
 import Foundation
+import SVProgressHUD
 
-class EncouragementsViewController: UIViewController{
+class EncouragementsViewController: UIViewController, UITextViewDelegate{
     
-    //TODO: Use this viewController to create new Encouragements for the elderly
-    // Add those Encouragements to the iCloud database 
-    // Show multiple TIMING options on the view with: Name, Date (Time)
+    @IBOutlet weak var vibrancyEffectView: UIVisualEffectView!
+    
+    @IBOutlet weak var encouragementText: UITextView!
+    @IBOutlet weak var encouragementTiming: UISegmentedControl!
+    @IBOutlet weak var encouragementTime: UIDatePicker!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.title = "Steps Per Day"
+        
+        let leftButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(pressedCancel))
+        let rightButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(pressedSave))
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        
+        vibrancyEffectView.layer.cornerRadius = 8.0
+        encouragementTiming.selectedSegmentIndex = 0
+    
+    }
+    
+    //MARK:- UI Interactions
+    
+    func pressedCancel(){
+        self.navigationController?.popViewControllerAnimated(true);
+    }
+    
+    
+    func pressedSave(){
+        if encouragementText.text.isEmpty == true {
+            let alertController = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Enter Message", andMessage: "Please enter encouragement message")
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }else{
+            let newEncouragement            = SKEncouragement()
+            newEncouragement.name           = encouragementText.text
+            newEncouragement.timeofDay      = encouragementTime.date
+            newEncouragement.timing         = SKEncouragementDataTiming(rawValue: encouragementTiming.selectedSegmentIndex + 1)
+            
+            SVProgressHUD .showWithStatus("Sending..")
+            SKDBManager.sharedInstance.saveEncouragement(newEncouragement, completion: { (success) in
+                SVProgressHUD.dismiss()
+                if success == false {
+                    SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Something went wrong", andMessage: "Could not save the encouragement to the database, please try again later")
+                }else{
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        self.navigationController?.popViewControllerAnimated(true)
+                    })
+                }
+            })
+            
+        }
+    }
+    
+    //MARK:- Text View Delegates
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false;
+        }else{
+            return true;
+        }
+    }
     
 }

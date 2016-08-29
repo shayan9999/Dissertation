@@ -12,11 +12,13 @@
 		AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
 		AECF16661B0E0B1000CC83B2 /* PatientApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16641B0E0B1000CC83B2 /* PatientApp.storyboard */; };
 		AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */; };
+		FA029ACE1D73C1E9002285D3 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FA029ACD1D73C1E9002285D3 /* bg.png */; };
+		FA029ACF1D73C1E9002285D3 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FA029ACD1D73C1E9002285D3 /* bg.png */; };
+		FA029AD01D73D811002285D3 /* UIAlertController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A61D469B4600919F64 /* UIAlertController+Convenience.swift */; };
 		FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */; };
 		FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
-		FA216A881D726B28003E19D6 /* EncouragementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */; };
 		FA26D7751D5CF960000FD6F5 /* SKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7741D5CF960000FD6F5 /* SKEnums.swift */; };
 		FA26D77A1D5D04DE000FD6F5 /* SKEncouragement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26D7791D5D04DE000FD6F5 /* SKEncouragement.swift */; };
 		FA3942331D62243D007EB433 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942161D62243D007EB433 /* SF-UI-Display-Black.otf */; };
@@ -48,6 +50,7 @@
 		FA39424D1D62243D007EB433 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942301D62243D007EB433 /* TitilliumWeb-LightItalic.ttf */; };
 		FA39424E1D62243D007EB433 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */; };
 		FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		FA8D67301D73BDF500101F9D /* EncouragementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */; };
 		FAAD7CE31D3C4388008D6B1F /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */; };
 		FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */; };
 		FAAD7CE51D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */; };
@@ -228,6 +231,7 @@
 		AEFD99531BC5948700BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7A05A5ADFE02200B14053C0 /* Pods_Dissertation_Caretaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dissertation_Caretaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.debug.xcconfig"; sourceTree = "<group>"; };
+		FA029ACD1D73C1E9002285D3 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRoomData.swift; sourceTree = "<group>"; };
 		FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStepsCount.swift; sourceTree = "<group>"; };
 		FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncouragementsViewController.swift; sourceTree = "<group>"; };
@@ -772,6 +776,7 @@
 		FACBADB11D6F6C1200C6FD2E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA029ACD1D73C1E9002285D3 /* bg.png */,
 				FACBADB21D6F6C1200C6FD2E /* bg.jpg */,
 				FACBADB31D6F6C1200C6FD2E /* bg2.jpg */,
 			);
@@ -977,6 +982,7 @@
 				FA3942381D62243D007EB433 /* SF-UI-Display-Regular.otf in Resources */,
 				FABA3B1A1D62620A00B70574 /* SliderCharacteristicCell.xib in Resources */,
 				FABA3B1C1D62620A00B70574 /* SwitchCharacteristicCell.xib in Resources */,
+				FA029ACE1D73C1E9002285D3 /* bg.png in Resources */,
 				FA39424A1D62243D007EB433 /* TitilliumWeb-ExtraLight.ttf in Resources */,
 				FA3942421D62243D007EB433 /* SF-UI-Text-LightItalic.otf in Resources */,
 				FA3942431D62243D007EB433 /* SF-UI-Text-Medium.otf in Resources */,
@@ -1034,6 +1040,7 @@
 				FABA3A9B1D624AAD00B70574 /* TitilliumWeb-SemiBold.ttf in Resources */,
 				FABA3A9C1D624AAD00B70574 /* TitilliumWeb-Italic.ttf in Resources */,
 				FABA3A9D1D624AAD00B70574 /* SF-UI-Text-Bold.otf in Resources */,
+				FA029ACF1D73C1E9002285D3 /* bg.png in Resources */,
 				FABA3A9E1D624AAD00B70574 /* SF-UI-Display-Heavy.otf in Resources */,
 				FABA3AA11D624AAD00B70574 /* Panton-ExtraBold.otf in Resources */,
 				FABA3AA21D624AAD00B70574 /* Dissertation.entitlements in Resources */,
@@ -1221,7 +1228,6 @@
 				FABA3B1F1D62620A00B70574 /* CharacteristicsTableViewDataSource.swift in Sources */,
 				FABA3B2C1D62620A00B70574 /* AddServicesViewController.swift in Sources */,
 				FABA3B301D62620A00B70574 /* CharacteristicTriggerViewController.swift in Sources */,
-				FA216A881D726B28003E19D6 /* EncouragementsViewController.swift in Sources */,
 				FABA3B151D62620A00B70574 /* CharacteristicCell.swift in Sources */,
 				FABA3B3A1D62620A00B70574 /* MapViewController.swift in Sources */,
 				FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */,
@@ -1268,6 +1274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA029AD01D73D811002285D3 /* UIAlertController+Convenience.swift in Sources */,
 				FABA3A3C1D624AAD00B70574 /* ProximityContentManager.swift in Sources */,
 				FABA3A401D624AAD00B70574 /* SKTrigger.swift in Sources */,
 				FABA3A431D624AAD00B70574 /* BeaconContentFactory.swift in Sources */,
@@ -1288,6 +1295,7 @@
 				FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */,
 				FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */,
 				FABA3A6E1D624AAD00B70574 /* BeaconDetailsCloudFactory.swift in Sources */,
+				FA8D67301D73BDF500101F9D /* EncouragementsViewController.swift in Sources */,
 				FABA3A6F1D624AAD00B70574 /* SKDBManager.swift in Sources */,
 				FABA3A751D624AAD00B70574 /* BeaconDetails.swift in Sources */,
 				FABA3A761D624AAD00B70574 /* SKEncouragement.swift in Sources */,

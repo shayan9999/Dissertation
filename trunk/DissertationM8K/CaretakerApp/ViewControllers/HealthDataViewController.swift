@@ -38,8 +38,8 @@ class HealthDataViewController : UIViewController {
         let button = sender as! UIButton;
         
         if(self.criticalLabels.count <= 0){
-            let alertController = UIAlertController.init(title: "No Data", message: "There is no critical data in the current set", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil))
+            
+            let alertController = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "No Data", andMessage: "There is no critical data in the current set")
             self.presentViewController(alertController, animated: true, completion: nil)
             return;
         }

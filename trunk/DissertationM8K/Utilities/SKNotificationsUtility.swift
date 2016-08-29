@@ -11,6 +11,8 @@ import Foundation
 class SKNotificationsUtility: NSObject {
     
     
+    //MARK:- Factory Methods
+    
     static func syncNotificationsForEncouragements(){
         // Get all encouragements data and setup new notifications
         
@@ -24,8 +26,17 @@ class SKNotificationsUtility: NSObject {
         })
     }
     
+    static func getSingleButtonAlertView(withTitle title: String, andMessage message: String) -> UIAlertController {
+        let alertController = UIAlertController.init(title: title, body: message)
+        //alertController.addAction(UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil))
+        return alertController
+    }
     
-    static func setNotifications(forEncouragement encouragement: SKEncouragement){
+    
+    //MARK:- Utility Functions
+    
+    
+    private static func setNotifications(forEncouragement encouragement: SKEncouragement){
        
         let notification = UILocalNotification()
         
@@ -34,8 +45,13 @@ class SKNotificationsUtility: NSObject {
         notification.fireDate = encouragement.timeofDay
         
         /* Time and timezone settings */
+        // This will be nil only if the timing is set to Once
         if let repeatInterval = SKNotificationsUtility.getRepeatIntervalForTimingOption(encouragement.timing!) {
             notification.repeatInterval = repeatInterval
+        }else{
+            if encouragement.timeofDay?.timeIntervalSinceReferenceDate < NSDate.init().timeIntervalSinceReferenceDate {
+                return;
+            }
         }
         
         /* Action settings */
@@ -50,7 +66,7 @@ class SKNotificationsUtility: NSObject {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    static func getRepeatIntervalForTimingOption( timingOption: SKEncouragementDataTiming) -> NSCalendarUnit?{
+    private static func getRepeatIntervalForTimingOption( timingOption: SKEncouragementDataTiming) -> NSCalendarUnit?{
         var repeatInterval: NSCalendarUnit? = NSCalendarUnit.Day
         
         switch timingOption {

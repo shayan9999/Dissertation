@@ -43,7 +43,7 @@ class SKDBManager: NSObject {
                         self.getPublicDB().saveRecord(recordForLastRoom!, completionHandler: { (recordSaved, error) in
                             if let fetchError2 = error{
                                 NSLog("Could not save Last Room end_date. Description: %@", fetchError2.localizedDescription)
-                                assertionFailure()
+                                //assertionFailure()
                             }else{
                                 NSLog("B. Saved end time for last room record")
                             }
@@ -64,8 +64,8 @@ class SKDBManager: NSObject {
             // 2. Save Name + Start Date
             // 3. Keep log of the new recordID (to update its end time later)
             let roomData = CKRecord(recordType: SKConstants.ICloud_Table_Name_For_Room_Data)
-            roomData["name"] = roomName
-            roomData["start_time"] = roomStartTime
+            roomData[SKRoomData.tableKeyForName()] = roomName
+            roomData[SKRoomData.tableKeyForStartTime()] = roomStartTime
             
             self.getPublicDB().saveRecord(roomData) { (recordForNewRoom, error) -> Void in
                 
@@ -212,6 +212,24 @@ class SKDBManager: NSObject {
     }
     
     //MARK:- CloudKit: Encouragements
+    
+    func saveEncouragement(encouragement: SKEncouragement, completion: (success: Bool)-> Void){
+        
+        let newRecord = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_Encouragements)
+        newRecord[SKEncouragement.tableKeyForName()] = encouragement.name
+        newRecord[SKEncouragement.tableKeyForTimeOfDay()] = encouragement.timeofDay
+        newRecord[SKEncouragement.tableKeyForTiming()] = encouragement.timing?.rawValue
+        
+        self.getPublicDB().saveRecord(newRecord, completionHandler: { (recordSaved, error) in
+            if let fetchError2 = error{
+                NSLog("Could not save Encouragement data. Description: %@", fetchError2.localizedDescription)
+                completion(success: false)
+            }else{
+                NSLog("B. Saved Encouragement: ' %@ ' ", encouragement.name!)
+                completion(success: true)
+            }
+        })
+    }
     
     func getAllEncouragements(completion: ((encouragementsReceived: [SKEncouragement]!) -> ())?){
         
