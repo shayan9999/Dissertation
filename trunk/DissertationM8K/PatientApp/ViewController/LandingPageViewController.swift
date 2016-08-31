@@ -38,6 +38,7 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         
         // This will initialize and fetch data from HealthKit
         SKDBManager.sharedInstance.syncCloudDataForStepsCount()
+        SKDBManager.sharedInstance.syncCloudDataForBloodPressure()
         
         
         for beaconID: BeaconID in self.allBeacons! {

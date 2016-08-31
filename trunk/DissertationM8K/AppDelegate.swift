@@ -108,7 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         #if PATIENTAPP
             
-            SKDBManager.sharedInstance.syncCloudDataForStepsCount();
+            SKDBManager.sharedInstance.syncCloudDataForStepsCount()
+            SKDBManager.sharedInstance.syncCloudDataForBloodPressure()
             
             let localNotification = UILocalNotification()
             localNotification.alertBody = "Just downloaded something in background"

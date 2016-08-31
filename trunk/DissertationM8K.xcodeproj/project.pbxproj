@@ -211,8 +211,11 @@
 		FAD197311D469BE900919F64 /* Dissertation.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAD197301D469BE900919F64 /* Dissertation.entitlements */; };
 		FAD197341D469C4900919F64 /* SKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197331D469C4900919F64 /* SKConstants.swift */; };
 		FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */; };
+		FAD62ED31D76ACAA00471083 /* SKBloodPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD62ED21D76ACAA00471083 /* SKBloodPressure.swift */; };
+		FAD62ED41D76ACAA00471083 /* SKBloodPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD62ED21D76ACAA00471083 /* SKBloodPressure.swift */; };
 		FADFF95B1D626CB0000B50D9 /* CaretakerApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADFF9591D626CAF000B50D9 /* CaretakerApp.storyboard */; };
 		FADFF95E1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */; };
+		FAF994221D76CECF00DCC252 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF994211D76CECF00DCC252 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -371,8 +374,10 @@
 		FAD197301D469BE900919F64 /* Dissertation.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dissertation.entitlements; sourceTree = "<group>"; };
 		FAD197331D469C4900919F64 /* SKConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKConstants.swift; sourceTree = "<group>"; };
 		FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNavigationUtility.swift; sourceTree = "<group>"; };
+		FAD62ED21D76ACAA00471083 /* SKBloodPressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBloodPressure.swift; sourceTree = "<group>"; };
 		FADFF95A1D626CB0000B50D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DissertationM8K/Base.lproj/CaretakerApp.storyboard; sourceTree = "<group>"; };
 		FADFF95D1D626D5D000B50D9 /* CaretakerLandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretakerLandingPageViewController.swift; sourceTree = "<group>"; };
+		FAF994211D76CECF00DCC252 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FFDF69FA438FDA88A06730D7 /* Pods-CaretakerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaretakerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaretakerApp/Pods-CaretakerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -791,6 +796,7 @@
 				FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */,
 				FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */,
 				FAD196111D46889800919F64 /* SKDBManager.swift */,
+				FAD62ED21D76ACAA00471083 /* SKBloodPressure.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -835,6 +841,7 @@
 				FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */,
 				FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */,
 				FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */,
+				FAF994211D76CECF00DCC252 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1263,6 +1270,7 @@
 				FABA3B0B1D62620A00B70574 /* HealthKitUtility.swift in Sources */,
 				FABA3B361D62620A00B70574 /* EventTriggerViewController.swift in Sources */,
 				FAD196B71D469B4600919F64 /* UIViewController+Convenience.swift in Sources */,
+				FAD62ED31D76ACAA00471083 /* SKBloodPressure.swift in Sources */,
 				FAD196AE1D469B4600919F64 /* HMCharacteristic+Properties.swift in Sources */,
 				FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */,
 				FABA3B221D62620A00B70574 /* ServicesViewController.swift in Sources */,
@@ -1283,6 +1291,7 @@
 				FABA3A511D624AAD00B70574 /* SKConstants.swift in Sources */,
 				FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */,
 				FABA3A521D624AAD00B70574 /* BeaconID.swift in Sources */,
+				FAD62ED41D76ACAA00471083 /* SKBloodPressure.swift in Sources */,
 				FAC9F31A1D6298C3000826DD /* DefinitionsConversion.m in Sources */,
 				FABA3A561D624AAD00B70574 /* NearestBeaconManager.swift in Sources */,
 				FACDE4CF1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */,
@@ -1299,6 +1308,7 @@
 				FABA3A6F1D624AAD00B70574 /* SKDBManager.swift in Sources */,
 				FABA3A751D624AAD00B70574 /* BeaconDetails.swift in Sources */,
 				FABA3A761D624AAD00B70574 /* SKEncouragement.swift in Sources */,
+				FAF994221D76CECF00DCC252 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

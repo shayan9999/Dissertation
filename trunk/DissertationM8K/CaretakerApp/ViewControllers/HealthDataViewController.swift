@@ -27,11 +27,12 @@ class HealthDataViewController : UIViewController {
     
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.title = "Steps Per Day"
         super.viewDidLoad()
         self.initializeGraphView()
         self.loadGraphViewData()
     }
+    
+    //MARK: UI Interactions
     
     @IBAction func toggleCriticalData(sender: AnyObject) {
         
@@ -70,7 +71,26 @@ class HealthDataViewController : UIViewController {
         
     }
     
-    
+    @IBAction func switchControlValueChanged (sender: AnyObject) {
+        let switchControl = sender as! UISegmentedControl
+        
+        let selectedIndex = switchControl.selectedSegmentIndex
+        
+        self.values.removeAll()
+        self.labels.removeAll()
+
+        self.criticalValues.removeAll()
+        self.criticalLabels.removeAll()
+        
+        switch selectedIndex {
+            case 0: self.showStepsDataOnGraph(); break;
+            case 1: self.showBloodPressureDataOnGraph(); break;
+            default: break;
+        }
+        
+    }
+        
+        
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
         
@@ -81,6 +101,8 @@ class HealthDataViewController : UIViewController {
         
         //self.loadGraphViewData()
     }
+    
+    //MARK: View Helpers
     
     func initializeGraphView(){
         
@@ -99,8 +121,16 @@ class HealthDataViewController : UIViewController {
     }
     
     func loadGraphViewData(){
-        SVProgressHUD.showWithStatus("Loading...");
+        
         self.graphView.setData([1000,2000,3999, 4999, 5000, 4000], withLabels: ["Date", "Date", "Date", "Date", "Date", "Date"])
+        
+        self.showStepsDataOnGraph()
+    }
+    
+    func showStepsDataOnGraph(){
+        
+        self.navigationItem.title = "Steps Per Day"
+        SVProgressHUD.showWithStatus("Loading...");
         
         SKDBManager.sharedInstance.getPatientStepsCountData { (stepsRetrieved) in
             // Setting data and labels now
@@ -113,10 +143,11 @@ class HealthDataViewController : UIViewController {
                 self.values.append(Double(stepsData.total!))
                 self.labels.append(dateFormatter.stringFromDate(stepsData.day!))
                 
-                if stepsData.total! <= 2000 {
+                if stepsData.total! <= SKConstants.getCriticalStepsCount() {
                     self.criticalValues.append(Double(stepsData.total!))
                     self.criticalLabels.append(dateFormatter.stringFromDate(stepsData.day!))
                 }
+                
             }
             
             dispatch_sync(dispatch_get_main_queue()) {
@@ -126,5 +157,33 @@ class HealthDataViewController : UIViewController {
         }
     }
     
+    func showBloodPressureDataOnGraph(){
+        
+        self.navigationItem.title = "Blood Pressure per Day"
+        SVProgressHUD.showWithStatus("Loading...");
+        
+        SKDBManager.sharedInstance.getPatientBloodPressureData { (bpInfoReceived) in
+            // Setting data and labels now
+            SVProgressHUD.dismiss()
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MMM dd"
+            
+            for bpData in bpInfoReceived{
+                self.values.append(Double(bpData.total!))
+                self.labels.append(dateFormatter.stringFromDate(bpData.day!))
+                
+                if bpData.total! <= SKConstants.getCriticalBloodPressure() {
+                    self.criticalValues.append(Double(bpData.total!))
+                    self.criticalLabels.append(dateFormatter.stringFromDate(bpData.day!))
+                }
+            }
+            
+            dispatch_sync(dispatch_get_main_queue()) {
+                self.isShowingCriticalData = false
+                self.graphView.setData(self.values, withLabels: self.labels)
+            }
+        }
+    }
     
 }

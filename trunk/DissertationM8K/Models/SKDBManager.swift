@@ -85,12 +85,10 @@ class SKDBManager: NSObject {
         }
         
         
-        //MARK:- CloudKit: StepsCount Data
+        //MARK:- CloudKit: HealthKit Data
         func syncCloudDataForStepsCount(){
             
             // To get all steps data we have before last written date
-            //TODO: Save HealthKit data based on whether or not it is saved already
-            //TODO: Read healthKit data on caretaker side and show it in a graph form
             //TODO: implement background monitoring of healthKit data on patient app.\
             
             var recordsToUpdate = [CKRecord]()
@@ -121,12 +119,12 @@ class SKDBManager: NSObject {
                                 // Go through all records rerieved from cloud
                                 for result in results! {
                                     
-                                    let dayForStepData   = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
+                                    let dayForStepData   = result.objectForKey(SKBloodPressure.tableKeyForDay()) as! NSDate
                                     
                                     // If any data was already uploaded to cloud, update its values
                                     if stepInfo.day!.isEqualToDate(dayForStepData) {
                                         foundMatch = true
-                                        result.setObject(stepInfo.total, forKey: SKStepsCount.tableKeyForTotal())
+                                        result.setObject(stepInfo.total, forKey: SKBloodPressure.tableKeyForTotal())
                                         recordsToUpdate.append(result);
                                     }
                                 }
@@ -134,8 +132,8 @@ class SKDBManager: NSObject {
                                 // if no match found, create a new record to add to the table
                                 if foundMatch == false {
                                     let newRecordForStep = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_StepsCount)
-                                    newRecordForStep[SKStepsCount.tableKeyForDay()] = stepInfo.day
-                                    newRecordForStep[SKStepsCount.tableKeyForTotal()] = stepInfo.total
+                                    newRecordForStep[SKBloodPressure.tableKeyForDay()] = stepInfo.day
+                                    newRecordForStep[SKBloodPressure.tableKeyForTotal()] = stepInfo.total
                                     recordsToUpdate.append(newRecordForStep);
                                     
                                 }
@@ -160,14 +158,86 @@ class SKDBManager: NSObject {
             }
         }
     
+    
+        func syncCloudDataForBloodPressure(){
+            
+            // To get all steps data we have before last written date
+            var recordsToUpdate = [CKRecord]()
+            
+            if (SKHealthKitUtility.sharedInstance.checkAuthorization() == true){
+                
+                // if we have written data before
+                let startOfToday = NSCalendar.currentCalendar().startOfDayForDate(NSDate.init())
+                var startDate    = startOfToday + (-12.days.timeInterval)
+                
+                if let startDayFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(SKConstants.UDK_For_CloudKit_Last_Blood_Pressure_Day) as? NSDate{
+                    
+                    startDate = startDayFromDefaults
+                }
+                
+                //TODO: Create similar function for BP
+                SKHealthKitUtility.sharedInstance.retrieveBPDataBetween(startDate, endTime: startOfToday, completion: { (bpInfoReceived) in
+                    
+                    let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure, predicate: NSPredicate(format: "date >= %@ AND date =< %@", argumentArray: [startDate, startOfToday]))
+                    self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                        
+                        if error == nil {
+                            
+                            // go through all the steps data received from healthKit
+                            for bpInfo in bpInfoReceived {
+                                
+                                var foundMatch  = false
+                                
+                                // Go through all records rerieved from cloud
+                                for result in results! {
+                                    
+                                    let dayForBPData   = result.objectForKey(SKBloodPressure.tableKeyForDay()) as! NSDate
+                                    
+                                    // If any data was already uploaded to cloud, update its values
+                                    if bpInfo.day!.isEqualToDate(dayForBPData) {
+                                        foundMatch = true
+                                        result.setObject(bpInfo.total, forKey: SKBloodPressure.tableKeyForTotal())
+                                        recordsToUpdate.append(result);
+                                    }
+                                }
+                                
+                                // if no match found, create a new record to add to the table
+                                if foundMatch == false {
+                                    let newRecordForStep = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure)
+                                    newRecordForStep[SKBloodPressure.tableKeyForDay()] = bpInfo.day
+                                    newRecordForStep[SKBloodPressure.tableKeyForTotal()] = bpInfo.total
+                                    recordsToUpdate.append(newRecordForStep);
+                                    
+                                }
+                            }
+                            
+                            // If there were some records found worth updating, update those records now
+                            if recordsToUpdate.count > 0 {
+                                let operation = CKModifyRecordsOperation.init(recordsToSave: recordsToUpdate, recordIDsToDelete: nil)
+                                SKDBManager.sharedInstance.performCloudKitBulkOperation(operation);
+                                NSUserDefaults.standardUserDefaults().setObject(startOfToday + -1.day.timeInterval, forKey: SKConstants.UDK_For_CloudKit_Last_Blood_Pressure_Day)
+                                NSUserDefaults.standardUserDefaults().synchronize()
+                            }
+                            
+                        }else{
+                            print(error?.localizedDescription)
+                        }
+                        
+                    }
+                    
+                }) // completion block
+                
+            }
+        }
+    
     #endif
     
     #if CARETAKERAPP
     
     func getPatientStepsCountData(completion: ((stepsRetrieved: [SKStepsCount]!) -> ())?){
-        
+    
         let sortDescriptor  = NSSortDescriptor(key: SKStepsCount.tableKeyForDay(), ascending: false)
-        
+    
         var stepsPerDay  = [SKStepsCount]()
         
         let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_StepsCount, predicate: NSPredicate(value: true))
@@ -185,6 +255,33 @@ class SKDBManager: NSObject {
             }
             
             completion?(stepsRetrieved: stepsPerDay)
+            
+        }
+        
+    }
+    
+    
+    func getPatientBloodPressureData(completion: ((bpInfoReceived: [SKBloodPressure]!) -> ())?){
+        
+        let sortDescriptor  = NSSortDescriptor(key: SKBloodPressure.tableKeyForDay(), ascending: false)
+        
+        var stepsPerDay  = [SKBloodPressure]()
+        
+        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure, predicate: NSPredicate(value: true))
+        query.sortDescriptors = [sortDescriptor]
+        
+        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+            
+            for result in results!{
+                let dayForBP      = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
+                let totalForBP    = result.objectForKey(SKStepsCount.tableKeyForTotal()) as! NSInteger
+                let bpData       = SKBloodPressure()
+                bpData.day       = dayForBP
+                bpData.total     = totalForBP
+                stepsPerDay.append(bpData);
+            }
+            
+            completion?(bpInfoReceived: stepsPerDay)
             
         }
         
@@ -261,7 +358,7 @@ class SKDBManager: NSObject {
     
     //MARK:- CareTaker App Functions
     
-    func getRoomMovementDataForDate(theDate: NSDate, completion: ((NSArray?) -> Void)?){
+    func getRoomMovementDataForDate(theDate: NSDate, completion: ((roomDataReceived: [SKRoomData]!) -> Void)?){
                 
         let queryPredicate  = self.predicateForDayFromDate(theDate)
         let sortDescriptor  = NSSortDescriptor(key: SKRoomData.tableKeyForStartTime(), ascending: true)
@@ -269,15 +366,13 @@ class SKDBManager: NSObject {
         let query           = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Room_Data, predicate: queryPredicate);
         query.sortDescriptors = [sortDescriptor]
         
-        var returnArray: NSArray?
+        var roomDataArray   = [SKRoomData]()
         
         self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
             
             if error == nil {
                 var i = 0
                 if let recordsArray: [CKRecord]? = results {
-                    
-                    let roomDataArray   = NSMutableArray.init(capacity: (recordsArray?.count)!)
                     
                     for record in recordsArray!{
                         
@@ -286,12 +381,10 @@ class SKDBManager: NSObject {
                         roomData.end_time   = record.objectForKey(SKRoomData.tableKeyForEndTime()) as? NSDate
                         roomData.start_time = record.objectForKey(SKRoomData.tableKeyForStartTime()) as? NSDate
                         
-                        roomDataArray.addObject(roomData)
+                        roomDataArray.append(roomData)
                         
                         i = i+1
                     }
-                    
-                    returnArray = NSArray(array: roomDataArray)
                     
                 }
     
@@ -301,7 +394,7 @@ class SKDBManager: NSObject {
             }
          
             
-            completion?(returnArray)
+            completion?(roomDataReceived: roomDataArray)
         }
         
     }

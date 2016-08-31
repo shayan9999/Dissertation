@@ -24,9 +24,7 @@ class EncouragementsViewController: UIViewController, UITextViewDelegate{
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.title = "Steps Per Day"
         
-        let leftButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(pressedCancel))
         let rightButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(pressedSave))
-        self.navigationItem.leftBarButtonItem = leftButton
         self.navigationItem.rightBarButtonItem = rightButton
         
         
@@ -36,11 +34,6 @@ class EncouragementsViewController: UIViewController, UITextViewDelegate{
     }
     
     //MARK:- UI Interactions
-    
-    func pressedCancel(){
-        self.navigationController?.popViewControllerAnimated(true);
-    }
-    
     
     func pressedSave(){
         if encouragementText.text.isEmpty == true {

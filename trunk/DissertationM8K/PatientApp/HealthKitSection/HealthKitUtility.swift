@@ -24,6 +24,8 @@ class SKHealthKitUtility: NSObject{
         hkSupported     = false
     }
     
+    //MARK: StepsCount
+    
     func retrieveStepCountBetween(startTime: NSDate, endTime: NSDate, completion: ((stepsRetrieved: [SKStepsCount]!) -> ())? ) {
         
         //   Define the Step Quantity Type
@@ -64,6 +66,50 @@ class SKHealthKitUtility: NSObject{
         healthStorage!.executeQuery(query)
     }
     
+    //MARK: Blood Pressure data
+    
+    func retrieveBPDataBetween(startTime: NSDate, endTime: NSDate, completion: ((bpInfoCollection: [SKBloodPressure]!) -> ())? ) {
+        
+        //   Define the Step Quantity Type
+        let bpInfoType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodPressureSystolic)
+        
+        //  Set the Predicates & Interval
+        let predicate = HKQuery.predicateForSamplesWithStartDate(startTime, endDate: endTime, options: HKQueryOptions.None)
+        let interval: NSDateComponents = NSDateComponents()
+        interval.day = 1
+        
+        //  Perform the Query
+        let query = HKStatisticsCollectionQuery(quantityType: bpInfoType!, quantitySamplePredicate: predicate, options: HKStatisticsOptions.DiscreteAverage, anchorDate: endTime, intervalComponents: interval)
+        
+        query.initialResultsHandler = { query, results, error in
+            
+            if error != nil {
+                print("An error has occured with the following description: \(error!.localizedDescription)")
+            } else {
+                var bpInfoPerDay = [SKBloodPressure]()
+                
+                for r in results!.statistics(){
+                    let result = r
+                    let quantity = result.averageQuantity()
+                    let count = quantity!.doubleValueForUnit(HKUnit.millimeterOfMercuryUnit())
+                    //print("sample: \(result.startDate.description) : \(count)")
+                    
+                    let bpInfo   = SKBloodPressure()
+                    bpInfo.day   = result.startDate
+                    bpInfo.total = Int(count)
+                    
+                    bpInfoPerDay.append(bpInfo)
+                }
+                
+                completion?(bpInfoCollection: bpInfoPerDay)
+            }
+        }
+        
+        healthStorage!.executeQuery(query)
+    }
+    
+    
+    
     //MARK:- Authorization
     
     func checkAuthorization () -> Bool {
@@ -78,7 +124,7 @@ class SKHealthKitUtility: NSObject{
             
             // Ask for BG
             var readingsSet = Set<HKObjectType>()
-            readingsSet.insert(HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodGlucose)!)
+            readingsSet.insert(HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodPressureSystolic)!)
             readingsSet.insert(HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!)
             healthStorage!.requestAuthorizationToShareTypes(nil, readTypes: readingsSet) { (success, error) -> Void in
                 isEnabled = success
