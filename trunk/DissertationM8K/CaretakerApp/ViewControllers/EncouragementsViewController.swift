@@ -37,9 +37,11 @@ class EncouragementsViewController: UIViewController, UITextViewDelegate{
     
     func pressedSave(){
         if encouragementText.text.isEmpty == true {
+            
             let alertController = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Enter Message", andMessage: "Please enter encouragement message")
             self.presentViewController(alertController, animated: true, completion: nil)
         }else{
+            
             let newEncouragement            = SKEncouragement()
             newEncouragement.name           = encouragementText.text
             newEncouragement.timeofDay      = encouragementTime.date
@@ -47,14 +49,17 @@ class EncouragementsViewController: UIViewController, UITextViewDelegate{
             
             SVProgressHUD .showWithStatus("Sending..")
             SKDBManager.sharedInstance.saveEncouragement(newEncouragement, completion: { (success) in
-                SVProgressHUD.dismiss()
-                if success == false {
-                    SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Something went wrong", andMessage: "Could not save the encouragement to the database, please try again later")
-                }else{
-                    dispatch_async(dispatch_get_main_queue(), { 
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    SVProgressHUD.dismiss()
+                    
+                    if success == false {
+                        let alert = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Something went wrong", andMessage: "Could not save the encouragement to the database, please try again later")
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }else{
                         self.navigationController?.popViewControllerAnimated(true)
-                    })
-                }
+                    }
+                })
             })
             
         }

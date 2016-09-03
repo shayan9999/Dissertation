@@ -15,6 +15,8 @@ struct SKConstants{
     static let UDK_For_CloudKit_Last_Room_Data_ID: String           = "CLOUDKIT_LAST_ROOM_DATA_ENTRY_ID"
     static let UDK_For_CloudKit_Last_Step_Count_Day: String         = "CLOUDKIT_LAST_STEP_COUNT_DAY"
     static let UDK_For_CloudKit_Last_Blood_Pressure_Day: String     = "CLOUDKIT_LAST_BLOOD_PRESSURE_DAY"
+    
+    static let UDK_For_Caretaker_Contact_Number                     = "CARETAKER_CONTACT_NUMBER"
     static let UDK_For_Step_Count_Critical_Level: String            = "CRITICAL_STEP_COUNT"
     static let UDK_For_Blood_Pressure_Critical_Level: String        = "CRITICAL_BLOOD_PRESSURE"
     
@@ -22,8 +24,11 @@ struct SKConstants{
     static let ICloud_Table_Name_For_Room_Data                      = "RoomData"
     static let ICloud_Table_Name_For_Triggers                       = "Triggers"
     static let ICloud_Table_Name_For_Encouragements                 = "Encouragements"
+    static let ICloud_Table_Name_For_Settings                       = "Settings"
     static let ICloud_Table_Name_For_StepsCount                     = "StepsCount"
     static let ICloud_Table_Name_For_BloodPressure                  = "BloodPressure"
+    
+    static let ICloud_Record_Name_For_Settings                      = "main_settings"
     
     #if PATIENTAPP
         static let ICloud_Container_Name_For_App                        = "iCloud.com.orchrd.Dissertation"
@@ -35,6 +40,12 @@ struct SKConstants{
     
     
     //MARK:- Constants returning functions
+    
+    
+    static func getCaretakerContactNumber() -> String?{
+        let caretakerNumber = NSUserDefaults.standardUserDefaults().stringForKey(SKConstants.UDK_For_Caretaker_Contact_Number)
+        return caretakerNumber
+    }
     
     static func getCriticalStepsCount() -> Int{
         var criticalStepsCount = NSUserDefaults.standardUserDefaults().integerForKey(SKConstants.UDK_For_Step_Count_Critical_Level)

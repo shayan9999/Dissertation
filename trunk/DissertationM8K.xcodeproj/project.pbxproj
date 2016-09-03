@@ -15,6 +15,16 @@
 		FA029ACE1D73C1E9002285D3 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FA029ACD1D73C1E9002285D3 /* bg.png */; };
 		FA029ACF1D73C1E9002285D3 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FA029ACD1D73C1E9002285D3 /* bg.png */; };
 		FA029AD01D73D811002285D3 /* UIAlertController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A61D469B4600919F64 /* UIAlertController+Convenience.swift */; };
+		FA0611F71D77CEB10027E139 /* SKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0611F61D77CEB10027E139 /* SKSettings.swift */; };
+		FA0611F81D77CEB10027E139 /* SKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0611F61D77CEB10027E139 /* SKSettings.swift */; };
+		FA0611FB1D78ECEB0027E139 /* icon-call.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611F91D78ECEB0027E139 /* icon-call.png */; };
+		FA0611FC1D78ECEB0027E139 /* icon-call.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611F91D78ECEB0027E139 /* icon-call.png */; };
+		FA0611FD1D78ECEB0027E139 /* icon-devices.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FA1D78ECEB0027E139 /* icon-devices.png */; };
+		FA0611FE1D78ECEB0027E139 /* icon-devices.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FA1D78ECEB0027E139 /* icon-devices.png */; };
+		FA0612001D78EFF60027E139 /* icon-setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FF1D78EFF60027E139 /* icon-setting.png */; };
+		FA0612011D78EFF60027E139 /* icon-setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FF1D78EFF60027E139 /* icon-setting.png */; };
+		FA0612031D78F0B00027E139 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
+		FA0612041D78F0B00027E139 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
 		FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */; };
 		FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
@@ -185,10 +195,6 @@
 		FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
 		FACBADAE1D6F55F700C6FD2E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACBADAD1D6F55F700C6FD2E /* ExternalAccessory.framework */; };
 		FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */; };
-		FACBADB41D6F6C1200C6FD2E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB21D6F6C1200C6FD2E /* bg.jpg */; };
-		FACBADB51D6F6C1200C6FD2E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB21D6F6C1200C6FD2E /* bg.jpg */; };
-		FACBADB61D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
-		FACBADB71D6F6C1200C6FD2E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACBADB31D6F6C1200C6FD2E /* bg2.jpg */; };
 		FACBADC61D6F6E0500C6FD2E /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD196A71D469B4600919F64 /* UIColor+Custom.swift */; };
 		FACDE4CE1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */; };
 		FACDE4CF1D713FC4008EC888 /* SKNotificationsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */; };
@@ -235,6 +241,11 @@
 		E7A05A5ADFE02200B14053C0 /* Pods_Dissertation_Caretaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dissertation_Caretaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19BEF07CB7A6C5F2226554F /* Pods-Dissertation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dissertation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dissertation/Pods-Dissertation.debug.xcconfig"; sourceTree = "<group>"; };
 		FA029ACD1D73C1E9002285D3 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		FA0611F61D77CEB10027E139 /* SKSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSettings.swift; sourceTree = "<group>"; };
+		FA0611F91D78ECEB0027E139 /* icon-call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-call.png"; sourceTree = "<group>"; };
+		FA0611FA1D78ECEB0027E139 /* icon-devices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-devices.png"; sourceTree = "<group>"; };
+		FA0611FF1D78EFF60027E139 /* icon-setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-setting.png"; sourceTree = "<group>"; };
+		FA0612021D78F0B00027E139 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRoomData.swift; sourceTree = "<group>"; };
 		FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStepsCount.swift; sourceTree = "<group>"; };
 		FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncouragementsViewController.swift; sourceTree = "<group>"; };
@@ -352,8 +363,6 @@
 		FAC9F3181D6298C3000826DD /* DefinitionsConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsConversion.m; sourceTree = "<group>"; };
 		FACBADAD1D6F55F700C6FD2E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
-		FACBADB21D6F6C1200C6FD2E /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		FACBADB31D6F6C1200C6FD2E /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
 		FACDE4CD1D713FC4008EC888 /* SKNotificationsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNotificationsUtility.swift; sourceTree = "<group>"; };
 		FAD181041D4C03DE009888C2 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		FAD1960F1D4681CA00919F64 /* SKTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTrigger.swift; sourceTree = "<group>"; };
@@ -781,9 +790,11 @@
 		FACBADB11D6F6C1200C6FD2E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA0611F91D78ECEB0027E139 /* icon-call.png */,
+				FA0611FA1D78ECEB0027E139 /* icon-devices.png */,
+				FA0611FF1D78EFF60027E139 /* icon-setting.png */,
 				FA029ACD1D73C1E9002285D3 /* bg.png */,
-				FACBADB21D6F6C1200C6FD2E /* bg.jpg */,
-				FACBADB31D6F6C1200C6FD2E /* bg2.jpg */,
+				FA0612021D78F0B00027E139 /* bg2.png */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -797,6 +808,7 @@
 				FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */,
 				FAD196111D46889800919F64 /* SKDBManager.swift */,
 				FAD62ED21D76ACAA00471083 /* SKBloodPressure.swift */,
+				FA0611F61D77CEB10027E139 /* SKSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -976,9 +988,10 @@
 				AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */,
 				FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				FABA3A201D62264500B70574 /* Panton-Regular.otf in Resources */,
+				FA0612001D78EFF60027E139 /* icon-setting.png in Resources */,
 				FA3942401D62243D007EB433 /* SF-UI-Text-Italic.otf in Resources */,
 				FA3942361D62243D007EB433 /* SF-UI-Display-Light.otf in Resources */,
-				FACBADB41D6F6C1200C6FD2E /* bg.jpg in Resources */,
+				FA0612031D78F0B00027E139 /* bg2.png in Resources */,
 				FA39423E1D62243D007EB433 /* SF-UI-Text-Heavy.otf in Resources */,
 				FA3942441D62243D007EB433 /* SF-UI-Text-MediumItalic.otf in Resources */,
 				FABA3A211D62264500B70574 /* Panton-Thin.otf in Resources */,
@@ -995,19 +1008,20 @@
 				FA3942431D62243D007EB433 /* SF-UI-Text-Medium.otf in Resources */,
 				FA39424B1D62243D007EB433 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
 				FABA3B1E1D62620A00B70574 /* TextCharacteristicCell.xib in Resources */,
+				FA0611FB1D78ECEB0027E139 /* icon-call.png in Resources */,
 				FA39424E1D62243D007EB433 /* TitilliumWeb-SemiBold.ttf in Resources */,
 				FABA3B0F1D62620A00B70574 /* HomeKit.storyboard in Resources */,
 				FA39424C1D62243D007EB433 /* TitilliumWeb-Italic.ttf in Resources */,
 				FA39423C1D62243D007EB433 /* SF-UI-Text-Bold.otf in Resources */,
 				FA3942351D62243D007EB433 /* SF-UI-Display-Heavy.otf in Resources */,
 				AECF16661B0E0B1000CC83B2 /* PatientApp.storyboard in Resources */,
-				FACBADB61D6F6C1200C6FD2E /* bg2.jpg in Resources */,
 				FABA3A1F1D62264500B70574 /* Panton-ExtraBold.otf in Resources */,
 				FABA3B161D62620A00B70574 /* CharacteristicCell.xib in Resources */,
 				FAD197311D469BE900919F64 /* Dissertation.entitlements in Resources */,
 				FA3942481D62243D007EB433 /* TitilliumWeb-Black.ttf in Resources */,
 				FA3942331D62243D007EB433 /* SF-UI-Display-Black.otf in Resources */,
 				FA3942471D62243D007EB433 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
+				FA0611FD1D78ECEB0027E139 /* icon-devices.png in Resources */,
 				FA3942461D62243D007EB433 /* SF-UI-Text-Semibold.otf in Resources */,
 				FABA3B181D62620A00B70574 /* SegmentedControlCharacteristicCell.xib in Resources */,
 				FA3942411D62243D007EB433 /* SF-UI-Text-Light.otf in Resources */,
@@ -1021,6 +1035,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0612041D78F0B00027E139 /* bg2.png in Resources */,
 				FABA3A821D624AAD00B70574 /* TitilliumWeb-LightItalic.ttf in Resources */,
 				FABA3A831D624AAD00B70574 /* SF-UI-Display-Semibold.otf in Resources */,
 				FABA3A841D624AAD00B70574 /* SF-UI-Text-HeavyItalic.otf in Resources */,
@@ -1031,15 +1046,16 @@
 				FABA3A8A1D624AAD00B70574 /* SF-UI-Text-Italic.otf in Resources */,
 				FABA3A8B1D624AAD00B70574 /* SF-UI-Display-Light.otf in Resources */,
 				FADFF95B1D626CB0000B50D9 /* CaretakerApp.storyboard in Resources */,
+				FA0611FC1D78ECEB0027E139 /* icon-call.png in Resources */,
 				FABA3A8C1D624AAD00B70574 /* SF-UI-Text-Heavy.otf in Resources */,
 				FABA3A8D1D624AAD00B70574 /* SF-UI-Text-MediumItalic.otf in Resources */,
-				FACBADB51D6F6C1200C6FD2E /* bg.jpg in Resources */,
 				FABA3A8E1D624AAD00B70574 /* Panton-Thin.otf in Resources */,
 				FABA3A8F1D624AAD00B70574 /* SF-UI-Display-Thin.otf in Resources */,
 				FABA3A911D624AAD00B70574 /* SF-UI-Text-Regular.otf in Resources */,
 				FABA3A931D624AAD00B70574 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				FABA3A941D624AAD00B70574 /* SF-UI-Display-Ultralight.otf in Resources */,
 				FABA3A961D624AAD00B70574 /* SF-UI-Display-Regular.otf in Resources */,
+				FA0611FE1D78ECEB0027E139 /* icon-devices.png in Resources */,
 				FABA3A971D624AAD00B70574 /* TitilliumWeb-ExtraLight.ttf in Resources */,
 				FABA3A981D624AAD00B70574 /* SF-UI-Text-LightItalic.otf in Resources */,
 				FABA3A991D624AAD00B70574 /* SF-UI-Text-Medium.otf in Resources */,
@@ -1053,9 +1069,9 @@
 				FABA3AA21D624AAD00B70574 /* Dissertation.entitlements in Resources */,
 				FABA3AA31D624AAD00B70574 /* TitilliumWeb-Black.ttf in Resources */,
 				FABA3AA41D624AAD00B70574 /* SF-UI-Display-Black.otf in Resources */,
-				FACBADB71D6F6C1200C6FD2E /* bg2.jpg in Resources */,
 				FABA3AA51D624AAD00B70574 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
 				FABA3AA61D624AAD00B70574 /* SF-UI-Text-Semibold.otf in Resources */,
+				FA0612011D78EFF60027E139 /* icon-setting.png in Resources */,
 				FABA3AA71D624AAD00B70574 /* SF-UI-Text-Light.otf in Resources */,
 				FABA3AA91D624AAD00B70574 /* SF-UI-Display-Medium.otf in Resources */,
 				FABA3AAA1D624AAD00B70574 /* SF-UI-Display-Bold.otf in Resources */,
@@ -1258,6 +1274,7 @@
 				FABA3B2A1D62620A00B70574 /* HomeViewController.swift in Sources */,
 				FAD197361D46AEC900919F64 /* SKNavigationUtility.swift in Sources */,
 				AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */,
+				FA0611F71D77CEB10027E139 /* SKSettings.swift in Sources */,
 				FABA3B0C1D62620A00B70574 /* FavoritesManager.swift in Sources */,
 				FABA3B281D62620A00B70574 /* HomeListViewController.swift in Sources */,
 				FABA3B3E1D62620A00B70574 /* TriggerViewController.swift in Sources */,
@@ -1304,6 +1321,7 @@
 				FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */,
 				FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */,
 				FABA3A6E1D624AAD00B70574 /* BeaconDetailsCloudFactory.swift in Sources */,
+				FA0611F81D77CEB10027E139 /* SKSettings.swift in Sources */,
 				FA8D67301D73BDF500101F9D /* EncouragementsViewController.swift in Sources */,
 				FABA3A6F1D624AAD00B70574 /* SKDBManager.swift in Sources */,
 				FABA3A751D624AAD00B70574 /* BeaconDetails.swift in Sources */,

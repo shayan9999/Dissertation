@@ -19,14 +19,16 @@ class SKDBManager: NSObject {
     static let sharedInstance = SKDBManager()
     
     private override init(){}
-
-    //MARK:- CloudKit: Room Movement Section
     
-    // Function to update ending Time Entry for the last room
+    //MARK:- Patient App Functions
+    //MARK:-
     
     #if PATIENTAPP
     
+        //MARK: CloudKit: Room Data Write
+    
         // Writes end time for the last room when a new room is discoverd
+        // Function to update ending Time Entry for the last room
         func writeEndTimeForLastRoom (){
             
             // if there is an entry recordID that needs end time updating, update its end time now
@@ -52,8 +54,7 @@ class SKDBManager: NSObject {
                 })
             }
         }
-        
-        
+    
         // Function to write room movement information
         func writeNewRoomEntry(roomName: NSString, roomStartTime: NSDate){
             
@@ -83,13 +84,13 @@ class SKDBManager: NSObject {
                 }
             }
         }
-        
-        
-        //MARK:- CloudKit: HealthKit Data
+
+        //MARK: CloudKit: HealthKit Data Write
+    
         func syncCloudDataForStepsCount(){
             
             // To get all steps data we have before last written date
-            //TODO: implement background monitoring of healthKit data on patient app.\
+            //TODO implement background monitoring of healthKit data on patient app.\
             
             var recordsToUpdate = [CKRecord]()
             
@@ -158,7 +159,6 @@ class SKDBManager: NSObject {
             }
         }
     
-    
         func syncCloudDataForBloodPressure(){
             
             // To get all steps data we have before last written date
@@ -175,7 +175,6 @@ class SKDBManager: NSObject {
                     startDate = startDayFromDefaults
                 }
                 
-                //TODO: Create similar function for BP
                 SKHealthKitUtility.sharedInstance.retrieveBPDataBetween(startDate, endTime: startOfToday, completion: { (bpInfoReceived) in
                     
                     let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure, predicate: NSPredicate(format: "date >= %@ AND date =< %@", argumentArray: [startDate, startOfToday]))
@@ -230,176 +229,227 @@ class SKDBManager: NSObject {
             }
         }
     
+        //MARK: CloudKit: Encouragements Fetch
+        
+        func getAllEncouragements(completion: ((encouragementsReceived: [SKEncouragement]!) -> ())?){
+            
+            let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Encouragements, predicate: NSPredicate(value: true));
+            
+            self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                if error == nil {
+                    
+                    var encouragements = [SKEncouragement]()
+                    
+                    for result in results!{
+                        let encouragement       = SKEncouragement()
+                        encouragement.name      = result.objectForKey(SKEncouragement.tableKeyForName()) as? String
+                        encouragement.timeofDay = result.objectForKey(SKEncouragement.tableKeyForTimeOfDay()) as? NSDate
+                        let timingOption        = result.objectForKey(SKEncouragement.tableKeyForTiming()) as? NSInteger
+                        encouragement.timing    = SKEncouragementDataTiming(rawValue: timingOption!)
+                        encouragements.append(encouragement)
+                    }
+                    
+                    completion?(encouragementsReceived: encouragements)
+                }
+                else{
+                    print(error?.localizedDescription)
+                }
+                
+            }
+            
+        }
+    
     #endif
+    
+    //MARK:- CareTaker App Functions
+    //MARK:-
     
     #if CARETAKERAPP
     
-    func getPatientStepsCountData(completion: ((stepsRetrieved: [SKStepsCount]!) -> ())?){
+        //MARK: CloudKit: Health Data Fetch
     
-        let sortDescriptor  = NSSortDescriptor(key: SKStepsCount.tableKeyForDay(), ascending: false)
-    
-        var stepsPerDay  = [SKStepsCount]()
+        func getPatientStepsCountData(completion: ((stepsRetrieved: [SKStepsCount]!) -> ())?){
         
-        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_StepsCount, predicate: NSPredicate(value: true))
-        query.sortDescriptors = [sortDescriptor]
+            let sortDescriptor  = NSSortDescriptor(key: SKStepsCount.tableKeyForDay(), ascending: false)
         
-        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+            var stepsPerDay  = [SKStepsCount]()
             
-            for result in results!{
-                let dayForStepData      = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
-                let totalForStepData    = result.objectForKey(SKStepsCount.tableKeyForTotal()) as! NSInteger
-                let stepCountData       = SKStepsCount()
-                stepCountData.day       = dayForStepData
-                stepCountData.total     = totalForStepData
-                stepsPerDay.append(stepCountData);
+            let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_StepsCount, predicate: NSPredicate(value: true))
+            query.sortDescriptors = [sortDescriptor]
+            
+            self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                
+                for result in results!{
+                    let dayForStepData      = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
+                    let totalForStepData    = result.objectForKey(SKStepsCount.tableKeyForTotal()) as! NSInteger
+                    let stepCountData       = SKStepsCount()
+                    stepCountData.day       = dayForStepData
+                    stepCountData.total     = totalForStepData
+                    stepsPerDay.append(stepCountData);
+                }
+                
+                completion?(stepsRetrieved: stepsPerDay)
+                
             }
-            
-            completion?(stepsRetrieved: stepsPerDay)
             
         }
         
-    }
-    
-    
-    func getPatientBloodPressureData(completion: ((bpInfoReceived: [SKBloodPressure]!) -> ())?){
-        
-        let sortDescriptor  = NSSortDescriptor(key: SKBloodPressure.tableKeyForDay(), ascending: false)
-        
-        var stepsPerDay  = [SKBloodPressure]()
-        
-        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure, predicate: NSPredicate(value: true))
-        query.sortDescriptors = [sortDescriptor]
-        
-        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+        func getPatientBloodPressureData(completion: ((bpInfoReceived: [SKBloodPressure]!) -> ())?){
             
-            for result in results!{
-                let dayForBP      = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
-                let totalForBP    = result.objectForKey(SKStepsCount.tableKeyForTotal()) as! NSInteger
-                let bpData       = SKBloodPressure()
-                bpData.day       = dayForBP
-                bpData.total     = totalForBP
-                stepsPerDay.append(bpData);
+            let sortDescriptor  = NSSortDescriptor(key: SKBloodPressure.tableKeyForDay(), ascending: false)
+            
+            var stepsPerDay  = [SKBloodPressure]()
+            
+            let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_BloodPressure, predicate: NSPredicate(value: true))
+            query.sortDescriptors = [sortDescriptor]
+            
+            self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                
+                for result in results!{
+                    let dayForBP      = result.objectForKey(SKStepsCount.tableKeyForDay()) as! NSDate
+                    let totalForBP    = result.objectForKey(SKStepsCount.tableKeyForTotal()) as! NSInteger
+                    let bpData       = SKBloodPressure()
+                    bpData.day       = dayForBP
+                    bpData.total     = totalForBP
+                    stepsPerDay.append(bpData);
+                }
+                
+                completion?(bpInfoReceived: stepsPerDay)
+                
             }
             
-            completion?(bpInfoReceived: stepsPerDay)
+        }
+    
+        //MARK: CloudKit: Room Data Fetch
+    
+        func getPatientRoomMovementDataForDate(theDate: NSDate, completion: ((roomDataReceived: [SKRoomData]!) -> Void)?){
+            
+            let queryPredicate  = self.predicateForDayFromDate(theDate)
+            let sortDescriptor  = NSSortDescriptor(key: SKRoomData.tableKeyForStartTime(), ascending: true)
+            
+            let query           = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Room_Data, predicate: queryPredicate);
+            query.sortDescriptors = [sortDescriptor]
+            
+            var roomDataArray   = [SKRoomData]()
+            
+            self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                
+                if error == nil {
+                    var i = 0
+                    if let recordsArray: [CKRecord]? = results {
+                        
+                        for record in recordsArray!{
+                            
+                            let roomData = SKRoomData.init()
+                            roomData.name       = record.objectForKey(SKRoomData.tableKeyForName()) as? String
+                            roomData.end_time   = record.objectForKey(SKRoomData.tableKeyForEndTime()) as? NSDate
+                            roomData.start_time = record.objectForKey(SKRoomData.tableKeyForStartTime()) as? NSDate
+                            
+                            roomDataArray.append(roomData)
+                            
+                            i = i+1
+                        }
+                        
+                    }
+                    
+                }
+                else{
+                    print(error?.localizedDescription)
+                }
+                
+                
+                completion?(roomDataReceived: roomDataArray)
+            }
             
         }
-        
-    }
     
+        //MARK: CloudKit: Triggers Fetch
+        
+        // Function to scan all triggers from iCloud
+        func getAllTiggers(){
+            
+            let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Triggers, predicate: NSPredicate(value: true));
+            
+            self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+                if error == nil {
+                    print("Record Found: " + results!.description)
+                }
+                else{
+                    print(error?.localizedDescription)
+                }
+                
+            }
+            
+        }
+    
+        //MARK: CloudKit: Encouragements Write
+        
+        func saveEncouragement(encouragement: SKEncouragement, completion: (success: Bool)-> Void){
+            
+            let newRecord = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_Encouragements)
+            newRecord[SKEncouragement.tableKeyForName()] = encouragement.name
+            newRecord[SKEncouragement.tableKeyForTimeOfDay()] = encouragement.timeofDay
+            newRecord[SKEncouragement.tableKeyForTiming()] = encouragement.timing?.rawValue
+            
+            self.getPublicDB().saveRecord(newRecord, completionHandler: { (recordSaved, error) in
+                if let fetchError2 = error{
+                    NSLog("Could not save Encouragement data. Description: %@", fetchError2.localizedDescription)
+                    completion(success: false)
+                }else{
+                    NSLog("B. Saved Encouragement: ' %@ ' ", encouragement.name!)
+                    completion(success: true)
+                }
+            })
+        }
+
     #endif
     
-    //MARK:- CloudKit: Triggers
+    //MARK:- CloudKit: Settings
+    //MARK:
     
-    // Function to scan all triggers from iCloud
-    func getAllTiggers(){
+    func saveSettings(setting: SKSettings, completion: (success: Bool)-> Void){
         
-        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Triggers, predicate: NSPredicate(value: true));
-        
-        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
-            if error == nil {
-                print("Record Found: " + results!.description)
-            }
-            else{
-                print(error?.localizedDescription)
-            }
-            
-        }
-        
-    }
-    
-    //MARK:- CloudKit: Encouragements
-    
-    func saveEncouragement(encouragement: SKEncouragement, completion: (success: Bool)-> Void){
-        
-        let newRecord = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_Encouragements)
-        newRecord[SKEncouragement.tableKeyForName()] = encouragement.name
-        newRecord[SKEncouragement.tableKeyForTimeOfDay()] = encouragement.timeofDay
-        newRecord[SKEncouragement.tableKeyForTiming()] = encouragement.timing?.rawValue
+        let newRecord = CKRecord.init(recordType: SKConstants.ICloud_Table_Name_For_Settings)
+        newRecord[SKSettings.tableKeyForCaretakerContact()] = setting.caretakerContact
+        newRecord[SKSettings.tableKeyForCriticalStepsCount()] = setting.criticalStepsCount
+        newRecord[SKSettings.tableKeyForCriticalBloodPressure()] = setting.criticalBloodPressure
         
         self.getPublicDB().saveRecord(newRecord, completionHandler: { (recordSaved, error) in
-            if let fetchError2 = error{
-                NSLog("Could not save Encouragement data. Description: %@", fetchError2.localizedDescription)
+            if let fetchError = error{
+                NSLog("Could not save Setting data. Description: %@", fetchError.localizedDescription)
                 completion(success: false)
             }else{
-                NSLog("B. Saved Encouragement: ' %@ ' ", encouragement.name!)
+                NSLog("B. Saved Setting to record name: ' %@ ' ", newRecord.recordID.recordName)
                 completion(success: true)
             }
         })
     }
     
-    func getAllEncouragements(completion: ((encouragementsReceived: [SKEncouragement]!) -> ())?){
+    func getAppSettings(completion: ((settingsReceived: SKSettings?) -> ())?) {
         
-        let query       = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Encouragements, predicate: NSPredicate(value: true));
+        let recordID                = CKRecordID(recordName: SKConstants.ICloud_Record_Name_For_Settings)
+        var settings: SKSettings?   = nil
         
-        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
+        self.getPublicDB().fetchRecordWithID(recordID) { ( record, error) in
             if error == nil {
                 
-                var encouragements = [SKEncouragement]()
+                settings = SKSettings()
                 
-                for result in results!{
-                    let encouragement       = SKEncouragement()
-                    encouragement.name      = result.objectForKey(SKEncouragement.tableKeyForName()) as? String
-                    encouragement.timeofDay = result.objectForKey(SKEncouragement.tableKeyForTimeOfDay()) as? NSDate
-                    let timingOption        = result.objectForKey(SKEncouragement.tableKeyForTiming()) as? NSInteger
-                    encouragement.timing    = SKEncouragementDataTiming(rawValue: timingOption!)
-                    encouragements.append(encouragement)
-                }
+                settings!.caretakerContact   = record?.objectForKey(SKSettings.tableKeyForCaretakerContact()) as? String
+                settings!.criticalStepsCount = record?.objectForKey(SKSettings.tableKeyForCriticalStepsCount()) as? NSInteger
+                settings!.criticalBloodPressure = record?.objectForKey(SKSettings.tableKeyForCriticalBloodPressure()) as? NSInteger
                 
-                completion?(encouragementsReceived: encouragements)
+                completion?(settingsReceived: settings)
             }
             else{
                 print(error?.localizedDescription)
             }
-            
         }
-        
     }
-    
-    //MARK:- CareTaker App Functions
-    
-    func getRoomMovementDataForDate(theDate: NSDate, completion: ((roomDataReceived: [SKRoomData]!) -> Void)?){
-                
-        let queryPredicate  = self.predicateForDayFromDate(theDate)
-        let sortDescriptor  = NSSortDescriptor(key: SKRoomData.tableKeyForStartTime(), ascending: true)
-        
-        let query           = CKQuery(recordType: SKConstants.ICloud_Table_Name_For_Room_Data, predicate: queryPredicate);
-        query.sortDescriptors = [sortDescriptor]
-        
-        var roomDataArray   = [SKRoomData]()
-        
-        self.getPublicDB().performQuery( query, inZoneWithID: nil) { (results, error) in
-            
-            if error == nil {
-                var i = 0
-                if let recordsArray: [CKRecord]? = results {
-                    
-                    for record in recordsArray!{
-                        
-                        let roomData = SKRoomData.init()
-                        roomData.name       = record.objectForKey(SKRoomData.tableKeyForName()) as? String
-                        roomData.end_time   = record.objectForKey(SKRoomData.tableKeyForEndTime()) as? NSDate
-                        roomData.start_time = record.objectForKey(SKRoomData.tableKeyForStartTime()) as? NSDate
-                        
-                        roomDataArray.append(roomData)
-                        
-                        i = i+1
-                    }
-                    
-                }
-    
-            }
-            else{
-                print(error?.localizedDescription)
-            }
-         
-            
-            completion?(roomDataReceived: roomDataArray)
-        }
-        
-    }
+
     
     //MARK:- Utility Method
+    //MARK:-
     
     // returns public database from the pertinent container for the current app
     func getPublicDB()-> CKDatabase {

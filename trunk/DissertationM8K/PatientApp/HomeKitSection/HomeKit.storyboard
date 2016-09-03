@@ -321,7 +321,7 @@
         <!--Room-->
         <scene sceneID="suc-M4-z2I">
             <objects>
-                <tableViewController id="Hki-Gk-t3j" customClass="RoomViewController" customModule="PatientApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Hki-Gk-t3j" customClass="RoomViewController" customModule="PatientApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="HZT-Et-yOV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2324,16 +2324,16 @@
         <image name="SelectedFavoritesTabIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UBP-oF-dww"/>
         <segue reference="qzE-YI-WRP"/>
+        <segue reference="UBP-oF-dww"/>
         <segue reference="8aB-qv-NyG"/>
-        <segue reference="nsB-DH-ErO"/>
         <segue reference="l7S-Nc-N1P"/>
         <segue reference="XMQ-LX-TnC"/>
-        <segue reference="5xY-BX-its"/>
-        <segue reference="Vco-xg-mBS"/>
+        <segue reference="nsB-DH-ErO"/>
         <segue reference="4hO-Ue-P0x"/>
-        <segue reference="ChR-Cr-psn"/>
+        <segue reference="5xY-BX-its"/>
+        <segue reference="5No-de-gcX"/>
         <segue reference="yUW-jy-m4o"/>
+        <segue reference="ChR-Cr-psn"/>
     </inferredMetricsTieBreakers>
 </document>

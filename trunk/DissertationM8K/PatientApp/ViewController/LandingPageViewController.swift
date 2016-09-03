@@ -4,17 +4,18 @@
 
 import UIKit
 
-class LandingPageViewController: UIViewController, ProximityContentManagerDelegate, ESTBeaconManagerDelegate {
+class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
 
     
     static weak var sharedInstance: LandingPageViewController!
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    //@IBOutlet weak var label: UILabel!
+    //@IBOutlet weak var image: UIImageView!
+    //@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet var menuButtonsCollection: [UIButton]!
     
     var proximityContentManager: ProximityContentManager!
-    
     var beaconManager: ESTBeaconManager?
     var allBeacons: [BeaconID]?
 
@@ -32,7 +33,7 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         super.viewDidLoad()
 
-        self.activityIndicator.startAnimating()
+        //self.activityIndicator.startAnimating()
         self.prepareBeaconManager()
         self.prepareTempBeacons()
         
@@ -43,6 +44,11 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         
         for beaconID: BeaconID in self.allBeacons! {
             beaconManager!.startMonitoringForRegion(beaconID.asBeaconRegion)
+        }
+        
+        // Applying round shape on all buttons
+        for button in menuButtonsCollection{
+            button.layer.cornerRadius = 8.0
         }
 
         /*
@@ -88,21 +94,21 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
     
     //MARK: Delegate Methods
     
-    func proximityContentManager(proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
-        self.activityIndicator!.stopAnimating()
-        self.activityIndicator!.removeFromSuperview()
-
-        if let beaconDetails = content as? BeaconDetails {
-            self.view.backgroundColor = beaconDetails.backgroundColor
-            self.label.text = "You're in \(beaconDetails.beaconName)'s range!"
-            self.image.hidden = false
-        } else {
-            self.view.backgroundColor = BeaconDetails.neutralColor
-            self.label.text = "No beacons in range."
-            self.image.hidden = true
-        }
-    
-    }
+//    func proximityContentManager(proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
+//        self.activityIndicator!.stopAnimating()
+//        self.activityIndicator!.removeFromSuperview()
+//
+//        if let beaconDetails = content as? BeaconDetails {
+//            self.view.backgroundColor = beaconDetails.backgroundColor
+//            self.label.text = "You're in \(beaconDetails.beaconName)'s range!"
+//            self.image.hidden = false
+//        } else {
+//            self.view.backgroundColor = BeaconDetails.neutralColor
+//            self.label.text = "No beacons in range."
+//            self.image.hidden = true
+//        }
+//    
+//    }
     
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         //let notification = UILocalNotification()
@@ -220,6 +226,23 @@ class LandingPageViewController: UIViewController, ProximityContentManagerDelega
         let vc: TabBarController = storyboard.instantiateInitialViewController() as! TabBarController
         vc.showControlsTab()
         self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func callCareTaker(){
+        
+        SKDBManager.sharedInstance.getAppSettings { (settingsReceived) in
+            let caretakerNumber = settingsReceived?.caretakerContact
+            
+            if caretakerNumber?.isEmpty == true {
+                let alert = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Caretaker Number not found", andMessage: "Ask your caretaker to set up his/ her contact number in settings on their app")
+                self.presentViewController(alert, animated: true, completion: nil)
+            }else{
+                let phoneNumberURL = "tel://" + caretakerNumber!
+                UIApplication.sharedApplication().openURL(NSURL(string: phoneNumberURL)!)
+            }
+            
+        }
+        
     }
 
 }

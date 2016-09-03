@@ -52,7 +52,7 @@ class RoomsMovementViewController: UIViewController {
         SVProgressHUD.showWithStatus("Loading...")
         self.textViewForRatios.text = ""
         
-        SKDBManager.sharedInstance.getRoomMovementDataForDate(datePicker.date){ returnedArray in
+        SKDBManager.sharedInstance.getPatientRoomMovementDataForDate(datePicker.date){ returnedArray in
             
             let timeFormatter = NSDateFormatter()
             timeFormatter.dateStyle = .NoStyle

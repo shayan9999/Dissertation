@@ -51,7 +51,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="4LY-zj-25C">
+                                        <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4LY-zj-25C">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                         </imageView>
                                     </subviews>
@@ -64,11 +64,17 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NC-Bp-yLg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="ypM-Lz-ffb"/>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q1-ez-Kct">
-                                <rect key="frame" x="23" y="49" width="274" height="88"/>
+                                <rect key="frame" x="23" y="60" width="274" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.67594986509999999" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="qIL-Xk-fS4"/>
+                                    <constraint firstAttribute="height" constant="65" id="qIL-Xk-fS4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="23"/>
                                 <state key="normal" title="Monitor Room Movement">
@@ -79,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5f-Sg-o95">
-                                <rect key="frame" x="23" y="153" width="274" height="88"/>
+                                <rect key="frame" x="23" y="141" width="274" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.67594986509999999" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="23"/>
                                 <state key="normal" title="Monitor Health &amp; Activity">
@@ -91,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLK-vi-ct1">
-                                <rect key="frame" x="23" y="257" width="274" height="88"/>
+                                <rect key="frame" x="23" y="222" width="274" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.67594986509999999" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="23"/>
                                 <state key="normal" title="Set Encouragements">
@@ -103,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7P-pm-lY0">
-                                <rect key="frame" x="23" y="377" width="274" height="88"/>
+                                <rect key="frame" x="23" y="400" width="274" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.67594986509999999" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="23"/>
                                 <state key="normal" title="Settings">
@@ -121,12 +127,14 @@
                             <constraint firstItem="GBv-0c-cXJ" firstAttribute="top" secondItem="g7P-pm-lY0" secondAttribute="bottom" constant="15" id="45w-tA-r0G"/>
                             <constraint firstItem="HLK-vi-ct1" firstAttribute="width" secondItem="3Q1-ez-Kct" secondAttribute="width" id="4rr-Du-ys2"/>
                             <constraint firstItem="HiN-ZK-xkd" firstAttribute="centerY" secondItem="4PS-ow-RKI" secondAttribute="centerY" id="8RU-ym-Y9c"/>
+                            <constraint firstItem="6NC-Bp-yLg" firstAttribute="width" secondItem="4PS-ow-RKI" secondAttribute="width" id="8jz-Wi-6s6"/>
+                            <constraint firstItem="6NC-Bp-yLg" firstAttribute="top" secondItem="Z9e-3M-XCA" secondAttribute="bottom" constant="-20" id="ANX-NT-11S"/>
                             <constraint firstItem="HLK-vi-ct1" firstAttribute="top" secondItem="F5f-Sg-o95" secondAttribute="bottom" constant="16" id="Dbr-F7-hDy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Q1-ez-Kct" secondAttribute="trailing" constant="7" id="FFf-w5-wMb"/>
                             <constraint firstItem="F5f-Sg-o95" firstAttribute="height" secondItem="3Q1-ez-Kct" secondAttribute="height" id="Fcr-V2-0xX"/>
                             <constraint firstItem="HiN-ZK-xkd" firstAttribute="height" secondItem="4PS-ow-RKI" secondAttribute="height" id="J8s-D8-eE7"/>
                             <constraint firstItem="HLK-vi-ct1" firstAttribute="height" secondItem="3Q1-ez-Kct" secondAttribute="height" id="Pcy-nJ-vot"/>
-                            <constraint firstItem="3Q1-ez-Kct" firstAttribute="top" secondItem="Z9e-3M-XCA" secondAttribute="bottom" constant="29" id="VbI-2w-Oj6"/>
+                            <constraint firstItem="3Q1-ez-Kct" firstAttribute="top" secondItem="Z9e-3M-XCA" secondAttribute="bottom" constant="40" id="VbI-2w-Oj6"/>
                             <constraint firstItem="g7P-pm-lY0" firstAttribute="width" secondItem="3Q1-ez-Kct" secondAttribute="width" id="Wl9-7F-2ds"/>
                             <constraint firstItem="F5f-Sg-o95" firstAttribute="width" secondItem="3Q1-ez-Kct" secondAttribute="width" id="ZCY-C1-kxR"/>
                             <constraint firstItem="HiN-ZK-xkd" firstAttribute="centerX" secondItem="4PS-ow-RKI" secondAttribute="centerX" id="dGj-rs-FSu"/>
@@ -134,15 +142,18 @@
                             <constraint firstItem="g7P-pm-lY0" firstAttribute="centerX" secondItem="3Q1-ez-Kct" secondAttribute="centerX" id="pDu-jC-tRB"/>
                             <constraint firstItem="3Q1-ez-Kct" firstAttribute="centerX" secondItem="4PS-ow-RKI" secondAttribute="centerX" id="rxh-da-J1j"/>
                             <constraint firstItem="F5f-Sg-o95" firstAttribute="centerX" secondItem="3Q1-ez-Kct" secondAttribute="centerX" id="t7A-FE-O5K"/>
+                            <constraint firstItem="6NC-Bp-yLg" firstAttribute="centerX" secondItem="4PS-ow-RKI" secondAttribute="centerX" id="tmx-Au-rzH"/>
                             <constraint firstItem="HLK-vi-ct1" firstAttribute="centerX" secondItem="3Q1-ez-Kct" secondAttribute="centerX" id="vVt-0S-3fL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nWT-pO-uYp"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outletCollection property="menuButtonsCollection" destination="HLK-vi-ct1" collectionClass="NSMutableArray" id="BeA-LS-MXI"/>
                         <outletCollection property="menuButtonsCollection" destination="F5f-Sg-o95" collectionClass="NSMutableArray" id="qfO-nB-hPP"/>
                         <outletCollection property="menuButtonsCollection" destination="3Q1-ez-Kct" collectionClass="NSMutableArray" id="bSm-dU-WfS"/>
+                        <outletCollection property="menuButtonsCollection" destination="g7P-pm-lY0" collectionClass="NSMutableArray" id="eu6-jk-qul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NtR-Oz-OPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,7 +231,7 @@
                                             <rect key="frame" x="0.0" y="386" width="320" height="29"/>
                                             <segments>
                                                 <segment title="Timeline"/>
-                                                <segment title="Ratios"/>
+                                                <segment title="Total Duration"/>
                                             </segments>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -247,7 +258,6 @@
                             </visualEffectView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-7H-P14">
                                 <rect key="frame" x="0.0" y="454" width="320" height="114"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="492997599.39064801">
                                     <!--2016-08-15 23:46:39 +0000-->
                                 </date>
@@ -631,20 +641,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="eg: 07877898989" textAlignment="natural" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-E3-nuD">
-                                        <rect key="frame" x="51" y="162" width="218" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="218" id="VZA-8x-Qqy"/>
-                                            <constraint firstAttribute="height" constant="46" id="wvD-U9-LQa"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="23"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="NDA-TU-27y" id="y4C-Pz-mTX"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjt-ps-dgn">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjt-ps-dgn" customClass="NoPasteTextField" customModule="CaretakerApp" customModuleProvider="target">
                                         <rect key="frame" x="51" y="312" width="218" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="218" id="CS0-9M-s9J"/>
@@ -652,7 +649,7 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="NDA-TU-27y" id="A6e-6l-6eB"/>
                                         </connections>
@@ -666,7 +663,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-hQ-IM4">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-hQ-IM4" customClass="NoPasteTextField" customModule="CaretakerApp" customModuleProvider="target">
                                         <rect key="frame" x="51" y="412" width="218" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="bTX-cB-Tzc"/>
@@ -674,7 +671,7 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="NDA-TU-27y" id="Qo4-xJ-gCK"/>
                                         </connections>
@@ -688,6 +685,19 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="line" placeholder="eg: 07877898989" textAlignment="natural" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-E3-nuD" customClass="NoPasteTextField" customModule="CaretakerApp" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="162" width="218" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="218" id="VZA-8x-Qqy"/>
+                                            <constraint firstAttribute="height" constant="46" id="wvD-U9-LQa"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="NDA-TU-27y" id="y4C-Pz-mTX"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bU9-E3-nuD" firstAttribute="centerX" secondItem="kcY-oR-XDw" secondAttribute="centerX" id="3HP-db-pxB"/>
@@ -747,6 +757,7 @@
     </scenes>
     <resources>
         <image name="bg.png" width="600" height="1064"/>
+        <image name="bg2.png" width="2048" height="2048"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

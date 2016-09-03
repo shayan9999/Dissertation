@@ -11,20 +11,54 @@ import Foundation
 class SKNotificationsUtility: NSObject {
     
     
-    //MARK:- Factory Methods
+    //MARK:- Encouragements Notifications
     
-    static func syncNotificationsForEncouragements(){
-        // Get all encouragements data and setup new notifications
-        
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-        
-        SKDBManager.sharedInstance.getAllEncouragements({ (encouragementsReceived) in
-            for e in encouragementsReceived{
-                print("Updated : %@ %d", e.name, e.timing)
-                SKNotificationsUtility.setNotifications(forEncouragement: e)
+    #if PATIENTAPP
+    
+        static func syncNotificationsForEncouragements(){
+            // Get all encouragements data and setup new notifications
+            
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            
+            SKDBManager.sharedInstance.getAllEncouragements({ (encouragementsReceived) in
+                for e in encouragementsReceived{
+                    print("Updated : %@ %d", e.name, e.timing)
+                    SKNotificationsUtility.setNotifications(forEncouragement: e)
+                }
+            })
+        }
+    
+        private static func setNotifications(forEncouragement encouragement: SKEncouragement){
+            
+            let notification = UILocalNotification()
+            
+            notification.timeZone = NSCalendar.currentCalendar().timeZone
+            notification.alertBody = encouragement.name
+            notification.fireDate = encouragement.timeofDay
+            
+            /* Time and timezone settings */
+            // This will be nil only if the timing is set to Once
+            if let repeatInterval = SKNotificationsUtility.getRepeatIntervalForTimingOption(encouragement.timing!) {
+                notification.repeatInterval = repeatInterval
+            }else{
+                if encouragement.timeofDay?.timeIntervalSinceReferenceDate < NSDate.init().timeIntervalSinceReferenceDate {
+                    return;
+                }
             }
-        })
+            
+            /* Action settings */
+            notification.hasAction = true
+            notification.alertAction = "View"
+            
+            /* Badge settings */
+            notification.applicationIconBadgeNumber =
+                UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+            
+            /* Schedule the notification */
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
+    
+    #endif
     
     static func getSingleButtonAlertView(withTitle title: String, andMessage message: String) -> UIAlertController {
         let alertController = UIAlertController.init(title: title, body: message)
@@ -34,37 +68,6 @@ class SKNotificationsUtility: NSObject {
     
     
     //MARK:- Utility Functions
-    
-    
-    private static func setNotifications(forEncouragement encouragement: SKEncouragement){
-       
-        let notification = UILocalNotification()
-        
-        notification.timeZone = NSCalendar.currentCalendar().timeZone
-        notification.alertBody = encouragement.name
-        notification.fireDate = encouragement.timeofDay
-        
-        /* Time and timezone settings */
-        // This will be nil only if the timing is set to Once
-        if let repeatInterval = SKNotificationsUtility.getRepeatIntervalForTimingOption(encouragement.timing!) {
-            notification.repeatInterval = repeatInterval
-        }else{
-            if encouragement.timeofDay?.timeIntervalSinceReferenceDate < NSDate.init().timeIntervalSinceReferenceDate {
-                return;
-            }
-        }
-        
-        /* Action settings */
-        notification.hasAction = true
-        notification.alertAction = "View"
-        
-        /* Badge settings */
-        notification.applicationIconBadgeNumber =
-            UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        
-        /* Schedule the notification */
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    }
     
     private static func getRepeatIntervalForTimingOption( timingOption: SKEncouragementDataTiming) -> NSCalendarUnit?{
         var repeatInterval: NSCalendarUnit? = NSCalendarUnit.Day

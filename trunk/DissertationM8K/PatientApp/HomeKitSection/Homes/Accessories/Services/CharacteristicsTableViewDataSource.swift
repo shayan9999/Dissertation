@@ -82,8 +82,21 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         The associated service type uses the valid associated service types.
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         switch CharacteristicTableViewSection(rawValue: section) {
+            
             case .Characteristics?:
+                
+                for characteristic in service.characteristics{
+                    if #available(iOS 9.3, *) {
+                        if characteristic.properties.contains(HMCharacteristicPropertyHidden) {
+                            NSLog("Hidden Property: %@", characteristic.localizedDescription)
+                        }
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                }
+                
                 return service.characteristics.count
                 
             case .AssociatedServiceType?:

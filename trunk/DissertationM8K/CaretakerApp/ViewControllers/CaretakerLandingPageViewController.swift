@@ -17,6 +17,8 @@ class CaretakerLandingPageViewController: UIViewController {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent;
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         // Applying round shape on all buttons
         for button in menuButtonsCollection{
             button.layer.cornerRadius = 8.0
