@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import CloudKit
 
 class SKEncouragement: NSObject{
-    var name: String?
-    var timeofDay: NSDate?
-    var timing: SKEncouragementDataTiming?
+    var name: String!
+    var timeofDay: NSDate!
+    var timing: SKEncouragementDataTiming!
+    var recordID: CKRecordID!
     
     static func tableKeyForName()-> String {return "name"}
     static func tableKeyForTimeOfDay()-> String {return "time_of_day"}

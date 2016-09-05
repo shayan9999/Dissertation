@@ -47,10 +47,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
                 UIApplication.sharedApplication().registerUserNotificationSettings(settingsForNotification)
                 UIApplication.sharedApplication().registerForRemoteNotifications()
             }
+        }else{
+            initializeHealthKitSettings()
         }
         
-        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
-            UIApplicationBackgroundFetchIntervalMinimum)
+        //UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
+        //    UIApplicationBackgroundFetchIntervalMinimum)
+    }
+    
+    func initializeHealthKitSettings(){
+        #if PATIENTAPP
+            //SKDBManager.sharedInstance.removeAllCloudKitSubscriptions()
+            SKDBManager.sharedInstance.setupCloudKitSubscriptions()
+            //SKDBManager.sharedInstance.authorizeAndSyncHealthKitData()
+            SKHealthKitUtility.sharedInstance.checkAuthorization(){(success) in
+                if (success == true) { NSLog("Successfully enabled healthKit Data") }
+            }
+        #endif
     }
     
     func resetBadgeCount(){
@@ -64,39 +77,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         
         print("### Remote Notifications Registration Successful")
-        
-        #if PATIENTAPP
-            //SKDBManager.sharedInstance.removeAllCloudKitSubscriptions()
-            SKDBManager.sharedInstance.setupCloudKitSubscriptions()
-        #endif
     }
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
         
         print("### Local Notifications Registration Successful")
+        initializeHealthKitSettings()
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         print("### Received Local Notification")
+        
+        #if PATIENTAPP
+        if let message = notification.alertBody{
+            let alert = SKNotificationsUtility.getSingleButtonAlertView(withTitle: "Message from your caretaker", andMessage: message)
+            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alert, animated: false, completion: nil)
+        }
+        #endif
     }
     
     // Called when remote notification will trigger a background fetch routine
+    
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 
         #if PATIENTAPP
         
-            let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
-            
-            // This will execute when one of the CloudKit subscriptions was triggered.
-            if cloudKitNotification.notificationType == CKNotificationType.Query {
-
-                //let queryNotification = cloudKitNotification as! CKQueryNotification
-                //let recordID = queryNotification.recordID
-                
-                self.resetBadgeCount()
-                print("Notification: " + userInfo.description)
-                SKNotificationsUtility.syncNotificationsForEncouragements()
-            }
+        let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: (userInfo as! [String: NSObject]))
+        
+        // This will execute when one of the CloudKit subscriptions was triggered.
+        if cloudKitNotification.notificationType == CKNotificationType.Query {
+            self.resetBadgeCount()
+            print("#### Updating Encouragement Notifications")
+            SKNotificationsUtility.syncNotificationsForEncouragements()
+        }
             
         #endif
         
@@ -104,15 +117,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     }
     
     //MARK: - Background Fetch Operations
+    
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
         #if PATIENTAPP
             
-            SKDBManager.sharedInstance.syncCloudDataForStepsCount()
-            SKDBManager.sharedInstance.syncCloudDataForBloodPressure()
+        //SKDBManager.sharedInstance.authorizeAndSyncHealthKitData()
+            SKNotificationsUtility.syncNotificationsForEncouragements()
             
             let localNotification = UILocalNotification()
-            localNotification.alertBody = "Just downloaded something in background"
+            localNotification.alertBody = "Syncing Encouragements data"
             application.presentLocalNotificationNow(localNotification)
             
         #endif

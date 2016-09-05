@@ -133,9 +133,8 @@ class HealthDataViewController : UIViewController {
         SVProgressHUD.showWithStatus("Loading...");
         
         SKDBManager.sharedInstance.getPatientStepsCountData { (stepsRetrieved) in
-            // Setting data and labels now
-            SVProgressHUD.dismiss()
             
+            // Setting data and labels now
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "MMM dd"
             
@@ -151,6 +150,7 @@ class HealthDataViewController : UIViewController {
             }
             
             dispatch_sync(dispatch_get_main_queue()) {
+                SVProgressHUD.dismiss()
                 self.isShowingCriticalData = false
                 self.graphView.setData(self.values, withLabels: self.labels)
             }
@@ -163,9 +163,8 @@ class HealthDataViewController : UIViewController {
         SVProgressHUD.showWithStatus("Loading...");
         
         SKDBManager.sharedInstance.getPatientBloodPressureData { (bpInfoReceived) in
-            // Setting data and labels now
-            SVProgressHUD.dismiss()
             
+            // Setting data and labels now
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "MMM dd"
             
@@ -179,7 +178,8 @@ class HealthDataViewController : UIViewController {
                 }
             }
             
-            dispatch_sync(dispatch_get_main_queue()) {
+            dispatch_async(dispatch_get_main_queue()) {
+                SVProgressHUD.dismiss()
                 self.isShowingCriticalData = false
                 self.graphView.setData(self.values, withLabels: self.labels)
             }

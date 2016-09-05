@@ -9,7 +9,7 @@
 import Foundation
 import SVProgressHUD
 
-class EncouragementsViewController: UIViewController, UITextViewDelegate{
+class EncouragementsViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var vibrancyEffectView: UIVisualEffectView!
     
@@ -76,4 +76,15 @@ class EncouragementsViewController: UIViewController, UITextViewDelegate{
         }
     }
     
+    //MARK:- SegmentedControl listener
+    
+    @IBAction func segmentedControlValueChanged(sender: UISegmentedControl){
+        
+        let index = sender.selectedSegmentIndex
+        if index == 0 || index == 2 || index == 3 {
+            self.encouragementTime.datePickerMode = UIDatePickerMode.DateAndTime
+        }else{
+            self.encouragementTime.datePickerMode = UIDatePickerMode.Time
+        }
+    }
 }

@@ -12,7 +12,9 @@ import HealthKit
 class SKHealthKitUtility: NSObject{
     
     var hkSupported: Bool?
-    var healthStorage: HKHealthStore?
+    var healthStore: HKHealthStore?
+    let bloodPressureType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodPressureSystolic)
+    let stepeCountType    = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
     
     static let sharedInstance = SKHealthKitUtility()
     
@@ -20,7 +22,7 @@ class SKHealthKitUtility: NSObject{
         
         super.init()
         
-        healthStorage   = HKHealthStore()
+        healthStore   = HKHealthStore()
         hkSupported     = false
     }
     
@@ -63,7 +65,7 @@ class SKHealthKitUtility: NSObject{
             }
         }
         
-        healthStorage!.executeQuery(query)
+        healthStore!.executeQuery(query)
     }
     
     //MARK: Blood Pressure data
@@ -105,42 +107,112 @@ class SKHealthKitUtility: NSObject{
             }
         }
         
-        healthStorage!.executeQuery(query)
+        healthStore!.executeQuery(query)
     }
     
     
     
     //MARK:- Authorization
     
-    func checkAuthorization () -> Bool {
+    func checkAuthorization (completion: (success: Bool)-> Void) {
         // Default to assuming that we're authorized
-        var isEnabled = true
         
         if (NSClassFromString("HKHealthStore") != nil) { hkSupported = true }
         
+        // if already asked for persmission once then just call the completion handler
+        //if NSUserDefaults.standardUserDefaults().boolForKey(SKConstants.UDK_For_HealthKit_Permission_Requested) == true{
+        //    completion(success:  true)
+        //}else{
+            
         // Do we have access to HealthKit on this device?
         if (hkSupported == true && HKHealthStore.isHealthDataAvailable()) {
             // We have to request each data type explicitly
             
-            // Ask for BG
+            // 1. Set the types you want to read from HK Store
             var readingsSet = Set<HKObjectType>()
-            readingsSet.insert(HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodPressureSystolic)!)
-            readingsSet.insert(HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!)
-            healthStorage!.requestAuthorizationToShareTypes(nil, readTypes: readingsSet) { (success, error) -> Void in
-                isEnabled = success
-                NSLog("Successfully enabled healthKit Data")
+            readingsSet.insert(bloodPressureType!)
+            readingsSet.insert(stepeCountType!)
+            
+            
+            // 2.  Request HealthKit authorization
+            healthStore!.requestAuthorizationToShareTypes(nil, readTypes: readingsSet) { (success, error) -> Void in
+                
+                if error == nil {
+                    
+                    dispatch_async(dispatch_get_main_queue(), self.enableBackgroundHealthMonitoring)
+
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: SKConstants.UDK_For_HealthKit_Permission_Requested)
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                    
+                    completion(success: success)
+                }else{
+                    print("Error in HealthKit authorization: \(error?.localizedDescription)")
+                    completion(success: false)
+                }
             }
             
         }
         else
         {
-            isEnabled = false
+            // 3. If the store is not available (for instance, iPad) return an error and don't go on.
+            print("HealthKit is not available on this device")
+            completion(success:false)
+            return;
         }
+        //}
         
-        return isEnabled
+        
     }
     
     
+    func enableBackgroundHealthMonitoring(){
+        
+        let query = HKObserverQuery(sampleType: stepeCountType!, predicate: nil, updateHandler: self.stepsUpdateHandler)
+        healthStore?.executeQuery(query)
+        
+        let query2 = HKObserverQuery(sampleType: bloodPressureType!, predicate: nil, updateHandler: self.bloodPressureUpdateHandler)
+        healthStore?.executeQuery(query2)
+        
+        self.healthStore?.enableBackgroundDeliveryForType( self.bloodPressureType!, frequency: HKUpdateFrequency.Immediate, withCompletion: { (success, error) in
+            
+            if error == nil{
+                NSLog("-- Enabled background query for Blood Pressure")
+                //SKHealthKitUtility.sharedInstance.listenForBloodPressureUpdates()
+            }
+        })
+        
+        self.healthStore?.enableBackgroundDeliveryForType( self.stepeCountType!, frequency: HKUpdateFrequency.Hourly, withCompletion: { (success, error) in
+            if error == nil {
+                NSLog("-- Enabled background query for Steps")
+                //SKHealthKitUtility.sharedInstance.listenForStepsUpdates()
+            }
+        })
+    }
+    
+    func stepsUpdateHandler(query: HKObserverQuery, completionHandler: HKObserverQueryCompletionHandler, error: NSError?){
+        
+        if (error == nil) {
+            SKDBManager.sharedInstance.syncCloudDataForStepsCount( completion:  {
+                print("Health update for steps")
+                completionHandler()
+            })
+        } else {
+            print("observer query returned error: \(error)")
+        }
+    }
+    
+    func bloodPressureUpdateHandler(query: HKObserverQuery, completionHandler: HKObserverQueryCompletionHandler, error: NSError?) {
+        
+        if (error == nil) {
+            SKDBManager.sharedInstance.syncCloudDataForBloodPressure(completion: {
+                print("Health update for bloodpressure")
+                completionHandler()
+            })
+        } else {
+            print("observer query returned error: \(error)")
+        }
+        
+    }
     
     
 }

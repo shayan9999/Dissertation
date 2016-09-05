@@ -22,6 +22,24 @@ enum SKHealthDataTriggerDuration: Int {
 
 enum SKEncouragementDataTiming: Int{
     case Once = 1, EveryDay, OnWeekdays, EveryWeek, EveryMonth
+    
+    var timingPrefix : String {
+        switch self {
+        // Use Internationalization, as appropriate.
+            case .Once: return "Once on ";
+            case .EveryDay: return "Every day at ";
+            case .OnWeekdays: return "Weekdays at ";
+            case .EveryWeek: return "Every Week starting ";
+            case .EveryMonth: return "Every Month starting ";
+        }
+    }
+    
+    func hasAssociatedDay()->Bool{
+        if self == .Once || self == .EveryWeek || self == .EveryMonth {
+            return true;
+        }
+        return false
+    }
 }
 
 

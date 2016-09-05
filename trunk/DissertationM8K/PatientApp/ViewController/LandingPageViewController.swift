@@ -30,16 +30,17 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
             assertionFailure()
         }
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         super.viewDidLoad()
-
+        
+        // Setting up navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         //self.activityIndicator.startAnimating()
         self.prepareBeaconManager()
-        self.prepareTempBeacons()
+        self.prepareRoomBeacons()
         
         // This will initialize and fetch data from HealthKit
-        SKDBManager.sharedInstance.syncCloudDataForStepsCount()
-        SKDBManager.sharedInstance.syncCloudDataForBloodPressure()
+        // SKDBManager.sharedInstance.authorizeAndSyncHealthKitData()
         
         
         for beaconID: BeaconID in self.allBeacons! {
@@ -62,34 +63,6 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
         self.proximityContentManager.delegate = self
         self.proximityContentManager.startContentUpdates()
          */
-        
-        /*  Setup navigation bar
-         
-         / BAR SHADOW APPEARANCE ////
-         NSShadow* shadow = [NSShadow new];
-         shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
-         shadow.shadowColor = [UIColor clearColor];
-         
-         /* BAR TITLE APPEARANCE */
-         [[UINavigationBar appearance] setTitleTextAttributes: @{
-         NSForegroundColorAttributeName: UIColorFromRGB(0x0187A7),
-         NSFontAttributeName: [UIFont fontWithName:@"Panton-ExtraBold" size: 17.0f],
-         NSShadowAttributeName: shadow
-         }];
-         /* BAR TINT COLOR */
-         [[UINavigationBar appearance] setBarTintColor: UIColorFromRGB(0xFFFFFF)];
-         
-         /* BAR BUTTONS APPEARANCE */
-         NSDictionary *normalAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-         [UIFont fontWithName:@"TitilliumWeb-Regular" size: 17.0f], NSFontAttributeName, UIColorFromRGB(0x6AA2BB), NSForegroundColorAttributeName,
-         nil];
-         [[UIBarButtonItem appearance] setTitleTextAttributes:normalAttributes
-         forState:UIControlStateNormal];
-         
-         [self.navigationItem setHidesBackButton: YES animated:NO];
-         
-         
-         */
     }
     
     //MARK: Delegate Methods
@@ -109,6 +82,12 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
 //        }
 //    
 //    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .Default
+    }
+    
+    // This method is called upon entering regions of beacons
     
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         //let notification = UILocalNotification()
@@ -145,6 +124,7 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
         }
     }
     
+    // Method called upon exiting region
     func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
         //let notification = UILocalNotification()
         var i = 0;
@@ -167,7 +147,7 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
     
     //MARK: Utility Functions
     
-    func prepareTempBeacons(){
+    func prepareRoomBeacons(){
         //allBeacons = NSMutableArray(capacity: 3);
         let beacon1: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:59901, minor:38842)
         let beacon2: BeaconID = BeaconID(proximityUUID: DefinitionsConversion.getProximityUUID(), major:50817, minor:7851)
@@ -200,10 +180,6 @@ class LandingPageViewController: UIViewController, ESTBeaconManagerDelegate {
         self.beaconManager = ESTBeaconManager();
         self.beaconManager?.delegate = self
         self.beaconManager?.requestAlwaysAuthorization()
-    }
-
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
     }
 
     override func didReceiveMemoryWarning() {

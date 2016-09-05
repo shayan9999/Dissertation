@@ -12,7 +12,7 @@ import UIKit
 
 class NoPasteTextField: UITextField {
     override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
-        if action == "paste:" {
+        if action == #selector(paste) {
             return false
         }
         return super.canPerformAction(action, withSender: sender)

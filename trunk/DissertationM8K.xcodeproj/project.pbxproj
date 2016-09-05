@@ -23,9 +23,9 @@
 		FA0611FE1D78ECEB0027E139 /* icon-devices.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FA1D78ECEB0027E139 /* icon-devices.png */; };
 		FA0612001D78EFF60027E139 /* icon-setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FF1D78EFF60027E139 /* icon-setting.png */; };
 		FA0612011D78EFF60027E139 /* icon-setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0611FF1D78EFF60027E139 /* icon-setting.png */; };
-		FA0612031D78F0B00027E139 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
-		FA0612041D78F0B00027E139 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
 		FA0F835E1D62735A009A92E7 /* RoomsMovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */; };
+		FA11C5851D7D3351007B2A15 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
+		FA11C5861D7D3351007B2A15 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0612021D78F0B00027E139 /* bg2.png */; };
 		FA11DD6D1D6282EA00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA11DD6E1D6284CE00313F2B /* SKRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11DD6C1D6282EA00313F2B /* SKRoomData.swift */; };
 		FA12AD0B1D6BE11900FA80CD /* SKStepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AD0A1D6BE11900FA80CD /* SKStepsCount.swift */; };
@@ -61,6 +61,7 @@
 		FA39424E1D62243D007EB433 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */; };
 		FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */; };
 		FA8D67301D73BDF500101F9D /* EncouragementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */; };
+		FA9C8BCF1D7CCF04005D32F3 /* EncouragementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C8BCD1D7CCED5005D32F3 /* EncouragementsListViewController.swift */; };
 		FAAD7CE31D3C4388008D6B1F /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */; };
 		FAAD7CE41D3C4388008D6B1F /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */; };
 		FAAD7CE51D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */; };
@@ -133,7 +134,7 @@
 		FABA3AB51D624AED00B70574 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA3AB31D624ADD00B70574 /* CloudKit.framework */; };
 		FABA3AB71D624B0900B70574 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA3AB61D624B0900B70574 /* HealthKit.framework */; };
 		FABA3ABD1D62610D00B70574 /* SKNavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD197351D46AEC900919F64 /* SKNavigationUtility.swift */; };
-		FABA3B0B1D62620A00B70574 /* HealthKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */; };
+		FABA3B0B1D62620A00B70574 /* SKHealthKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC01D62620A00B70574 /* SKHealthKitUtility.swift */; };
 		FABA3B0C1D62620A00B70574 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC31D62620A00B70574 /* FavoritesManager.swift */; };
 		FABA3B0D1D62620A00B70574 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC41D62620A00B70574 /* FavoritesViewController.swift */; };
 		FABA3B0E1D62620A00B70574 /* HMCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA3AC51D62620A00B70574 /* HMCatalogViewController.swift */; };
@@ -281,6 +282,7 @@
 		FA3942311D62243D007EB433 /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
 		FA3942321D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsMovementViewController.swift; sourceTree = "<group>"; };
+		FA9C8BCD1D7CCED5005D32F3 /* EncouragementsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncouragementsListViewController.swift; sourceTree = "<group>"; };
 		FAAD7CD81D3C4388008D6B1F /* BeaconContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentFactory.swift; sourceTree = "<group>"; };
 		FAAD7CD91D3C4388008D6B1F /* BeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetails.swift; sourceTree = "<group>"; };
 		FAAD7CDA1D3C4388008D6B1F /* BeaconDetailsCloudFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsCloudFactory.swift; sourceTree = "<group>"; };
@@ -302,7 +304,7 @@
 		FABA3AB21D624AAE00B70574 /* Dissertation copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dissertation copy-Info.plist"; path = "/Users/macbook/Workspace/Dissertation/Dissertation/trunk/Dissertation copy-Info.plist"; sourceTree = "<absolute>"; };
 		FABA3AB31D624ADD00B70574 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FABA3AB61D624B0900B70574 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitUtility.swift; sourceTree = "<group>"; };
+		FABA3AC01D62620A00B70574 /* SKHealthKitUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKHealthKitUtility.swift; sourceTree = "<group>"; };
 		FABA3AC31D62620A00B70574 /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		FABA3AC41D62620A00B70574 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		FABA3AC51D62620A00B70574 /* HMCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMCatalogViewController.swift; sourceTree = "<group>"; };
@@ -584,7 +586,7 @@
 		FABA3ABF1D62620A00B70574 /* HealthKitSection */ = {
 			isa = PBXGroup;
 			children = (
-				FABA3AC01D62620A00B70574 /* HealthKitUtility.swift */,
+				FABA3AC01D62620A00B70574 /* SKHealthKitUtility.swift */,
 			);
 			path = HealthKitSection;
 			sourceTree = "<group>";
@@ -853,6 +855,7 @@
 				FA92CE231D626E8A00567B66 /* RoomsMovementViewController.swift */,
 				FACBADAF1D6F6BDF00C6FD2E /* HealthDataViewController.swift */,
 				FA216A871D726B28003E19D6 /* EncouragementsViewController.swift */,
+				FA9C8BCD1D7CCED5005D32F3 /* EncouragementsListViewController.swift */,
 				FAF994211D76CECF00DCC252 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -986,12 +989,12 @@
 				FA39423F1D62243D007EB433 /* SF-UI-Text-HeavyItalic.otf in Resources */,
 				FA39423D1D62243D007EB433 /* SF-UI-Text-BoldItalic.otf in Resources */,
 				AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */,
+				FA11C5851D7D3351007B2A15 /* bg2.png in Resources */,
 				FA39424F1D62243D007EB433 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				FABA3A201D62264500B70574 /* Panton-Regular.otf in Resources */,
 				FA0612001D78EFF60027E139 /* icon-setting.png in Resources */,
 				FA3942401D62243D007EB433 /* SF-UI-Text-Italic.otf in Resources */,
 				FA3942361D62243D007EB433 /* SF-UI-Display-Light.otf in Resources */,
-				FA0612031D78F0B00027E139 /* bg2.png in Resources */,
 				FA39423E1D62243D007EB433 /* SF-UI-Text-Heavy.otf in Resources */,
 				FA3942441D62243D007EB433 /* SF-UI-Text-MediumItalic.otf in Resources */,
 				FABA3A211D62264500B70574 /* Panton-Thin.otf in Resources */,
@@ -1035,7 +1038,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0612041D78F0B00027E139 /* bg2.png in Resources */,
 				FABA3A821D624AAD00B70574 /* TitilliumWeb-LightItalic.ttf in Resources */,
 				FABA3A831D624AAD00B70574 /* SF-UI-Display-Semibold.otf in Resources */,
 				FABA3A841D624AAD00B70574 /* SF-UI-Text-HeavyItalic.otf in Resources */,
@@ -1066,6 +1068,7 @@
 				FA029ACF1D73C1E9002285D3 /* bg.png in Resources */,
 				FABA3A9E1D624AAD00B70574 /* SF-UI-Display-Heavy.otf in Resources */,
 				FABA3AA11D624AAD00B70574 /* Panton-ExtraBold.otf in Resources */,
+				FA11C5861D7D3351007B2A15 /* bg2.png in Resources */,
 				FABA3AA21D624AAD00B70574 /* Dissertation.entitlements in Resources */,
 				FABA3AA31D624AAD00B70574 /* TitilliumWeb-Black.ttf in Resources */,
 				FABA3AA41D624AAD00B70574 /* SF-UI-Display-Black.otf in Resources */,
@@ -1284,7 +1287,7 @@
 				FABA3B171D62620A00B70574 /* SegmentedControlCharacteristicCell.swift in Sources */,
 				FABA3B311D62620A00B70574 /* ConditionCell.swift in Sources */,
 				FABA3B3C1D62620A00B70574 /* TimerTriggerViewController.swift in Sources */,
-				FABA3B0B1D62620A00B70574 /* HealthKitUtility.swift in Sources */,
+				FABA3B0B1D62620A00B70574 /* SKHealthKitUtility.swift in Sources */,
 				FABA3B361D62620A00B70574 /* EventTriggerViewController.swift in Sources */,
 				FAD196B71D469B4600919F64 /* UIViewController+Convenience.swift in Sources */,
 				FAD62ED31D76ACAA00471083 /* SKBloodPressure.swift in Sources */,
@@ -1319,6 +1322,7 @@
 				FACBADC61D6F6E0500C6FD2E /* UIColor+Custom.swift in Sources */,
 				FABA3ABD1D62610D00B70574 /* SKNavigationUtility.swift in Sources */,
 				FACBADAC1D6E9E4900C6FD2E /* SKStepsCount.swift in Sources */,
+				FA9C8BCF1D7CCF04005D32F3 /* EncouragementsListViewController.swift in Sources */,
 				FACBADB01D6F6BDF00C6FD2E /* HealthDataViewController.swift in Sources */,
 				FABA3A6E1D624AAD00B70574 /* BeaconDetailsCloudFactory.swift in Sources */,
 				FA0611F81D77CEB10027E139 /* SKSettings.swift in Sources */,
