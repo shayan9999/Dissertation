@@ -861,7 +861,7 @@
     </scenes>
     <resources>
         <image name="bg.png" width="600" height="1064"/>
-        <image name="bg2.png" width="2048" height="2048"/>
+        <image name="bg2.png" width="1024" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

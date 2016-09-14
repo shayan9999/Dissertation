@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DissertationM8K/PatientApp/HomeKitSection/Homes/Service Groups/ServiceGroupViewController.swift"
-            timestampString = "494401278.849173"
+            filePath = "DissertationM8K/PatientApp/HomeKitSection/Favorites/FavoritesViewController.swift"
+            timestampString = "495533969.106438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "resetLists()"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "registerAsDelegate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,14 +35,78 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DissertationM8K/PatientApp/HealthKitSection/HealthKitUtility.swift"
-            timestampString = "494739614.975926"
+            filePath = "DissertationM8K/PatientApp/HomeKitSection/Homes/Accessories/Services/ServicesViewController.swift"
+            timestampString = "495537705.233539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "checkAuthorization(_:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DissertationM8K/PatientApp/HomeKitSection/Homes/Accessories/Services/ServicesViewController.swift"
+            timestampString = "495537705.233539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DissertationM8K/PatientApp/HomeKitSection/Homes/Accessories/ControlsTableViewDataSource.swift"
+            timestampString = "495537822.507239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "serviceForIndexPath(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PatientApp.ControlsTableViewDataSource.serviceForIndexPath (__ObjC.NSIndexPath) -&gt; Swift.Optional&lt;__ObjC.HMService&gt;"
+                  moduleName = "PatientApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Workspace/Dissertation/Dissertation/trunk/DissertationM8K/PatientApp/HomeKitSection/Homes/Accessories/ControlsTableViewDataSource.swift"
+                  timestampString = "495537822.524446"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PatientApp.ControlsTableViewDataSource.serviceForIndexPath (__ObjC.NSIndexPath) -&gt; Swift.Optional&lt;__ObjC.HMService&gt;"
+                  moduleName = "PatientApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Workspace/Dissertation/Dissertation/trunk/DissertationM8K/PatientApp/HomeKitSection/Homes/Accessories/ControlsTableViewDataSource.swift"
+                  timestampString = "495537822.524637"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

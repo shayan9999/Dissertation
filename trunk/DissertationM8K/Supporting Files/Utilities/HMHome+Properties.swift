@@ -29,8 +29,23 @@ extension HMHome {
     */
     var serviceTable: [String: [HMService]] {
         var serviceDictionary = [String: [HMService]]()
+        
         for service in self.allServices {
-            if !service.isControlType {
+            
+            var foundCharacteristic = false
+            for characteristic in service.characteristics{
+                
+                if (characteristic.characteristicType == HMCharacteristicTypeTargetLockMechanismState
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentLockMechanismState
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentTemperature
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentRelativeHumidity){
+                    
+                    foundCharacteristic = true
+                    break;
+                }
+            }
+            
+            if !service.isControlType || !foundCharacteristic {
                 continue
             }
             

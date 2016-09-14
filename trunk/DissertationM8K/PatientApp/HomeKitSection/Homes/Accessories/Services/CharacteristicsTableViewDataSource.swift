@@ -87,17 +87,20 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
             
             case .Characteristics?:
                 
+                var recognizedCharacteristics: [HMCharacteristic] = [HMCharacteristic]();
+                
                 for characteristic in service.characteristics{
-                    if #available(iOS 9.3, *) {
-                        if characteristic.properties.contains(HMCharacteristicPropertyHidden) {
-                            NSLog("Hidden Property: %@", characteristic.localizedDescription)
-                        }
-                    } else {
-                        // Fallback on earlier versions
+
+                    if (characteristic.characteristicType == HMCharacteristicTypeTargetLockMechanismState
+                        || characteristic.characteristicType == HMCharacteristicTypeCurrentLockMechanismState
+                        || characteristic.characteristicType == HMCharacteristicTypeCurrentTemperature
+                        || characteristic.characteristicType == HMCharacteristicTypeCurrentRelativeHumidity){
+                        recognizedCharacteristics.append(characteristic)
                     }
                 }
                 
-                return service.characteristics.count
+                //return service.characteristics.count
+                return recognizedCharacteristics.count;
                 
             case .AssociatedServiceType?:
                 // For 'None'.
@@ -160,7 +163,20 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         located at the specified index path.
     */
     private func tableView(tableView: UITableView, characteristicCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let characteristic = service.characteristics[indexPath.row]
+        
+        var recognizedCharacteristics: [HMCharacteristic] = [HMCharacteristic]();
+        for characteristic in service.characteristics{
+            
+            if (characteristic.characteristicType == HMCharacteristicTypeTargetLockMechanismState
+                || characteristic.characteristicType == HMCharacteristicTypeCurrentLockMechanismState
+                || characteristic.characteristicType == HMCharacteristicTypeCurrentTemperature
+                || characteristic.characteristicType == HMCharacteristicTypeCurrentRelativeHumidity){
+                recognizedCharacteristics.append(characteristic)
+            }
+        }
+        
+        //let characteristic = service.characteristics[indexPath.row]
+        let characteristic = recognizedCharacteristics[indexPath.row]
 
         var reuseIdentifier = Identifiers.characteristicCell
         

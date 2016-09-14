@@ -33,7 +33,7 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
     lazy var cellDelegate: CharacteristicCellDelegate = AccessoryUpdateController()
     var showsFavorites = false
     var allowsAllWrites = false
-    var onlyShowsControlServices = false
+    var onlyShowsControlServices = true
     var displayedServices = [HMService]()
     var bridgedAccessories = [HMAccessory]()
     
@@ -71,7 +71,12 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
         guard segue.identifier == Identifiers.showServiceSegue else { return }
         
         if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
-            let selectedService = displayedServices[indexPath.row]
+            
+            let recognizedServices = getRecognizedServices()
+            
+            //let selectedService = displayedServices[indexPath.row]
+            let selectedService = recognizedServices[indexPath.row]
+            
             let characteristicsViewController = segue.intendedDestinationViewController as! CharacteristicsViewController
             characteristicsViewController.showsFavorites = showsFavorites
             characteristicsViewController.allowsAllWrites = allowsAllWrites
@@ -119,10 +124,15 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
         Section 2 contains the bridged accessories.
     */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         switch AccessoryTableViewSection(rawValue: section) {
             case .Services?:
-                return displayedServices.count
                 
+                let recognizedServices = getRecognizedServices()
+                
+                //return displayedServices.count
+                return recognizedServices.count
+            
             case .BridgedAccessories?:
                 return bridgedAccessories.count
                 
@@ -166,8 +176,12 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
     */
     func tableView(tableView: UITableView, serviceCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let recognizedServices = getRecognizedServices()
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(Identifiers.serviceCell, forIndexPath: indexPath)
-        let service = displayedServices[indexPath.row]
+        
+        //let service = displayedServices[indexPath.row]
+        let service = recognizedServices[indexPath.row]
         
         // Inherit the name from the accessory if the Service doesn't have one.
         cell.textLabel?.text = service.name ?? service.accessory?.name
@@ -255,5 +269,27 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
         if self.accessory == accessory {
             navigationController?.popViewControllerAnimated(true)
         }
+    }
+    
+    func getRecognizedServices() -> [HMService] {
+        
+        var recognizedServices: [HMService] = [HMService]();
+        
+        for service in displayedServices{
+            
+            for characteristic in service.characteristics{
+                
+                if (characteristic.characteristicType == HMCharacteristicTypeTargetLockMechanismState
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentLockMechanismState
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentTemperature
+                    || characteristic.characteristicType == HMCharacteristicTypeCurrentRelativeHumidity){
+                    
+                    recognizedServices.append(service)
+                    break;
+                }
+            }
+        }
+        
+        return recognizedServices
     }
 }
